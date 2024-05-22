@@ -28,6 +28,74 @@ body {
   }
 }
 
+.countdown {
+  display: flex;
+}
+
+.countdown .time {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: #280d7c;
+  margin: 0 15px;
+}
+
+.countdown .time div {
+  width: 150px;
+  height: 100px;
+  background-color: #280d7c;
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 0.3rem;
+  font-size: 36px;
+}
+
+p {
+  margin: 6px;
+}
+
+/* OVERSKRIFTER */
+.titlecontainer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.titletxt {
+  color: #dbc2cf;
+  /* Fallback */
+  text-transform: uppercase;
+  -webkit-text-fill-color: #280d7c;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ff0a9d;
+  letter-spacing: 3px;
+  /* Future-proofing */
+  background: linear-gradient(180deg, #fd1995 8.18%, #4e30c5 59.64%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+}
+
+.titleline {
+  width: 576px;
+  height: 3px;
+  background-color: #fd1995;
+}
+
+.heroflex {
+  display: flex;
+}
+
+.countd {
+  margin: auto;
+  background: #fd1995;
+  padding-top: 150px;
+  padding-bottom: 130px;
+}
+
 
 /* FOOTER */
 .footer {
