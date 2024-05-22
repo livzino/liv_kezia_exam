@@ -327,3 +327,73 @@ p {
   color: #280d7c;
   font-weight: 600;
 }
+
+/******************************** BUBBLES ************************************/
+.twobbl {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.threebbl {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+
+.bbl_last {
+  display: flex;
+  justify-content: center;
+  gap: 140px;
+}
+
+
+.bbl_container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.bbl1 {
+  grid-column: 3/3;
+}
+
+.bbl2 {
+  grid-column: 4/4;
+}
+
+
+/* .bbl1 {
+  grid-column: 1;
+}
+
+
+.bbl2 {
+  grid-column: 1 / 4;
+}
+ */
+/*
+
+.bbl3 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.bbl4 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.bbl5 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.div6 {
+  grid-area: 5 / 3 / 6 / 4;
+}
+
+.bbl7 {
+  grid-area: 5 / 4 / 6 / 5;
+}
+
+.bbl8 {
+  grid-area: 4 / 5 / 5 / 6;
+} */
