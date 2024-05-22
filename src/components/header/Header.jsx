@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 import styles from "../header/Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
+
 function Navbar() {
   // adding the states
   const [isActive, setIsActive] = useState(false);
@@ -18,25 +20,25 @@ function Navbar() {
     <div className="App">
       <header className="App-header">
         <nav className={`${styles.navbar}`}>
-          {/* logo */}
-          <a href="#home" className={`${styles.logo}`}>
-            <Image src="./img/logo.svg" width={100} height={100} alt="logo" className="logo" />
-          </a>
+          <Link href="/">
+            <Image src="./img/logo.svg" width={100} height={100} alt="logo" className="logo" />{" "}
+          </Link>
+
           <ul className={`${styles.navMenu} ${isActive ? styles.active : "ul"}`}>
             <li onClick={removeActive}>
-              <a href="#home" className={`${styles.navLink}`}>
+              <Link href="/lineup" className={`${styles.navLink}`}>
                 LINEUP
-              </a>
+              </Link>
             </li>
             <li onClick={removeActive}>
-              <a href="#home" className={`${styles.navLink}`}>
+              <Link href="/schedule" className={`${styles.navLink}`}>
                 SCHEDULE
-              </a>
+              </Link>
             </li>
             <li onClick={removeActive}>
-              <a href="#home" className={`${styles.navLink}`}>
+              <Link href="/booking" className={`${styles.navLink}`}>
                 BOOK NOW
-              </a>
+              </Link>
             </li>
           </ul>
           <div className={`${styles.hamburger} ${isActive ? styles.active : ""}`} onClick={toggleActiveClass}>
@@ -50,36 +52,3 @@ function Navbar() {
   );
 }
 export default Navbar;
-
-/* export default function Header() {
-  return (
-    <header>
-      <div class="head">
-        <a href="">
-          <Image src="./img/logo.svg" width={100} height={100} alt="logo" className="logo" />
-        </a>
-        <button id="btn-mobile">☰</button>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="">
-              <span>LINEUP</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>SCHEDULE</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>BOOK NOW</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  );
-}
- */
