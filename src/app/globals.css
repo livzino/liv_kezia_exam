@@ -96,7 +96,6 @@ p {
   padding-bottom: 130px;
 }
 
-
 /* FOOTER */
 .footer {
   background: rgba(57, 26, 160, 0.852);
@@ -159,4 +158,107 @@ p {
     padding: 0;
     border-bottom: none;
   }
+}
+
+/******************************** ticket ************************************/
+
+.ticket {
+  background: rgb(58 26 160);
+  text-align: center;
+  width: 450px;
+  height: 550px;
+  border: solid 6px rgb(30 218 230);
+  border-radius: 60px;
+  margin: 30px;
+  font-family: "Syncopate", sans-serif;
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: rgb(30 218 230);
+  font-weight: lighter;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hrendags {
+  width: 300px;
+  height: 2px;
+  background: rgb(30 218 230);
+  margin: auto;
+}
+
+.endags {
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 4px;
+}
+
+.fullweek {
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 4px;
+}
+
+.pris {
+  font-weight: 250;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.imgendag {
+  margin: auto;
+}
+
+.vip {
+  text-align: center;
+  width: 450px;
+  height: 550px;
+  margin: 30px;
+  font-family: "Syncopate", sans-serif;
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: rgb(218 238 104);
+  font-weight: lighter;
+  background: linear-gradient(rgb(72 27 165), rgb(72 27 165)) padding-box, linear-gradient(to top, rgb(244 45 133), rgb(218 238 104)) border-box;
+  border-radius: 60px;
+  border: 6px solid transparent;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.price {
+  font-weight: 250;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.hrvip {
+  width: 300px;
+  height: 2px;
+  background: rgb(218 238 104);
+  margin: auto;
+}
+
+.imgv {
+  margin: auto;
+}
+
+.ticketflex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 150px;
+}
+
+.ticketh {
+  margin-left: 140px;
+  margin-top: 50px;
+  font-size: 50px;
+  color: #280d7c;
+  font-weight: 600;
+}
+.tickethv {
+  margin-left: 210px;
+  margin-top: 50px;
+  font-size: 50px;
+  color: #280d7c;
+  font-weight: 600;
 }
