@@ -1,3 +1,11 @@
+import BandBbl from "../../components/BandBbl";
+import Title from "../../components/Title";
+
 export default function Lineup() {
-  return <h1>HELLO</h1>;
+  return (
+    <main>
+      <Title title="LINEUP" />
+      <BandBbl />
+    </main>
+  );
 }
