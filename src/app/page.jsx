@@ -1,8 +1,8 @@
 "use client";
-import "./globals.css";
 import Hero from "../components/Hero";
 import CountDown from "../components/CountDown";
-
+import CampMap from "../components/CampMap";
+import Title from "../components/Title";
 export default function Home() {
   return (
     <main>
@@ -13,6 +13,9 @@ export default function Home() {
           <CountDown />
         </div>
       </div>
+      <Title title="FESTIVAL OVERVIEW" />
+      <br />
+      <CampMap />
     </main>
   );
 }
