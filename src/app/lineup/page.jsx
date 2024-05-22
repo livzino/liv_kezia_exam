@@ -1,3 +1,5 @@
+import Artist from "../../components/Artist";
+
 export default function Lineup() {
-  return <h1>HELLO</h1>;
+  return <Artist />;
 }
