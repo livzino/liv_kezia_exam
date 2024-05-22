@@ -1,7 +1,8 @@
 "use client";
-import "./globals.css";
 import Hero from "../components/Hero";
 import CountDown from "../components/CountDown";
+import CampMap from "../components/CampMap";
+import Title from "../components/Title";
 import Ticket from "../components/Ticket";
 import Vip from "../components/Vip";
 
@@ -15,6 +16,9 @@ export default function Home() {
           <CountDown />
         </div>
       </div>
+      <Title title="FESTIVAL OVERVIEW" />
+      <br />
+      <CampMap />
       <div className="ticketflex">
         <div>
           <h2 className="ticketh">REGULAR</h2>

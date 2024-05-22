@@ -96,7 +96,28 @@ p {
   padding-bottom: 130px;
 }
 
-/* FOOTER */
+/************************* BUTTON ****************************************/
+.btn {
+  background: linear-gradient(90deg, rgba(83, 201, 238, 1) 0%, rgba(76, 151, 236, 1) 35%, rgba(69, 102, 234, 1) 100%);
+  border-radius: 20px;
+  border: #daee68 4px solid;
+  color: #daee68;
+  cursor: pointer;
+  font-weight: 700;
+  font-display: swap;
+  height: 3.5rem;
+  padding: 0 2rem;
+  max-width: 10rem;
+}
+
+.btn:hover {
+  background: #daee68;
+  border: #daee68 4px solid;
+  color: #4c97ec;
+}
+
+
+/************************* FOOTER ****************************************/
 .footer {
   background: rgba(57, 26, 160, 0.852);
   padding: 30px 0px;
@@ -158,6 +179,49 @@ p {
     padding: 0;
     border-bottom: none;
   }
+}
+
+/************************* MAP OVERVIEW ****************************************/
+
+.map_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: #f42d87b1;
+  width: 100%;
+}
+
+.map_container>div {
+  flex: 1;
+  margin: 16px;
+}
+
+.map_container p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.map_container img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.img_container {
+  background: #1A0755;
+  border: #DAEE68 3px solid;
+  border-radius: 40px;
+}
+
+.img_container img {
+  margin: 0 auto;
 }
 
 /******************************** ticket ************************************/
@@ -255,6 +319,7 @@ p {
   color: #280d7c;
   font-weight: 600;
 }
+
 .tickethv {
   margin-left: 210px;
   margin-top: 50px;
