@@ -9,7 +9,6 @@ import Vip from "../components/Vip";
 export default function Home() {
   return (
     <main>
-      <h1>Hej</h1>
       <div className="heroflex">
         <Hero></Hero>
         <div className="countd">
