@@ -15,9 +15,9 @@ export default function Home() {
           <CountDown />
         </div>
       </div>
-      <Title title="FESTIVAL OVERVIEW" />
       <br />
-      <CampMap />
+      <Title title="TICKETS" />
+
       <div className="ticketflex">
         <div>
           <h2 className="ticketh">REGULAR</h2>
@@ -28,6 +28,9 @@ export default function Home() {
           <Vip />
         </div>
       </div>
+      <Title title="FESTIVAL OVERVIEW" />
+      <br />
+      <CampMap />
     </main>
   );
 }
