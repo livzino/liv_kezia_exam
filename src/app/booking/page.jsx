@@ -9,7 +9,8 @@ import PaymentStatus from "../../components/booking/PaymentStatus";
 import OrderSummary from "../../components/booking/OrderSummary";
 import MobileOrderSummary from "../../components/booking/MobileOrderSummery";
 import BackAndContinueButtons from "@/components/booking/BackAndContinueButtons";
-/*
+import SelectCamp from "@/components/booking/SelectCamp";
+/* 
 import { supabase } from "@/utils/supabaseClient"; */
 import { url } from "/config";
 
@@ -352,19 +353,20 @@ function Page() {
       <section className="w-full h-full md:h-5/6 bg-gray-900 max-w-7xl flex flex-col md:flex-row md:rounded-xl md:border border-gray-700 border-opacity-60 relative overflow-hidden">
         <div className={` ${ticketsReserved ? "mt-28" : "mt-12"} md:mt-0 bg-gray-900 w-full  h-full order-2 md:order-1 p-6 md:p-12 flex flex-col justify-between`}>
           {(currentSlide === 0 && <TicketAndCamp regularTickets={regularTickets} vipTickets={vipTickets} totalTickets={totalTickets} spots={spots} selectedSpot={selectedSpot} updateTickets={updateTickets} selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} selectedCamp={selectedCamp} setSelectedCamp={setSelectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
-            (currentSlide === 1 && <TentOptions updateTents={updateTents} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} greenCamping={greenCamping} setGreenCamping={setGreenCamping} totalSelectedCapacity={totalSelectedCapacity} setTotalSelectedCapacity={setTotalSelectedCapacity} />) ||
-            (currentSlide === 2 && <TicketHolders regularTickets={regularTickets} vipTickets={vipTickets} ticketHolders={ticketHolders} setTicketHolders={setTicketHolders} />) ||
-            (currentSlide === 3 && <Payment email={email} setEmail={setEmail} termsAccepted={termsAccepted} setTermsAccepted={setTermsAccepted} />) ||
-            (currentSlide === 4 && <PaymentStatus paymentSuccess={paymentSuccess} />)}
+            (currentSlide === 1 && <SelectCamp regularTickets={regularTickets} vipTickets={vipTickets} totalTickets={totalTickets} spots={spots} selectedSpot={selectedSpot} updateTickets={updateTickets} selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} selectedCamp={selectedCamp} setSelectedCamp={setSelectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
+            (currentSlide === 2 && <TentOptions updateTents={updateTents} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} greenCamping={greenCamping} setGreenCamping={setGreenCamping} totalSelectedCapacity={totalSelectedCapacity} setTotalSelectedCapacity={setTotalSelectedCapacity} />) ||
+            (currentSlide === 3 && <TicketHolders regularTickets={regularTickets} vipTickets={vipTickets} ticketHolders={ticketHolders} setTicketHolders={setTicketHolders} />) ||
+            (currentSlide === 4 && <Payment email={email} setEmail={setEmail} termsAccepted={termsAccepted} setTermsAccepted={setTermsAccepted} />) ||
+            (currentSlide === 5 && <PaymentStatus paymentSuccess={paymentSuccess} />)}
 
           <BackAndContinueButtons currentSlide={currentSlide} changeSlide={changeSlide} handleContinue={handleContinue} totalTickets={totalTickets} selectedSpot={selectedSpot} ticketHolders={ticketHolders} fulfillReservation={fulfillReservation} dataToSupabase={dataToSupabase} sendMailToCustomer={sendMailToCustomer} email={email} termsAccepted={termsAccepted} />
         </div>
-        {currentSlide !== 4 && (
+        {currentSlide !== 5 && (
           <div className="hidden h-full w-7/12 order-2 md:block">
             <OrderSummary allChoices={allChoices} currentSlide={currentSlide} countdown={countdown} minutes={minutes} seconds={seconds} isPulsing={isPulsing} ticketsReserved={ticketsReserved} totalPrice={totalPrice} regularTickets={regularTickets} vipTickets={vipTickets} selectedSpot={selectedSpot} greenCamping={greenCamping} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} />
           </div>
         )}
-        <div className="order-1 md:hidden">{currentSlide !== 4 && <MobileOrderSummary allChoices={allChoices} currentSlide={currentSlide} countdown={countdown} minutes={minutes} seconds={seconds} isPulsing={isPulsing} ticketsReserved={ticketsReserved} totalPrice={totalPrice} regularTickets={regularTickets} vipTickets={vipTickets} selectedSpot={selectedSpot} greenCamping={greenCamping} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} />}</div>
+        <div className="order-1 md:hidden">{currentSlide !== 5 && <MobileOrderSummary allChoices={allChoices} currentSlide={currentSlide} countdown={countdown} minutes={minutes} seconds={seconds} isPulsing={isPulsing} ticketsReserved={ticketsReserved} totalPrice={totalPrice} regularTickets={regularTickets} vipTickets={vipTickets} selectedSpot={selectedSpot} greenCamping={greenCamping} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} />}</div>
       </section>
     </main>
   );
