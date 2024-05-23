@@ -7,12 +7,13 @@ import Ticket from "../components/Ticket";
 import Vip from "../components/Vip";
 
 export default function Home() {
+  const targetDate = new Date("Jun 26, 2024").getTime();
   return (
     <main>
       <div className="heroflex">
         <Hero></Hero>
         <div className="countd">
-          <CountDown />
+          <CountDown targetDate={targetDate} />
         </div>
       </div>
       <br />
