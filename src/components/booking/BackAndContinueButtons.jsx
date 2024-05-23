@@ -29,7 +29,7 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
 
     const isTermsAccepted = termsAccepted;
 
-    return totalTickets > 0 /* && selectedSpot */ && !(currentSlide === 1 && !isTicketHolderValid) && !(currentSlide === 3 && (!isEmailValid || !isTermsAccepted));
+    return totalTickets > 0 /* && selectedSpot */ && !(currentSlide === 2 && !isTicketHolderValid) && !(currentSlide === 3 && (!isEmailValid || !isTermsAccepted));
   };
 
   const handleButtonClick = () => {

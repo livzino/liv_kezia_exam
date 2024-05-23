@@ -14,7 +14,8 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-social-icons": "^6.16.0"
+    "react-social-icons": "^6.16.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@swc/cli": "^0.3.12",
