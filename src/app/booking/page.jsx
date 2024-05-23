@@ -6,10 +6,10 @@ import TicketAndCamp from "../../components/booking/TicketAndCamp";
 import TicketHolders from "../../components/booking/TicketHolders";
 import Payment from "../../components/booking/Payment";
 import PaymentStatus from "../../components/booking/PaymentStatus";
-import OrderSummary from "../../components/booking/OrderSummery";
+import OrderSummary from "../../components/booking/OrderSummary";
 import MobileOrderSummary from "../../components/booking/MobileOrderSummery";
 import BackAndContinueButtons from "@/components/booking/BackAndContinueButtons";
-/* 
+/*
 import { supabase } from "@/utils/supabaseClient"; */
 import { url } from "/config";
 
