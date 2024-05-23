@@ -153,7 +153,8 @@ function Page() {
     if (ticketsReserved === true) {
       setIsModalOpen(true);
     } else {
-      setSelectedSpot(spot);
+      setSelectedSpot(spot.area); // Update selectedSpot with the area of the spot
+      setSelectedCamp(spot.area); // Update selectedCamp with the area of the spot
     }
   }
 
