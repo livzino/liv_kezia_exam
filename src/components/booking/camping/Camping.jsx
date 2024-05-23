@@ -1,68 +1,61 @@
-// Importerer nødvendige moduler og stilarter
 import styles from "./camping.css";
 import React from "react";
 import CampingArea from "./CampingArea";
 import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid"; // Importerer uuid biblioteket for at generere unikke id'er
+import { v4 as uuidv4 } from "uuid";
+import { url } from "../../../../config";
 
-// Definerer hovedkomponenten Camping
-export default function Camping(props) {
-  // Definerer state for at holde styr på det valgte campingområde
-  const [selectedCamping, setSelectedCamping] = useState({
-    name: "",
-    type: "Camping",
-    id: "",
-  });
+export default function Camping({ regularTickets, vipTickets, totalTickets, spots, setSelectedSpot, updateTickets, setSelectedCamp, selectedCamp, mapHandleModal, reservationId, warningCamp }) {
+  {
+    function chooseSpot(selectedCamp) {
+      const selectedSpotDetails = spots.find((spot) => spot.area === selectedCamp);
 
-  // Definerer state for at holde campingdata, der hentes fra API
-  const [campingData, setCampingData] = useState([]); // Sørger for at initialisere som en tom array
-
-  // useEffect hook for at hente data fra API når komponenten mountes
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        // Henter data fra API
-        const response = await fetch("https://tan-chipped-baboon.glitch.me/available-spots");
-        const json = await response.json();
-        // Opdaterer campingData state med den hentede data
-        setCampingData(json);
-      } catch (error) {
-        console.error("Fejl ved hentning af data: ", error);
+      if (reservationId) {
+        return;
+      } else if (selectedSpotDetails.available === 0 || totalTickets > selectedSpotDetails.available) {
+        console.log(selectedCamp);
+        setSelectedSpot(null);
+        setSelectedCamp(null);
+      } else {
+        setSelectedSpot(selectedCamp);
       }
     }
-    // Kalder fetchData funktionen
-    fetchData();
-  }, []); // Tom array som afhængighed betyder, at denne effekt kun kører én gang efter den første render
 
-  // Tilføjer unikke id'er til hver campingdata element ved hjælp af uuidv4
-  const areas = Array.isArray(campingData)
-    ? campingData.map((data) => {
-        return { ...data, id: uuidv4() };
-      })
-    : [];
+    const [dataCamps, setDataCamps] = useState(null);
+    const [selectedCamp, setSelectedCamp] = useState(null);
 
-  // Logger areas til konsollen for debugging formål
-  console.log(areas);
+    useEffect(() => {
+      const fetchData = async () => {
+        const resCamps = await fetch(`${url}/available-spots`);
+        const dataCamps = await resCamps.json();
+        setDataCamps(dataCamps);
+      };
 
-  // Returnerer JSX til at rendere camping områder
-  return (
-    <div className={styles.Camping}>
-      {areas.map((area) => {
-        return (
-          // Render hver CampingArea komponent med nødvendige props
-          <CampingArea
-            key={area.id} // Nøgleattribut for at hjælpe React med at identificere elementer
-            id={area.id} // Id for campingområdet
-            area={area.area} // Navn på campingområdet
-            spots={area.spots} // Antal pladser i campingområdet
-            available={area.available} // Antal tilgængelige pladser
-            selectedCamping={selectedCamping} // Nuværende valgte campingområde
-            setSelectedCamping={setSelectedCamping} // Funktion til at opdatere det valgte campingområde
-            products={props.products} // Produkter relateret til camping
-            setProducts={props.setProducts} // Funktion til at opdatere produkter
-          />
-        );
-      })}
-    </div>
-  );
+      fetchData();
+    }, []);
+
+    return (
+      <div className={styles.Camping}>
+        {dataCamps &&
+          dataCamps.map((camp) => (
+            <CampingArea
+              key={camp.area}
+              campName={camp.area}
+              available={camp.available}
+              spots={camp.spots}
+              camp={camp}
+              selectedCamp={selectedCamp}
+              onClick={(e) => {
+                setSelectedCamp(camp);
+              }}
+              chooseSpot={chooseSpot}
+              totalTickets={totalTickets}
+              className="aspect-[3/2] w-full md:col-start-2 md:col-end-4 md:aspect-[2.25/1] rounded-2xl overflow-hidden border border-gray-800"
+              mapHandleModal={mapHandleModal}
+              reservationId={reservationId}
+            />
+          ))}
+      </div>
+    );
+  }
 }

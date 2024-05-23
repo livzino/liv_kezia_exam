@@ -1,7 +1,7 @@
 import React from "react";
 import { IconBuildingCircus, IconCash, IconFlag, IconTicket, IconTrees, IconTent, IconVip, IconShoppingCart } from "@tabler/icons-react";
 
-function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice, regularTickets, vipTickets, setSelectedCamping, greenCamping, twoPersonTents, threePersonTents, totalTickets }) {
+function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice, regularTickets, vipTickets, selectedCamp, greenCamping, twoPersonTents, threePersonTents, totalTickets }) {
   return (
     <div className="bg-gray-800 bg-opacity-70 h-24 md:h-full w-full  flex flex-row md:flex-col justify-between items-baseline md:items-start gap-5 order-1 md:order-2 md:border-l border-l-gray-700 border-opacity-60 p-6 md:p-12">
       <div className="space-y-5 hidden md:block">
@@ -49,7 +49,19 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
             </div>
           )}
-
+          {
+            <div className="flex items-center gap-4">
+              <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
+                <IconFlag />
+              </div>
+              <div className="flex flex-col">
+                <p className="text-gray-400">Selected Camp</p>
+                <p className="text-gray-50">
+                  <span>{selectedCamp ? selectedCamp : "No camp selected"}</span>
+                </p>
+              </div>
+            </div>
+          }
           {twoPersonTents > 0 && (
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
@@ -79,19 +91,6 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             </div>
           )}
 
-          {
-            <div className="flex items-center gap-4">
-              <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
-                <IconFlag />
-              </div>
-              <div className="flex flex-col">
-                <p className="text-gray-400">Selected Camp</p>
-                <p className="text-gray-50">
-                  <span>{setSelectedCamping ? setSelectedCamping : "No camp selected"}</span>
-                </p>
-              </div>
-            </div>
-          }
           {greenCamping && (
             <div className="flex items-center gap-4">
               <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
