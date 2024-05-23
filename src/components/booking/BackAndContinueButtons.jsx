@@ -10,7 +10,7 @@ function BackButton({ currentSlide, changeSlide }) {
     );
   }
 
-  if (currentSlide > 0 && currentSlide < 4) {
+  if (currentSlide > 0 && currentSlide < 5) {
     return (
       <button className="text-gray-500 hover:text-gray-400 transition-colors font-medium" onClick={() => changeSlide("prev")}>
         Back
@@ -29,7 +29,7 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
 
     const isTermsAccepted = termsAccepted;
 
-    return totalTickets > 0 && selectedSpot && !(currentSlide === 2 && !isTicketHolderValid) && !(currentSlide === 3 && (!isEmailValid || !isTermsAccepted));
+    return totalTickets > 0 /* && selectedSpot */ && !(currentSlide === 1 && !isTicketHolderValid) && !(currentSlide === 3 && (!isEmailValid || !isTermsAccepted));
   };
 
   const handleButtonClick = () => {
@@ -43,7 +43,7 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
     }
   };
 
-  if (currentSlide === 4) {
+  if (currentSlide === 5) {
     return null;
   }
 

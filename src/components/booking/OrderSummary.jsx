@@ -50,17 +50,6 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             </div>
           )}
 
-          <div className="flex items-center gap-4">
-            <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
-              <IconFlag />
-            </div>
-            <div className="flex flex-col">
-              <p className="text-gray-400">Selected Camp</p>
-              <p className="text-gray-50">
-                <span>{selectedSpot ? selectedSpot : "No camp selected"}</span>
-              </p>
-            </div>
-          </div>
           {twoPersonTents > 0 && (
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
@@ -89,6 +78,20 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
             </div>
           )}
+
+          {
+            <div className="flex items-center gap-4">
+              <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
+                <IconFlag />
+              </div>
+              <div className="flex flex-col">
+                <p className="text-gray-400">Selected Camp</p>
+                <p className="text-gray-50">
+                  <span>{selectedSpot ? selectedSpot : "No camp selected"}</span>
+                </p>
+              </div>
+            </div>
+          }
           {greenCamping && (
             <div className="flex items-center gap-4">
               <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
