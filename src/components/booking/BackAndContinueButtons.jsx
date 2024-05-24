@@ -29,12 +29,12 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
 
     const isTermsAccepted = termsAccepted;
 
-    return totalTickets > 0 > selectedSpot && !(currentSlide === 2 && !isTicketHolderValid) && !(currentSlide === 3 && (!isEmailValid || !isTermsAccepted));
+    return totalTickets > 0 > selectedSpot && !(currentSlide === 3 && !isTicketHolderValid) && !(currentSlide === 4 && (!isEmailValid || !isTermsAccepted));
   };
 
   const handleButtonClick = () => {
     if (isContinueButtonEnabled()) {
-      if (currentSlide === 3) {
+      if (currentSlide === 4) {
         fulfillReservation();
         sendMailToCustomer();
         dataToSupabase();
@@ -49,7 +49,7 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
 
   return (
     <button className={`btn ${isContinueButtonEnabled() ? "bg-primary text-emerald-100" : "btn-disabled"} font-medium text-base rounded py-1 px-4 w-fit border border-emerald-500 hover:bg-emerald-500 hover:border-emerald-400 `} onClick={handleButtonClick}>
-      {currentSlide === 3 ? "Finish Payment" : "Continue"}
+      {currentSlide === 4 ? "Finish Payment" : "Continue"}
     </button>
   );
 }
