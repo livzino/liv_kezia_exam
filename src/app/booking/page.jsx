@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 /* import { sendMail } from "@/utils/sendMail";
-import { TentOptions } from "@/components/booking/TentOptions"; */
+ */ import { TentOptions } from "@/components/booking/TentOptions";
 import TicketAndCamp from "../../components/booking/TicketAndCamp";
 import TicketHolders from "../../components/booking/TicketHolders";
 import Payment from "../../components/booking/Payment";
@@ -11,7 +11,7 @@ import MobileOrderSummary from "../../components/booking/MobileOrderSummery";
 import BackAndContinueButtons from "@/components/booking/BackAndContinueButtons";
 import SelectCamp from "@/components/booking/SelectCamp";
 import Camping from "@/components/booking/camping/Camping";
-/* 
+/*
 import { supabase } from "@/utils/supabaseClient"; */
 import { url } from "/config";
 
