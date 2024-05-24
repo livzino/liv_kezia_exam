@@ -57,7 +57,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               <div className="flex flex-col">
                 <p className="text-gray-400">Selected Camp</p>
                 <p className="text-gray-50">
-                  <span>{selectedCamp ? selectedCamp : "No camp selected"}</span>
+                  <span>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
                 </p>
               </div>
             </div>
