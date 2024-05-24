@@ -3,7 +3,7 @@ import { IconBuildingCircus, IconCash, IconFlag, IconTicket, IconTrees, IconTent
 
 function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice, regularTickets, vipTickets, selectedCamp, greenCamping, twoPersonTents, threePersonTents, totalTickets }) {
   return (
-    <div className="bg-gray-800 bg-opacity-70 h-24 md:h-full w-full  flex flex-row md:flex-col justify-between items-baseline md:items-start gap-5 order-1 md:order-2 md:border-l border-l-gray-700 border-opacity-60 p-6 md:p-12">
+    <div className="bg-gray-800 bg-opacity-70 h-24 md:h-full w-full flex flex-row md:flex-col justify-between items-baseline md:items-start gap-5 order-1 md:order-2 md:border-l border-l-gray-700 border-opacity-60 p-6 md:p-12">
       <div className="space-y-5 hidden md:block">
         <div className="flex gap-2 items-center">
           <IconShoppingCart />
@@ -11,7 +11,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
         </div>
         <div className="space-y-5 font-medium hidden md:block">
           <div className="flex items-center gap-4 tooltip" data-tip="This fee is non-refundable and is used to cover the costs of the festival.">
-            <div className="rounded-lg bg-gray-600 border border-gray-500 p-2 ">
+            <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
               <IconCash />
             </div>
             <div className="flex flex-col text-start">
@@ -23,14 +23,14 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
           </div>
           {regularTickets > 0 && (
             <div className="flex items-center gap-4">
-              <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2 ">
-                <span class="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{regularTickets}</span>
+              <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
+                <span className="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{regularTickets}</span>
                 <IconTicket />
               </div>
               <div className="flex flex-col">
                 <p className="text-gray-400">Regular Tickets</p>
                 <p className="text-gray-50">
-                  <span>799 DKK </span>
+                  <span>799 DKK</span>
                 </p>
               </div>
             </div>
@@ -38,40 +38,38 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
           {vipTickets > 0 && (
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
-                <span class="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{vipTickets}</span>
+                <span className="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{vipTickets}</span>
                 <IconVip />
               </div>
               <div className="flex flex-col">
                 <p className="text-gray-400">VIP Tickets</p>
                 <p className="text-gray-50">
-                  <span>1299 DKK </span>
+                  <span>1299 DKK</span>
                 </p>
               </div>
             </div>
           )}
-          {
-            <div className="flex items-center gap-4">
-              <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
-                <IconFlag />
-              </div>
-              <div className="flex flex-col">
-                <p className="text-gray-400">Selected Camp</p>
-                <p className="text-gray-50">
-                  <span>{selectedCamp ? selectedCamp : "No camp selected"}</span>
-                </p>
-              </div>
+          <div className="flex items-center gap-4">
+            <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
+              <IconFlag />
             </div>
-          }
+            <div className="flex flex-col">
+              <p className="text-gray-400">Selected Camp</p>
+              <p className="text-gray-50">
+                <span>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
+              </p>
+            </div>
+          </div>
           {twoPersonTents > 0 && (
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
-                <span class="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{twoPersonTents}</span>
+                <span className="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{twoPersonTents}</span>
                 <IconTent />
               </div>
               <div className="flex flex-col">
                 <p className="text-gray-400">2 Person Tents</p>
                 <p className="text-gray-50">
-                  <span>299 DKK </span>
+                  <span>299 DKK</span>
                 </p>
               </div>
             </div>
@@ -79,18 +77,17 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
           {threePersonTents > 0 && (
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
-                <span class="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{threePersonTents}</span>
+                <span className="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{threePersonTents}</span>
                 <IconBuildingCircus />
               </div>
               <div className="flex flex-col">
                 <p className="text-gray-400">3 Person Tents</p>
                 <p className="text-gray-50">
-                  <span>399 DKK </span>
+                  <span>399 DKK</span>
                 </p>
               </div>
             </div>
           )}
-
           {greenCamping && (
             <div className="flex items-center gap-4">
               <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
@@ -107,18 +104,16 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
         </div>
       </div>
       <div className="w-full h-fit md:space-y-5">
-        <div className=" divider mt-0 hidden md:flex"></div>
+        <div className="divider mt-0 hidden md:flex"></div>
         {ticketsReserved && (
-          <div className={`hidden md:block font-medium ${isPulsing ? " animate-pulse" : ""}`}>
+          <div className={`hidden md:block font-medium ${isPulsing ? "animate-pulse" : ""}`}>
             <p className="text-gray-400 mb-1">{totalTickets > 1 ? "Tickets Reserved" : "Ticket Reserved"}</p>
-            <span className="countdown border border-gray-700 bg-gray-900 rounded-lg p-2 mr-1">
-              <span style={{ "--value": minutes }}> :</span>
-            </span>
-            <span className="text-gray-400">min</span>
-            <span className="countdown border border-gray-700 bg-gray-900 rounded-lg p-2 mr-1 ml-2">
-              <span style={{ "--value": seconds }}></span>
-            </span>
-            <span className="text-gray-400">sec</span>
+            <div className="flex items-center gap-2">
+              <span className="countdown border border-gray-700 bg-gray-900 rounded-lg p-2">{minutes < 10 ? `0${minutes}` : minutes}</span>
+              <span className="text-gray-400">min</span>
+              <span className="countdown border border-gray-700 bg-gray-900 rounded-lg p-2">{seconds < 10 ? `0${seconds}` : seconds}</span>
+              <span className="text-gray-400">sec</span>
+            </div>
           </div>
         )}
         <div className="font-medium flex flex-row md:flex-col gap-2 md:gap-0">
