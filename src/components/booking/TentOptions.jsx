@@ -41,8 +41,7 @@ const TentOption = ({ tentType, tentPrice, tentCount, updateTents, totalTickets,
             updateTents(tentType, "increase");
           }
         }}
-        disabled={totalSelectedCapacity + (tentType === "two" ? 2 : 3) > totalTickets}
-      >
+        disabled={totalSelectedCapacity + (tentType === "two" ? 2 : 3) > totalTickets}>
         <IconPlus />
       </button>
     </div>
