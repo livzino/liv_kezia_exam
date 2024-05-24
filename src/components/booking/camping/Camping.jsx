@@ -5,16 +5,21 @@ import { v4 as uuidv4 } from "uuid";
 import { url } from "../../../../config";
 
 export default function Camping({ totalTickets, spots, setSelectedSpot, setSelectedCamp, selectedCamp, mapHandleModal, reservationId, setReservationId }) {
-  function chooseSpot(selectedCamp) {
-    const selectedSpotDetails = spots.find((spot) => spot.area === selectedCamp.area);
+  function chooseSpot(camp) {
+    if (!spots) {
+      console.error("Spots data is not available");
+      return;
+    }
+
+    const selectedSpotDetails = spots.find((spot) => spot.area === camp.area);
 
     if (reservationId) {
       return;
-    } else if (selectedSpotDetails.available === 0 || totalTickets > selectedSpotDetails.available) {
+    } else if (!selectedSpotDetails || selectedSpotDetails.available === 0 || totalTickets > selectedSpotDetails.available) {
       setSelectedSpot(null);
       setSelectedCamp(null);
     } else {
-      setSelectedSpot(selectedCamp.area);
+      setSelectedSpot(camp.area);
       const newReservationId = uuidv4(); // Generate a new reservation ID
       setReservationId(newReservationId); // Set the new reservation ID
     }
@@ -35,6 +40,10 @@ export default function Camping({ totalTickets, spots, setSelectedSpot, setSelec
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    console.log("Spots data: ", spots);
+  }, [spots]);
 
   return (
     <div className={styles.Camping}>
