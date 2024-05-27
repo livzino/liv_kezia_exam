@@ -9,16 +9,18 @@ export default function Vip() {
           <Image src="./img/starbbl.svg" width={100} height={100} alt="starbbl" className="star" />
         </div>
         <div className="hrvip"></div>
-        <h2 className="fullweek">
+        <h2 className="fullweek" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
           ADGANG ALLE
           <br /> FESTIVALENS DAGE
         </h2>
 
-        <p>
+        <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
           1.-2.-3.- AUGUST
           <br /> WHATS NOT TO LOVE?
         </p>
-        <h3 className="price">1299 DKK</h3>
+        <h3 className="price" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+          1299 DKK
+        </h3>
       </div>
     </Link>
   );
