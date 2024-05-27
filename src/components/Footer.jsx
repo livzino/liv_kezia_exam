@@ -44,7 +44,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div class="row">INFERNO Copyright © 2021 Inferno - All rights reserved || Designed By: Mahesh</div>
+        <div class="row">CURLYFRIES Copyright © 2024 CurlyFries - All rights reserved || Designed By: Kezia and Liv</div>
       </div>
     </footer>
   );
