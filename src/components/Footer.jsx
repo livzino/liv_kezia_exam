@@ -2,7 +2,7 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
       <div class="footer">
         <div class="row">
           <a href="#">

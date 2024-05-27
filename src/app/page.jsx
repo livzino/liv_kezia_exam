@@ -34,10 +34,17 @@ export default function Home() {
           <Vip />
         </div>
       </div>
-
+      <br />
+      <br />
+      <br />
+      <br />
       <Title title="FESTIVAL OVERVIEW" />
       <br />
       <CampMap />
+      <br />
+      <br />
+      <br />
+      <br />
     </main>
   );
 }
