@@ -5,6 +5,7 @@ import CampMap from "../components/CampMap";
 import Title from "../components/Title";
 import Ticket from "../components/Ticket";
 import Vip from "../components/Vip";
+import Image from "next/image";
 
 export default function Home() {
   const targetDate = new Date("Jun 26, 2024").getTime();
@@ -29,6 +30,7 @@ export default function Home() {
           <Vip />
         </div>
       </div>
+
       <Title title="FESTIVAL OVERVIEW" />
       <br />
       <CampMap />

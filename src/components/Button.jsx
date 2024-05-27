@@ -1,3 +1,9 @@
+import Link from "next/link";
+
 export default function Button(props) {
-  return <button /* href="/booking" */ /* className="btn bg-primary text-gray-50 font-medium text-base rounded py-1 px-4 w-fit border border-emerald-700 hover:bg-emerald-800 hover:border-emerald-700" */ className="btn">{props.text}</button>;
+  return (
+    <Link href="/booking">
+      <button className="text-m bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600  backdrop-blur-md transition-all hover:scale-105 border-4 border-lime-400 rounded-2xl text-lime-400 cursor-pointer h-14 px-12 max-w-s">{props.text}</button>
+    </Link>
+  );
 }
