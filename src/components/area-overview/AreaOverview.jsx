@@ -50,7 +50,7 @@ function AreaOverview() {
         </div>
       </section>
       <div className={styles.mapWrapper}>
-        <Image src="../../img/Vanaheim.svg" alt="Vanaheim" width={50} height={50} className={`${styles.mapImage} ${styles.bob}`} onClick={() => setShowStage("Vanaheim")} />
+        <Image src="../../img/Vanaheim.svg" alt="Vanaheim" width={50} height={50} className={`${styles.mapImage} ${styles.vanmap}`} onClick={() => setShowStage("Vanaheim")} />
         {/*  <Image src="../../img/Svartheim.svg" alt="Svartheim" width={150} height={150} className={`${styles.mapImage} ${styles.lars}`} onClick={() => setShowStage("Svartheim")} />
         <Image src="../../img/Niflheim.svg" alt="Niflheim" width={150} height={150} className={styles.mapImage} onClick={() => setShowStage("Niflheim")} />
         <Image src="../../img/Muspelheim.svg" alt="Muspelheim" width={150} height={150} className={styles.mapImage} onClick={() => setShowStage("Muspelheim")} />
