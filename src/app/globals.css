@@ -39,6 +39,8 @@ body {
   font-weight: 400;
   text-align: center;
   color: #280d7c;
+  font-family: "Syncopate", sans-serif;
+  font-weight: 200;
   margin: 0 15px;
 }
 
@@ -51,6 +53,7 @@ body {
   color: white;
   border-radius: 0.3rem;
   font-size: 36px;
+
 }
 
 p {
