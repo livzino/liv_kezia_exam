@@ -1,8 +1,9 @@
+import React from "react";
 import PlayingTime from "@/components/PlayingTime";
-import Image from "next/image";
-import { url } from "/config";
 import BackBtn from "@/components/BackBtn";
 import Spotify from "@/components/Spotify";
+import Title from "@/components/Title";
+import { url } from "/config";
 
 // Function to generate static paths for each band
 export async function generateStaticParams() {
@@ -42,35 +43,27 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <main className="min-h-screen">
-        <div key={band.slug}>
-          <div className="w-fit h-fit relative">
-            <Image src={band.logo} alt="Random Unsplash Image" width={2000} height={2000} className="w-screen h-[45vh] overflow-hidden object-cover object-center opacity-30 band-image" />
-
-            <div className="container mx-auto max-w-4xl px-6 relative">
-              <h1 className="absolute bottom-6 z-50 text-3xl font-medium">{band.name}</h1>
-              <p className="absolute bottom-6 right-0 text-xs text-gray-400 opacity-50 max-w-xs pr-6 text-right">{band.logoCredits}</p>
-            </div>
+      <main>
+        <div key={band.slug} className="container mx-auto px-4">
+          <Title title={band.name} />
+          <div className="flex justify-between mt-6">
+            <BackBtn />
+            <PlayingTime band={band} />
           </div>
-          <div className="flex flex-col md:flex-row mt-6 md:mt-12 mb-12 max-w-5xl mx-auto container">
-            <div className="space-y-6 md:space-y-12  w-full order-2 md:order-1">
-              <div className="flex md:items-center justify-between gap-12 max-w-4xl mx-auto px-6">
-                <BackBtn />
-                <div className="flex flex-col-reverse self-end md:flex-row gap-6 items-end md:justify-end">
-                  <div className="badge badge-outline border-gray-700 text-gray-300  rounded-lg  h-fit py-1">{band.genre}</div>
-                  <PlayingTime band={band} />
-                </div>
-              </div>
-              <div className="container mx-auto max-w-4xl px-6 space-y-6">
-                <p className="">{band.bio}</p>
-                <ul className="list-none space-y-1">
-                  <span className="mb-1">Members</span>
-                  {band.members.map((member) => (
-                    <li key={member} className="text-sm text-gray-300">
-                      {member}
-                    </li>
-                  ))}
-                </ul>
+          <div className="relative flex mt-6 h-96">
+            <div
+              className="w-1/2 h-full relative z-20 rounded-3xl"
+              style={{
+                backgroundImage: `url(${band.logo})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}></div>
+            <div className="w-1/2 h-full bg-violet-400 border-lime-300 border-4 border-solid p-6 flex items-center relative z-10 -ml-12 rounded-3xl" style={{ paddingLeft: "5rem" }}>
+              <div className="relative z-30 p-6  rounded-3xl">
+                <h3>ABOUT:</h3>
+
+                <p className="mt-4">{band.bio}</p>
               </div>
             </div>
           </div>

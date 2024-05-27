@@ -43,7 +43,7 @@ function PlayingTime({ band }) {
 
   return (
     <Link href={`/schedule`}>
-      <div className={`badge ${stage === "Midgard" ? "bg-amber-600 border-amber-500 text-amber-100" : stage === "Vanaheim" ? "bg-primary border-emerald-600 text-emerald-100" : stage === "Jotunheim" ? "bg-rose-600 border-rose-500 text-rose-100" : "bg-gray-600 border-gray-500 text-gray-100"}  rounded-lg h-fit py-1 md:whitespace-nowrap`}>{schedule ? <p>{schedule}</p> : <p>Loading...</p>}</div>
+      <div className={`badge ${stage === "Midgard" ? "bg-pink-400 border-rose-700 text-indigo-950" : stage === "Vanaheim" ? "bg-purple-500 border-purple-500 text-indigo-950" : stage === "Jotunheim" ? "bg-yellow-400 border-yellow-400 text-indigo-950" : "bg-gray-600 border-gray-500 text-gray-100"}  rounded-lg h-fit py-1 md:whitespace-nowrap`}>{schedule ? <p>{schedule}</p> : <p>Loading...</p>}</div>
     </Link>
   );
 }
