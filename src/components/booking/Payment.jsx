@@ -1,7 +1,7 @@
- import { IconCreditCard } from "@tabler/icons-react"; 
+import { IconCreditCard } from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
-/* import Cards from "react-credit-cards-2";
-import "react-credit-cards-2/dist/es/styles-compiled.css"; */
+import Cards from "react-credit-cards-2";
+import "react-credit-cards-2/dist/es/styles-compiled.css";
 
 const Payment = ({ email, setEmail, termsAccepted, setTermsAccepted }) => {
   const [state, setState] = useState({
