@@ -9,8 +9,7 @@ import PaymentStatus from "../../components/booking/PaymentStatus";
 import OrderSummary from "../../components/booking/OrderSummary";
 import MobileOrderSummary from "../../components/booking/MobileOrderSummery";
 import BackAndContinueButtons from "../../components/booking/BackAndContinueButtons";
-/* import SelectCamp from "@/components/booking/SelectCamp";
- */ import Camping from "@/components/booking/camping/Camping";
+import Camping from "@/components/booking/camping/Camping";
 /*
 import { supabase } from "@/utils/supabaseClient"; */
 import { url } from "/config";
