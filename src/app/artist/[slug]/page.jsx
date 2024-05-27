@@ -61,13 +61,15 @@ export default async function Page({ params }) {
               }}></div>
             <div className="w-1/2 h-full bg-violet-400 border-lime-300 border-4 border-solid p-6 flex items-center relative z-10 -ml-12 rounded-3xl" style={{ paddingLeft: "5rem" }}>
               <div className="relative z-30 p-6  rounded-3xl">
-                <h3>ABOUT:</h3>
+                <h3 className="text-2xl">ABOUT:</h3>
 
                 <p className="mt-4">{band.bio}</p>
               </div>
             </div>
           </div>
-          <Spotify band={band} />
+          <div className="mb-8">
+            <Spotify band={band} />
+          </div>
         </div>
       </main>
     </>

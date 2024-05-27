@@ -8,9 +8,10 @@ export default function BackBtn() {
   };
 
   return (
-    <button onClick={goBack} className="text-m text-lime-400 bg-blue-700 hover:bg-lime-400 hover:text-blue-700  border-4  border-lime-400 rounded-2xl text-lime-400 cursor-pointer  h-14 px-12 max-w-s ">
-      &#8592; Back
+    <button onClick={goBack} className="text-m bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600  backdrop-blur-md transition-all hover:scale-105 border-4 border-lime-400 rounded-2xl text-lime-400 cursor-pointer h-14 px-12 max-w-s">
+      &#8592; BACK
     </button>
+
     /*     <button onClick={goBack} className="text-m bg-gradient-to-r from-[rgba(83, 201, 238, 1)] via-[rgba(76, 151, 236, 1)] to-[rgba(69, 102, 234, 1)] px-2 backdrop-blur-md transition-all hover:bg-[#FF4B4B] hover:bg-none border-4  border-lime-400 rounded-2xl text-lime-400 cursor-pointer  h-14 px-12 max-w-s ">
       &#8592; Back
     </button> */
