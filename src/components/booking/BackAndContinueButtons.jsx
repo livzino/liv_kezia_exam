@@ -29,12 +29,12 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
 
     const isTermsAccepted = termsAccepted;
 
-    return totalTickets > 0 > selectedSpot && !(currentSlide === 3 && !isTicketHolderValid) && !(currentSlide === 4 && (!isEmailValid || !isTermsAccepted));
+    return totalTickets > 0 > selectedSpot && !(currentSlide === 3 && !isTicketHolderValid) && !(currentSlide === 5 && (!isEmailValid || !isTermsAccepted));
   };
 
   const handleButtonClick = () => {
     if (isContinueButtonEnabled()) {
-      if (currentSlide === 4) {
+      if (currentSlide === 5) {
         fulfillReservation();
         sendMailToCustomer();
         dataToSupabase();
