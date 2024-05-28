@@ -50,14 +50,17 @@ function AreaOverview() {
         </div>
       </section>
       <div className={styles.mapWrapper}>
-        <Image src="../../img/Vanaheim.svg" alt="Vanaheim" width={50} height={50} className={`${styles.mapImage} ${styles.vanmap}`} onClick={() => setShowStage("Vanaheim")} />
-        {/*  <Image src="../../img/Svartheim.svg" alt="Svartheim" width={150} height={150} className={`${styles.mapImage} ${styles.lars}`} onClick={() => setShowStage("Svartheim")} />
-        <Image src="../../img/Niflheim.svg" alt="Niflheim" width={150} height={150} className={styles.mapImage} onClick={() => setShowStage("Niflheim")} />
-        <Image src="../../img/Muspelheim.svg" alt="Muspelheim" width={150} height={150} className={styles.mapImage} onClick={() => setShowStage("Muspelheim")} />
-        <Image src="../../img/Midgard.svg" alt="Midgard" width={150} height={150} className={styles.mapImage} onClick={() => setShowStage("Midgard")} />
-        <Image src="../../img/Jotunheim.svg" alt="Jotunheim" width={150} height={150} className={styles.mapImage} onClick={() => setShowStage("Jotunheim")} />
-        <Image src="../../img/Helheim.svg" alt="Helheim" width={150} height={150} className={styles.mapImage} onClick={() => setShowStage("Helheim")} />
-        <Image src="../../img/Alfheim.svg" alt="Alfheim" width={150} height={150} className={styles.mapImage} onClick={() => setShowStage("Alfheim")} /> */}
+        {/* STAGES */}
+        <Image src="../../img/Vanaheim.svg" alt="Vanaheim" width={50} height={50} className={`${styles.mapImage} ${styles.vanaheimImg}`} onClick={() => setShowStage("Vanaheim")} />
+        <Image src="../../img/Midgard.svg" alt="Midgard" width={150} height={150} className={`${styles.mapImage} ${styles.midgardImg}`} onClick={() => setShowStage("Midgard")} />
+        <Image src="../../img/Jotunheim.svg" alt="Jotunheim" width={150} height={150} className={`${styles.mapImage} ${styles.jotunheimImg}`} onClick={() => setShowStage("Jotunheim")} />
+
+        {/* STAGES */}
+        <Image src="../../img/Helheim.svg" alt="Helheim" width={150} height={150} className={`${styles.mapImage} ${styles.helheimImg}`} onClick={() => setShowStage("Helheim")} />
+        <Image src="../../img/Svartheim.svg" alt="Svartheim" width={150} height={150} className={`${styles.mapImage} ${styles.svartheimImg}`} onClick={() => setShowStage("Svartheim")} />
+        <Image src="../../img/Muspelheim.svg" alt="Muspelheim" width={150} height={150} className={`${styles.mapImage} ${styles.muspelheimImg}`} onClick={() => setShowStage("Muspelheim")} />
+        <Image src="../../img/Niflheim.svg" alt="Niflheim" width={150} height={150} className={`${styles.mapImage} ${styles.niflheimImg}`} onClick={() => setShowStage("Niflheim")} />
+        <Image src="../../img/Alfheim.svg" alt="Alfheim" width={150} height={150} className={`${styles.mapImage} ${styles.alfheimImg}`} onClick={() => setShowStage("Alfheim")} />
       </div>
       <section className={styles.legendWrapper}>
         <div>
