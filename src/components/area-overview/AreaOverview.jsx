@@ -1,8 +1,9 @@
-import styles from "./AreaOverview.module.css";
-import { useState } from "react";
-import Image from "next/image"; // Import Image from next.js
+import styles from "./AreaOverview.module.css"; // Importerer CSS-modulet til denne komponent
+import { useState } from "react"; // Importerer useState hook fra React
+import Image from "next/image"; // Importerer Image komponent fra Next.js til optimeret billedhåndtering
 
 function AreaOverview() {
+  // Definerer to state-variabler, showStage og toggleLegend, med initiale værdier som tomme strenge
   const [showStage, setShowStage] = useState("");
   const [toggleLegend, setToggleLegend] = useState("");
 
@@ -11,11 +12,14 @@ function AreaOverview() {
       <section className={styles.labelWrapper}>
         <span
           onClick={() => {
+            // Sætter showStage til en tom streng, når dette span-element klikkes
             setShowStage("");
           }}
+          // Bruger CSS-klasser baseret på, om showStage er en tom streng eller ej
           className={showStage !== "" ? `${styles.show}` : `${styles.hide}`}>
           Hide labels
         </span>
+        {/* Gentagne div-elementer for hvert område, som vises eller skjules baseret på værdien af showStage */}
         <div className={showStage === "Vanaheim" ? `${styles.show} ${styles.vanaheim}` : `${styles.hide} ${styles.vanaheim}`}>
           <h3>Vanaheim</h3>
           <p>Stage</p>
@@ -50,12 +54,12 @@ function AreaOverview() {
         </div>
       </section>
       <div className={styles.mapWrapper}>
-        {/* STAGES */}
+        {/* Billedkomponenter for hvert område, der bruger Next.js's Image komponent til optimering */}
+        {/* Når et billede klikkes, sættes showStage til navnet på det relevante område */}
         <Image src="../../img/Vanaheim.svg" alt="Vanaheim" width={50} height={50} className={`${styles.mapImage} ${styles.vanaheimImg}`} onClick={() => setShowStage("Vanaheim")} />
         <Image src="../../img/Midgard.svg" alt="Midgard" width={150} height={150} className={`${styles.mapImage} ${styles.midgardImg}`} onClick={() => setShowStage("Midgard")} />
         <Image src="../../img/Jotunheim.svg" alt="Jotunheim" width={150} height={150} className={`${styles.mapImage} ${styles.jotunheimImg}`} onClick={() => setShowStage("Jotunheim")} />
 
-        {/* STAGES */}
         <Image src="../../img/Helheim.svg" alt="Helheim" width={150} height={150} className={`${styles.mapImage} ${styles.helheimImg}`} onClick={() => setShowStage("Helheim")} />
         <Image src="../../img/Svartheim.svg" alt="Svartheim" width={150} height={150} className={`${styles.mapImage} ${styles.svartheimImg}`} onClick={() => setShowStage("Svartheim")} />
         <Image src="../../img/Muspelheim.svg" alt="Muspelheim" width={150} height={150} className={`${styles.mapImage} ${styles.muspelheimImg}`} onClick={() => setShowStage("Muspelheim")} />
@@ -66,11 +70,13 @@ function AreaOverview() {
         <div>
           <span
             onClick={() => {
+              // Skifter mellem at vise og skjule legend-sektionen
               toggleLegend === "" ? setToggleLegend("toggled") : setToggleLegend("");
             }}>
             {toggleLegend === "" ? "SHOW" : "HIDE"}
           </span>
         </div>
+        {/* Viser eller skjuler legend baseret på toggleLegend's værdi */}
         <div className={toggleLegend === "toggled" ? styles.showLegend : styles.hideLegend}>
           <ul>
             <li>
@@ -96,4 +102,4 @@ function AreaOverview() {
   );
 }
 
-export default AreaOverview;
+export default AreaOverview; // Eksporterer komponenten til brug andre steder
