@@ -66,7 +66,7 @@ function AreaOverview() {
         <Image src="../../img/Niflheim.svg" alt="Niflheim" width={150} height={150} className={`${styles.mapImage} ${styles.niflheimImg}`} onClick={() => setShowStage("Niflheim")} />
         <Image src="../../img/Alfheim.svg" alt="Alfheim" width={150} height={150} className={`${styles.mapImage} ${styles.alfheimImg}`} onClick={() => setShowStage("Alfheim")} />
       </div>
-      <section className={styles.legendWrapper}>
+      <section className={styles.legendWrapper} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
         <div>
           <span
             onClick={() => {
