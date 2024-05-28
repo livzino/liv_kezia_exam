@@ -56,7 +56,7 @@ export default function Hero() {
             return (
               <React.Fragment key={band.slug}>
                 <li>
-                  <Link prefetch={false} href={`/artist/${band.slug}`} className=" text-pink-500  hover:text-pink-800 transition text-stroke-1 hover:text-stroke-0">
+                  <Link prefetch={false} href={`/artist/${band.slug}`} className=" text-pink-500  hover:text-pink-800 transition text-stroke-1 hover:text-stroke-0" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
                     {band.name}
                   </Link>
                 </li>
@@ -72,7 +72,7 @@ export default function Hero() {
             {pages2.map((band, index, array) => {
               return (
                 <React.Fragment key={band.slug}>
-                  <li className="text-lime-400 hover:text-emerald-900 transition-colors" key={band.slug}>
+                  <li className="text-lime-400 hover:text-emerald-900 transition-colors" key={band.slug} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 500 }}>
                     <Link prefetch={false} href={`/artist/${band.slug}`} key={band.slug}>
                       {band.name}
                     </Link>

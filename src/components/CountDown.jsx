@@ -2,7 +2,6 @@
 
 // Importerer nødvendige hooks fra React-biblioteket
 import { useEffect, useState } from "react";
-import "../app/globals.css";
 
 // Definerer en funktionel komponent kaldet CountDown, som tager en prop 'targetDate'
 export default function CountDown({ targetDate }) {

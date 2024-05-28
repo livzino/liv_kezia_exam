@@ -22,18 +22,29 @@ export default function Home() {
 
       <div className="ticketflex">
         <div>
-          <h2 className="ticketh">REGULAR</h2>
+          <h2 className="ticketh" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+            REGULAR
+          </h2>
           <Ticket />
         </div>
         <div>
-          <h2 className="tickethv">VIP</h2>
+          <h2 className="tickethv" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+            VIP
+          </h2>
           <Vip />
         </div>
       </div>
-
+      <br />
+      <br />
+      <br />
+      <br />
       <Title title="FESTIVAL OVERVIEW" />
       <br />
       <CampMap />
+      <br />
+      <br />
+      <br />
+      <br />
     </main>
   );
 }

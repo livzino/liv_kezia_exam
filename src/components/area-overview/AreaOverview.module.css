@@ -1,0 +1,480 @@
+.mapWrapper {
+  position: relative;
+  /* Ensure the container is relatively positioned */
+  width: 100%;
+  /* Adjust the width of the container as needed */
+  height: 0;
+  /* Start with 0 height */
+  padding-bottom: 100%;
+  /* Set the padding based on width to create a square container */
+}
+
+.mapWrapper img {
+  position: absolute;
+  /* Position each image absolutely within the container */
+  width: 40%;
+  /* Make the image fill its container */
+  height: 40%;
+  /* Make the image fill its container */
+  object-fit: cover;
+  /* Ensure the image covers its container */
+}
+
+.mapImage:hover {
+  filter: brightness(1.3) contrast(0.8);
+  transform: scale(1.1);
+}
+
+.vanaheimImg {
+  top: 19%;
+  left: 110.5%;
+}
+
+.midgardImg {
+  top: 65%;
+  right: 111%;
+}
+
+.jotunheimImg {
+  top: 21%;
+  right: 111%;
+}
+
+.svartheimImg {
+  top: 25%;
+  left: 63%;
+}
+
+.helheimImg {
+  top: 20%;
+  left: 18%;
+}
+
+.muspelheimImg {
+  top: 40%;
+  left: 31%;
+}
+
+.niflheimImg {
+  top: 74%;
+  left: 29%;
+}
+
+.alfheimImg {
+  top: 58%;
+  left: 60%;
+}
+
+
+.hide {
+  display: none;
+  /* Hide elements */
+}
+
+.show {
+  display: block;
+  /* Show elements */
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  cursor: default !important;
+}
+
+.show {
+  opacity: 1;
+  color: #fff;
+  transform: translateY(0);
+}
+
+.componentWrapper {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  flex-direction: column;
+}
+
+.labelWrapper {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  aspect-ratio: 1/1;
+  z-index: 2;
+  /* Ensure labels are above images */
+}
+
+.labelWrapper div {
+  pointer-events: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 16px;
+  position: absolute;
+  transition: 0.3s ease-in;
+  color: #280d7c;
+  background-color: #ffffff;
+  display: flex;
+  filter: drop-shadow(0 4px 8px #000);
+}
+
+.labelWrapper div:before,
+.labelWrapper div:after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: "";
+  aspect-ratio: 6/10;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: drop-shadow(0 0 2px #000);
+}
+
+.labelWrapper div:before {
+  left: -0.9rem;
+}
+
+.labelWrapper div:after {
+  right: -0.9rem;
+  transform: scaleX(-1);
+}
+
+.labelWrapper div h3 {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.labelWrapper div p {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.labelWrapper div p:after {
+  width: 24px;
+  height: 24px;
+  display: block;
+  content: " ";
+  position: absolute;
+  bottom: -6px;
+  background-color: #fff;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+/* label positions */
+.vanaheim {
+  bottom: 68%;
+  left: 111.5%;
+}
+
+.midgard {
+  right: 120.5%;
+  bottom: 21%;
+}
+
+.jotunheim {
+  top: 10%;
+  right: 116.5%;
+}
+
+.muspelheim {
+  bottom: 36%;
+  left: 18%;
+}
+
+.niflheim {
+  bottom: 10%;
+  left: 18%;
+}
+
+.alfheim {
+  bottom: 19%;
+  right: 6%;
+}
+
+.helheim {
+  bottom: 75%;
+  left: 11.5%;
+}
+
+.svartheim {
+  bottom: 61%;
+  left: 62%;
+}
+
+.labelWrapper span {
+  pointer-events: initial;
+  cursor: pointer;
+  color: #DAEE68;
+  top: 92%;
+  left: 111%;
+  position: absolute;
+  border: solid 2px #DAEE68;
+  padding: 4px 32px;
+  transition: 0.3s ease-in-out;
+}
+
+.labelWrapper span:hover {
+  transform: scale(1.1);
+}
+
+.legendWrapper {
+  margin: auto;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.legendWrapper div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  font-size: 16px;
+  color: #fff;
+  padding: 16px 16px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.legendWrapper div:first-of-type {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.legendWrapper div:first-of-type h2 {
+  font-size: 20px;
+  font-family: 'Syncopate', sans-serif;
+  color: #fff;
+}
+
+.legendWrapper div:first-of-type span {
+  color: #DAEE68;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.legendWrapper div:first-of-type span:hover {
+  transform: scale(1.1);
+}
+
+.legendWrapper div h4 {
+  font-weight: bold;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 18px;
+}
+
+.legendWrapper div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legendWrapper ul li {
+  display: flex;
+  gap: 8px;
+}
+
+.legendWrapper ul li:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  border: solid 1px #000;
+}
+
+.showLegend {
+  max-height: 500px;
+}
+
+.hideLegend {
+  max-height: 0;
+  padding: 0 16px !important;
+}
+
+/* legend colorboxes */
+/* stages */
+.legendWrapper div ul:first-of-type li:nth-of-type(1):before {
+  display: none;
+}
+
+.legendWrapper div ul:first-of-type li:nth-of-type(2):before {
+  background-color: #ac38ff;
+}
+
+.legendWrapper div ul:first-of-type li:nth-of-type(3):before {
+  background-color: #ff78b5;
+}
+
+.legendWrapper div ul:first-of-type li:nth-of-type(4):before {
+  background-color: #f6dc19;
+}
+
+/* camping areas */
+.legendWrapper div ul:last-of-type li:nth-of-type(1):before {
+  display: none;
+}
+
+.legendWrapper div ul:last-of-type li:nth-of-type(2):before {
+  background-color: #de2929;
+}
+
+.legendWrapper div ul:last-of-type li:nth-of-type(3):before {
+  background-color: #ff8418;
+}
+
+.legendWrapper div ul:last-of-type li:nth-of-type(4):before {
+  background-color: #17b04f;
+}
+
+.legendWrapper div ul:last-of-type li:nth-of-type(5):before {
+  background-color: #48f3ff;
+}
+
+.legendWrapper div ul:last-of-type li:nth-of-type(6):before {
+  background-color: #cf227e;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+
+  .vanaheimImg,
+  .midgardImg,
+  .jotunheimImg,
+  .svartheimImg,
+  .helheimImg,
+  .muspelheimImg,
+  .niflheimImg,
+  .alfheimImg {
+    width: 45%;
+    height: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .vanaheimImg,
+  .midgardImg,
+  .jotunheimImg,
+  .svartheimImg,
+  .helheimImg,
+  .muspelheimImg,
+  .niflheimImg,
+  .alfheimImg {
+    width: 50%;
+    height: 50%;
+  }
+
+  .labelWrapper span {
+    top: 90%;
+    left: 105%;
+  }
+
+  .legendWrapper div:nth-of-type(2) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .vanaheimImg,
+  .midgardImg,
+  .jotunheimImg,
+  .svartheimImg,
+  .helheimImg,
+  .muspelheimImg,
+  .niflheimImg,
+  .alfheimImg {
+    width: 60%;
+    height: 60%;
+  }
+
+  .labelWrapper div {
+    font-size: 0.9rem;
+  }
+
+  .legendWrapper div:first-of-type h2 {
+    font-size: 18px;
+  }
+
+  .legendWrapper div:first-of-type span {
+    font-size: 16px;
+  }
+
+  .legendWrapper div h4 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .vanaheimImg,
+  .midgardImg,
+  .jotunheimImg,
+  .svartheimImg,
+  .helheimImg,
+  .muspelheimImg,
+  .niflheimImg,
+  .alfheimImg {
+    width: 70%;
+    height: 70%;
+  }
+
+  .labelWrapper span {
+    top: 85%;
+    left: 100%;
+  }
+
+  .labelWrapper div h3 {
+    font-size: 0.8rem;
+  }
+
+  .labelWrapper div p {
+    font-size: 14px;
+  }
+
+  .legendWrapper div:nth-of-type(2) {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .vanaheimImg,
+  .midgardImg,
+  .jotunheimImg,
+  .svartheimImg,
+  .helheimImg,
+  .muspelheimImg,
+  .niflheimImg,
+  .alfheimImg {
+    width: 80%;
+    height: 80%;
+  }
+
+  .labelWrapper span {
+    top: 80%;
+    left: 95%;
+  }
+
+  .labelWrapper div h3 {
+    font-size: 0.7rem;
+  }
+
+  .labelWrapper div p {
+    font-size: 12px;
+  }
+
+  .legendWrapper div:nth-of-type(2) {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
