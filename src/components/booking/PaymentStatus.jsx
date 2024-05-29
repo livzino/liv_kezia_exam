@@ -1,5 +1,5 @@
 import React from "react";
- import { IconCheck } from "@tabler/icons-react"; 
+import { IconHeartCheck } from "@tabler/icons-react";
 import Link from "next/link";
 
 const PaymentStatus = ({ paymentSuccess }) => (
@@ -8,7 +8,7 @@ const PaymentStatus = ({ paymentSuccess }) => (
       <div className="place-self-center flex flex-col gap-4 items-center text-center">
         {paymentSuccess ? (
           <>
-            <IconCheck className="text-emerald-500 animate-bounce" size={64} />
+            <IconHeartCheck className="text-emerald-500 animate-bounce" size={64} />
             <h1 className="font-medium text-lg">Order Complete!</h1>
             <p className="text-gray-400 font-medium max-w-xs">Your order has been placed and you will receive a confirmation email shortly.</p>
             <Link href="/" className="btn btn-primary mt-4 font-medium text-emerald-100 text-base rounded py-1 px-4 w-fit border border-emerald-500 hover:bg-emerald-500 hover:border-emerald-400">
