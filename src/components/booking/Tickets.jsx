@@ -6,7 +6,9 @@ const TicketOption = ({ ticketType, ticketPrice, ticketCount, updateTickets, tot
       <h2 className="text-rose-500" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
         {ticketType}
       </h2>
-      <p>{ticketPrice}</p>
+      <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+        {ticketPrice}
+      </p>
     </div>
 
     <div className="flex items-center w-32 justify-between font-medium ">
@@ -14,7 +16,7 @@ const TicketOption = ({ ticketType, ticketPrice, ticketCount, updateTickets, tot
         <IconMinus color="#BBEE68" />
       </button>
       <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{ticketCount}</p>
-      <button aria-label="Increase ticket count" className={`  font-medium text-base p-2 rounded-full w-fit border transition-colors ${totalTickets >= 8 ? "btn-disabled bg-indigo-900 border-gray-800 stroke-indigo-800" : " text-lime-500 border-lime-500 border-2  hover:scale-105 hover:bg-cyan-400 hover:border-lime-500 "}`} onClick={() => totalTickets < 8 && updateTickets(ticketType.toLowerCase(), "increase")}>
+      <button aria-label="Increase ticket count" className={`font-medium text-base p-2 rounded-full w-fit border transition-colors ${totalTickets >= 8 ? "btn-disabled bg-indigo-900 border-gray-800 stroke-indigo-800" : " text-lime-500 border-lime-500 border-2  hover:scale-105 hover:bg-cyan-400 hover:border-lime-500 "}`} onClick={() => totalTickets < 8 && updateTickets(ticketType.toLowerCase(), "increase")}>
         <IconPlus color="#BBEE68" />
       </button>
     </div>
