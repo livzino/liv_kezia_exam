@@ -6,13 +6,13 @@ export default function ScheduleCard({ scene, ...props }) {
 
   switch (scene) {
     case "Midgard":
-      borderColor = "border-amber-500";
+      borderColor = "border-pink-500";
       break;
     case "Vanaheim":
-      borderColor = "border-emerald-500";
+      borderColor = "border-purple-500";
       break;
     case "Jotunheim":
-      borderColor = "border-pink-500";
+      borderColor = "border-yellow-400";
       break;
     default:
       borderColor = "border-slate-500";
