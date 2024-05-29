@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 /* import { sendMail } from "@/utils/sendMail";
  */ import { TentOptions } from "../../components/booking/TentOptions";
-import TicketAndCamp from "../../components/booking/TicketAndCamp";
+import Tickets from "../../components/booking/Tickets";
 import TicketHolders from "../../components/booking/TicketHolders";
 import Payment from "../../components/booking/Payment";
 import PaymentStatus from "../../components/booking/PaymentStatus";
@@ -358,7 +358,7 @@ function Page() {
 
       <section className="w-full h-full md:h-5/6 bg-violet-800 bg-opacity-50 max-w-7xl flex flex-col md:flex-row md:rounded-xl  border-rose-500 border-4  relative overflow-hidden">
         <div className={` ${ticketsReserved ? "mt-28" : "mt-12"} md:mt-0 bg-violet-800 bg-opacity-50 w-full  h-full order-2 md:order-1 p-6 md:p-12 flex flex-col justify-between`}>
-          {(currentSlide === 0 && <TicketAndCamp regularTickets={regularTickets} vipTickets={vipTickets} totalTickets={totalTickets} spots={spots} selectedSpot={selectedSpot} updateTickets={updateTickets} selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} selectedCamp={selectedCamp} setSelectedCamp={setSelectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
+          {(currentSlide === 0 && <Tickets regularTickets={regularTickets} vipTickets={vipTickets} totalTickets={totalTickets} spots={spots} selectedSpot={selectedSpot} updateTickets={updateTickets} selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} selectedCamp={selectedCamp} setSelectedCamp={setSelectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
             (currentSlide === 1 && <Camping selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} setSelectedCamp={setSelectedCamp} selectedCamp={selectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
             (currentSlide === 2 && <TentOptions updateTents={updateTents} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} greenCamping={greenCamping} setGreenCamping={setGreenCamping} totalSelectedCapacity={totalSelectedCapacity} setTotalSelectedCapacity={setTotalSelectedCapacity} />) ||
             (currentSlide === 3 && <TicketHolders regularTickets={regularTickets} vipTickets={vipTickets} ticketHolders={ticketHolders} setTicketHolders={setTicketHolders} />) ||
