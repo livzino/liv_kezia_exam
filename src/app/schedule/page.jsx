@@ -113,7 +113,7 @@ export default function Schedule() {
             {/* Her er vores knapper som er dynamisk genereret baseret på hver scene og */}
             <button
               style={{ backgroundColor: selectedButton === "Midgard" ? "#ff78b5" : "rgb(17 24 39)" }}
-              className={`btn btn-block px-8 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500`}
+              className={`btn btn-block px-8 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
               onClick={() => {
                 showSelectedScene(`Midgard`);
                 setSelectedButton(`Midgard`);
@@ -122,7 +122,7 @@ export default function Schedule() {
             </button>
             <button
               style={{ backgroundColor: selectedButton === "Vanaheim" ? "#882dc8" : "rgb(17 24 39)" }}
-              className={`btn btn-block px-8 py-2 bg-purple-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-purple-500 " : "border-gray-500"} hover:bg-purple-500 hover:border-purple-500`}
+              className={`btn btn-block px-8 py-2 bg-purple-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-purple-500 " : "border-gray-500"} hover:bg-purple-500 hover:border-purple-500 hover:scale-105`}
               onClick={() => {
                 showSelectedScene(`Vanaheim`);
                 setSelectedButton(`Vanaheim`);
@@ -131,7 +131,7 @@ export default function Schedule() {
             </button>
             <button
               style={{ backgroundColor: selectedButton === "Jotunheim" ? "#f6dc19" : "rgb(17 24 39)" }}
-              className={`btn px-8 py-2 bg-yellow-400 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Jotunheim" ? "border-yellow-400" : "border-gray-500"} hover:bg-yellow-400 hover:border-yellow-400`}
+              className={`btn px-8 py-2 bg-yellow-400 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Jotunheim" ? "border-yellow-400" : "border-gray-500"} hover:bg-yellow-400 hover:border-yellow-400 hover:scale-105`}
               onClick={() => {
                 showSelectedScene(`Jotunheim`);
                 setSelectedButton(`Jotunheim`);
@@ -140,7 +140,7 @@ export default function Schedule() {
             </button>
             <button
               style={{ backgroundColor: selectedButton === "All stages" ? "rgb(17 24 39)" : "rgb(17 24 39)" }}
-              className="btn px-8 py-2 bg-gray-900 text-gray-100 text-xs lg:text-base w-fit rounded border border-gray-500 hover:bg-gray-900 hover:border-gray-300"
+              className="btn px-8 py-2 bg-gray-900 text-gray-100 text-xs lg:text-base w-fit rounded border border-gray-500 hover:bg-gray-900 hover:border-gray-300 hover:scale-105"
               onClick={() => {
                 showSelectedScene(`All stages`);
                 setSelectedButton(`All stages`);
@@ -149,7 +149,7 @@ export default function Schedule() {
             </button>
           </div>
           <div className="flex items-center">
-            <input className="input input-bordered input-sm lg:input-md w-full max-w-xs text-xs px-8 py-2 bg-indigo-900 text-gray-100  lg:text-base  rounded border border-lime-500" type="text" placeholder="Search artist..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} /> {/* Search input field */}
+            <input className="input input-bordered input-sm lg:input-md w-full max-w-xs text-xs px-8 py-2 bg-indigo-900 text-gray-100  lg:text-base  rounded border border-lime-500 hover:scale-105" type="text" placeholder="Search artist..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} /> {/* Search input field */}
             {/* Render the rest of the component, using filteredBands instead of dataBands */}
           </div>
         </div>

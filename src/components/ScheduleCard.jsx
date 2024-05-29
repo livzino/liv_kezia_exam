@@ -20,11 +20,11 @@ export default function ScheduleCard({ scene, ...props }) {
   return (
     <>
       <Link prefetch={false} className="" href={`${props.slug}`}>
-        <div className="card w-36 bg-base-100 image-full cursor-pointer text-center relative ">
+        <div className="card w-36 bg-base-100 image-full cursor-pointer text-center relative hover:scale-105">
           <div>
             <figure className={`h-36  relative border-2 rounded-3xl ${borderColor}`}>
               <div>
-                <Image className="block w-full h-auto rounded-3xl" src={props.src} alt={props.artist} layout="fill" objectFit="cover" />
+                <Image className="block w-full h-auto rounded-3xl " src={props.src} alt={props.artist} layout="fill" objectFit="cover" />
               </div>
               <div className="absolute top-0 left-0 w-full h-full bg-blue-950 bg-opacity-50 flex items-center justify-center rounded-3xl ">
                 <p className="text-xl text-white p-0 text-wrap break-words  ">{props.artist}</p>
