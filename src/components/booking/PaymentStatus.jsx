@@ -8,16 +8,24 @@ const PaymentStatus = ({ paymentSuccess }) => (
       <div className="place-self-center flex flex-col gap-4 items-center text-center">
         {paymentSuccess ? (
           <>
-            <IconHeartCheck className="text-emerald-500 animate-bounce" size={64} />
-            <h1 className="font-medium text-lg">Order Complete!</h1>
-            <p className="text-gray-400 font-medium max-w-xs">Your order has been placed and you will receive a confirmation email shortly.</p>
-            <Link href="/" className="btn btn-primary mt-4 font-medium text-emerald-100 text-base rounded py-1 px-4 w-fit border border-emerald-500 hover:bg-emerald-500 hover:border-emerald-400">
-              Return Home
+            <IconHeartCheck color="#BBEE68" className="animate-bounce" size={64} />
+            <h1 className="font-medium text-3xl" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+              Order Complete!
+            </h1>
+            <p className="text-lime-400 font-medium max-w-xs" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+              Your order has been placed and you will receive a confirmation email shortly.
+            </p>
+            <Link href="/">
+              <button className="text-m bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600  backdrop-blur-md transition-all hover:scale-105 border-4 border-lime-400 rounded-2xl text-lime-400 cursor-pointer h-14 px-12 max-w-s" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+                Return Home
+              </button>
             </Link>
           </>
         ) : (
           <>
-            <h1 className="font-medium text-lg">Loading...</h1>
+            <h1 className="text-rose-500" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+              Loading...
+            </h1>
             <p className="text-gray-400 font-medium max-w-xs"></p>
             {/* <Link
               href="/booking"
