@@ -18,7 +18,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             </div>
             <div className="flex flex-col text-start">
               <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                Booking Fee
+                BOOKING FEE
               </p>
               <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                 <span>99</span> DKK
@@ -33,7 +33,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  Regular Tickets
+                  REGULAR TICKETS
                 </p>
                 <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>799 DKK</span>
@@ -49,7 +49,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  VIP Tickets
+                  VIP TICKETS
                 </p>
                 <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>1299 DKK</span>
@@ -63,10 +63,10 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             </div>
             <div className="flex flex-col">
               <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                Selected Camp
+                SELECTED CAMP
               </p>
               <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-                <span>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
+                <span style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
               </p>
             </div>
           </div>
@@ -78,7 +78,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  2 Person Tents
+                  2 PERSON TENTS
                 </p>
                 <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>299 DKK</span>
@@ -94,7 +94,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  3 Person Tents
+                  3 PERSON TENTS
                 </p>
                 <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>399 DKK</span>
@@ -109,7 +109,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  Green Camping
+                  GREEN CAMPING
                 </p>
                 <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>249 DKK</span>
@@ -144,7 +144,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
         )}
         <div className="font-medium flex flex-row md:flex-col gap-2 md:gap-0">
           <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-            Total
+            TOTAL
           </p>
           <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{totalPrice} DKK</p>
         </div>

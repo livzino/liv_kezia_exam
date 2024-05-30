@@ -1,6 +1,8 @@
 import styles from "./camping.css";
 import React, { useState, useEffect } from "react";
 import CampingArea from "./CampingArea";
+import { IconFlag } from "@tabler/icons-react";
+
 import { v4 as uuidv4 } from "uuid";
 import { url } from "../../../../config";
 
@@ -46,30 +48,39 @@ export default function Camping({ totalTickets, spots, setSelectedSpot, setSelec
   }, [spots]);
 
   return (
-    <div className={styles.Camping}>
-      {dataCamps &&
-        dataCamps.map((camp) => (
-          <CampingArea
-            key={camp.area}
-            campName={camp.area}
-            available={camp.available}
-            spots={camp.spots}
-            camp={camp}
-            selectedCamp={selectedCamp}
-            onClick={() => {
-              if (reservationId) {
-                mapHandleModal();
-              } else {
-                setSelectedCamp(camp);
-                chooseSpot(camp); // Call chooseSpot function here
-              }
-            }}
-            totalTickets={totalTickets}
-            className="aspect-[3/2] w-full md:col-start-2 md:col-end-4 md:aspect-[2.25/1] rounded-2xl overflow-hidden border border-gray-800"
-            mapHandleModal={mapHandleModal}
-            reservationId={reservationId}
-          />
-        ))}
+    <div className="h-full flex flex-col ">
+      <div className="flex gap-2 items-center mt-4 md:mt-0 mb-10">
+        <IconFlag color="#FD1995" size="60" />
+        <h1 className="font-medium text-5xl " style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+          CAMPS
+        </h1>
+      </div>
+
+      <div className={styles.Camping}>
+        {dataCamps &&
+          dataCamps.map((camp) => (
+            <CampingArea
+              key={camp.area}
+              campName={camp.area}
+              available={camp.available}
+              spots={camp.spots}
+              camp={camp}
+              selectedCamp={selectedCamp}
+              onClick={() => {
+                if (reservationId) {
+                  mapHandleModal();
+                } else {
+                  setSelectedCamp(camp);
+                  chooseSpot(camp); // Call chooseSpot function here
+                }
+              }}
+              totalTickets={totalTickets}
+              className="aspect-[3/2] w-full md:col-start-2 md:col-end-4 md:aspect-[2.25/1] rounded-2xl overflow-hidden border border-gray-800"
+              mapHandleModal={mapHandleModal}
+              reservationId={reservationId}
+            />
+          ))}
+      </div>
     </div>
   );
 }
