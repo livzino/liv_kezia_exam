@@ -104,7 +104,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  3 PERSON TENTS // Overskrift for tre-personers telte
+                  3 PERSON TENTS
                 </p>
                 <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>399 DKK</span>
@@ -120,7 +120,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  GREEN CAMPING // Overskrift for grønt campingområde
+                  GREEN CAMPING
                 </p>
                 <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>249 DKK</span>
@@ -140,14 +140,16 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             </p>
             <div className="flex items-center gap-2">
               <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                {minutes < 10 ? `0${minutes}` : minutes} {/* // Antal minutter til reservation udløber */}
+                {minutes < 10 ? `0${minutes}` : minutes} :
               </span>
+              {/* // Antal minutter til reservation udløber */}
               <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
                 min
               </span>
               <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                {seconds < 10 ? `0${seconds}` : seconds} {/* // Antal sekunder til reservation udløber */}
+                {seconds < 10 ? `0${seconds}` : seconds}
               </span>
+              {/* // Antal sekunder til reservation udløber */}
               <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
                 sec
               </span>
@@ -157,9 +159,10 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
         {/* Totalprisen for ordren */}
         <div className="font-medium flex flex-row md:flex-col gap-2 md:gap-0">
           <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-            TOTAL // Overskrift for totalprisen
+            TOTAL
           </p>
-          <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{totalPrice} DKK</p> {/* // Totalprisen i DKK */}
+          <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{totalPrice} DKK</p>
+          {/* // Totalprisen i DKK */}
         </div>
       </div>
     </div>

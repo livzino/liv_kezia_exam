@@ -3,7 +3,7 @@
 import { IconBuildingCircus, IconCash, IconFlag, IconTicket, IconTrees, IconTent, IconVip, IconShoppingCart, IconCaretDown, IconCaretUp } from "@tabler/icons-react";
 import { useState } from "react";
 
-export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice, regularTickets, vipTickets, selectedSpot, greenCamping, twoPersonTents, threePersonTents, totalTickets }) {
+export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice, regularTickets, vipTickets, selectedCamp, greenCamping, twoPersonTents, threePersonTents, totalTickets }) {
   const [showOrderSummary, setShowOrderSummary] = useState(false);
 
   return (
@@ -13,14 +13,15 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
           <p className="text-gray-400">{totalTickets > 1 ? "Tickets Reserved" : "Ticket Reserved"}</p>
           <div>
             <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2  mr-1 ml-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-              <span style={minutes < 10 ? `0${minutes}` : minutes}> :</span>
+              <span style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>{minutes < 10 ? `0${minutes}` : minutes} :</span>
             </span>
             <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
               min
             </span>
             <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 mr-1 ml-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-              <span style={seconds < 10 ? `0${seconds}` : seconds}></span>
+              {seconds < 10 ? `0${seconds}` : seconds}
             </span>
+
             <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
               sec
             </span>
@@ -36,27 +37,31 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
         <p>{totalPrice} DKK</p>
       </div>
       {showOrderSummary && (
-        <div className="bg-gray-700 px-8 py-6 flex flex-col gap-4">
+        <div className="bg-rose-500 px-8 py-6 flex flex-col gap-4 ">
           <div className="flex items-center gap-4">
-            <div className="rounded-lg bg-gray-600 border border-gray-500 p-2 ">
+            <div className="rounded-lg bg-rose-500 border border-rose-700 p-2">
               <IconCash />
             </div>
             <div className="flex flex-col">
-              <p className="text-gray-400">Booking Fee</p>
-              <p className="text-gray-50">
+              <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                BOOKING FEE
+              </p>
+              <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                 <span>99</span> DKK
               </p>
             </div>
           </div>
           {regularTickets > 0 && (
             <div className="flex items-center gap-4">
-              <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2 ">
-                <span class="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{regularTickets}</span>
+              <div className="indicator rounded-lg bg-rose-500 border border-rose-700 p-2 ">
+                <span class="indicator-item bg-indigo-900  badge badge-secondary h-5 w-5 rounded-full text-xs">{regularTickets}</span>
                 <IconTicket />
               </div>
               <div className="flex flex-col">
-                <p className="text-gray-400">Regular Tickets</p>
-                <p className="text-gray-50">
+                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                  REGULAR TICKETS
+                </p>
+                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>799 DKK </span>
                 </p>
               </div>
@@ -64,38 +69,44 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
           )}
           {vipTickets > 0 && (
             <div className="flex items-center gap-4">
-              <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
-                <span class="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{vipTickets}</span>
+              <div className="indicator rounded-lg bg-rose-500 border border-rose-700 p-2 ">
+                <span class="indicator-item bg-indigo-900  badge badge-secondary h-5 w-5 rounded-full text-xs">{vipTickets}</span>
                 <IconVip />
               </div>
               <div className="flex flex-col">
-                <p className="text-gray-400">VIP Tickets</p>
-                <p className="text-gray-50">
+                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                  VIP TICKETS
+                </p>
+                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>1299 DKK </span>
                 </p>
               </div>
             </div>
           )}
           <div className="flex items-center gap-4">
-            <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
+            <div className="rounded-lg bg-rose-500 border border-rose-700 p-2">
               <IconFlag />
             </div>
             <div className="flex flex-col">
-              <p className="text-gray-400">Selected Camp</p>
-              <p className="text-gray-50">
-                <span>{selectedSpot ? selectedSpot : "No camp selected"}</span>
+              <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                SELECTED CAMP
+              </p>
+              <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <span style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
               </p>
             </div>
           </div>
           {twoPersonTents > 0 && (
             <div className="flex items-center gap-4">
-              <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
-                <span class="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{twoPersonTents}</span>
+              <div className="indicator rounded-lg bg-rose-500 border border-rose-700 p-2">
+                <span class="indicator-item bg-indigo-900 badge badge-secondary h-5 w-5 rounded-full text-xs">{twoPersonTents}</span>
                 <IconTent />
               </div>
               <div className="flex flex-col">
-                <p className="text-gray-400">2 Person Tents</p>
-                <p className="text-gray-50">
+                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                  2 Person Tents
+                </p>
+                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>299 DKK </span>
                 </p>
               </div>
@@ -103,13 +114,15 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
           )}
           {threePersonTents > 0 && (
             <div className="flex items-center gap-4">
-              <div className="indicator rounded-lg bg-gray-600 border border-gray-500 p-2">
-                <span class="indicator-item bg-emerald-600 border-emerald-500 badge badge-secondary h-5 w-5 rounded-full text-xs">{threePersonTents}</span>
+              <div className="indicator rounded-lg bg-rose-500 border border-rose-700 p-2">
+                <span class="indicator-item bg-indigo-900 badge badge-secondary h-5 w-5 rounded-full text-xs">{threePersonTents}</span>
                 <IconBuildingCircus />
               </div>
               <div className="flex flex-col">
-                <p className="text-gray-400">3 Person Tents</p>
-                <p className="text-gray-50">
+                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                  3 Person Tents
+                </p>
+                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>399 DKK </span>
                 </p>
               </div>
@@ -117,34 +130,40 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
           )}
           {greenCamping && (
             <div className="flex items-center gap-4">
-              <div className="rounded-lg bg-gray-600 border border-gray-500 p-2">
+              <div className="rounded-lg bg-rose-500 border border-rose-700 p-2">
                 <IconTrees />
               </div>
               <div className="flex flex-col">
-                <p className="text-gray-400">Green Camping</p>
-                <p className="text-gray-50">
+                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                  Green Camping
+                </p>
+                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
                   <span>249 DKK</span>
                 </p>
               </div>
             </div>
           )}
-          <hr className="border-gray-500" />
+          <hr className="border-indigo-900" />
           <div className="flex justify-between">
             <div>
-              <p className="text-lg">Total</p>
-              <p className="text-gray-400 text-sm">Including {Number((totalPrice * 0.2).toFixed(2))} kr in taxes</p>
+              <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                Total
+              </p>
+              <p className="text-white text-sm whitespace-nowrap" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+                Including {Number((totalPrice * 0.2).toFixed(2))} kr in taxes
+              </p>
             </div>
-            <p className="text-lg">{totalPrice} DKK</p>
+            <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{totalPrice} DKK</p>
           </div>
         </div>
       )}
       {ticketsReserved && (
         <div className="text-center">
-          <p className="text-gray-400 text-sm mb-2">Time remaining to complete your order:</p>
+          <p className="text-indigo-900 text-sm mb-2">Time remaining to complete your order:</p>
           <div className="flex justify-center items-center">
-            <span className="text-red-500 font-semibold text-2xl mr-1">{minutes < 10 ? `0${minutes}` : minutes}</span>
-            <span className="text-gray-400 font-semibold text-2xl">:</span>
-            <span className="text-red-500 font-semibold text-2xl ml-1">{seconds < 10 ? `0${seconds}` : seconds}</span>
+            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl mr-1">{minutes < 10 ? `0${minutes}` : minutes}</span>
+            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl">:</span>
+            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl ml-1">{seconds < 10 ? `0${seconds}` : seconds}</span>
           </div>
         </div>
       )}
