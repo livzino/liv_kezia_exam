@@ -69,6 +69,7 @@ function AreaOverview() {
       <section className={styles.legendWrapper} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
         <div>
           <span
+            style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}
             onClick={() => {
               // Skifter mellem at vise og skjule legend-sektionen
               toggleLegend === "" ? setToggleLegend("toggled") : setToggleLegend("");
@@ -78,9 +79,9 @@ function AreaOverview() {
         </div>
         {/* Viser eller skjuler legend baseret på toggleLegend's værdi */}
         <div className={toggleLegend === "toggled" ? styles.showLegend : styles.hideLegend}>
-          <ul>
+          <ul style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
             <li>
-              <h4>STAGES</h4>
+              <h4 style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>STAGES</h4>
             </li>
             <li>Vanaheim</li>
             <li>Midgard</li>
