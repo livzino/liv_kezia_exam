@@ -13,14 +13,14 @@ export default function Home() {
     <main>
       <div className="heroflex">
         <Hero></Hero>
-        <div className="countd">
+        <div className="countd md:flex flex-col justify-center items-center">
           <CountDown targetDate={targetDate} />
         </div>
       </div>
       <br />
       <Title title="TICKETS" />
 
-      <div className="ticketflex">
+      <div className="ticketflex flex flex-col md:flex-row md:justify-center md:items-center">
         <div>
           <h2 className="ticketh" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
             REGULAR

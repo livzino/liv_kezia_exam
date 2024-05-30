@@ -42,6 +42,8 @@ export default function ScheduleCard({ scene, ...props }) {
               {props.time}
             </p>
             <div></div>
+            <p className="text-sm font-light">{scene}</p>
+            <p className="text-2xl font-black">{props.time}</p>d<div></div>
           </div>
         </div>
       </Link>
