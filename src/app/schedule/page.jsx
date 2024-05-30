@@ -2,7 +2,7 @@
 
 import ScheduleCard from "../../components/ScheduleCard";
 import { url } from "/config";
-
+import Title from "../../components/Title";
 import { useEffect, useState } from "react";
 
 // Funktionel komponent for tidsplan-siden
@@ -107,8 +107,8 @@ export default function Schedule() {
 
   return (
     <>
-      <div className="container mx-auto max-w-6xl px-6 mt-40 flex flex-col gap-4">
-        <h2 className="font-sans font-black text-3xl lg:text-5xl">Schedule</h2>
+      <div className="container mx-auto max-w-6xl px-4 mt-10 flex flex-col gap-4">
+        <Title title="SCHEDULE" />
         <h3 className="font-sans font-black text-2xl lg:text-4xl text-stroke-1 text-transparent">Stage</h3>
         <div className="grid grid-cols content-evenly gap-6 lg:flex lg:justify-between">
           <div className="grid grid-cols-2 lg:flex flex-col lg:flex-row gap-2">
@@ -119,7 +119,8 @@ export default function Schedule() {
               onClick={() => {
                 showSelectedScene(`Midgard`);
                 setSelectedButton(`Midgard`);
-              }}>
+              }}
+            >
               Midgard
             </button>
             <button
@@ -128,7 +129,8 @@ export default function Schedule() {
               onClick={() => {
                 showSelectedScene(`Vanaheim`);
                 setSelectedButton(`Vanaheim`);
-              }}>
+              }}
+            >
               Vanaheim
             </button>
             <button
@@ -137,7 +139,8 @@ export default function Schedule() {
               onClick={() => {
                 showSelectedScene(`Jotunheim`);
                 setSelectedButton(`Jotunheim`);
-              }}>
+              }}
+            >
               Jotunheim
             </button>
             <button
@@ -146,7 +149,8 @@ export default function Schedule() {
               onClick={() => {
                 showSelectedScene(`All stages`);
                 setSelectedButton(`All stages`);
-              }}>
+              }}
+            >
               All stages
             </button>
           </div>
