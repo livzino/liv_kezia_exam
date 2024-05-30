@@ -30,19 +30,19 @@ export default function CountDown({ targetDate }) {
     <div className="countdown">
       <div className="time">
         <div>{days}</div>
-        <p>Day</p>
+        <p>DAY</p>
       </div>
       <div className="time">
         <div>{hours}</div>
-        <p>Hour</p>
+        <p>HOUR</p>
       </div>
       <div className="time">
         <div>{minutes}</div>
-        <p>Minute</p>
+        <p>MINUTE</p>
       </div>
       <div className="time">
         <div>{seconds}</div>
-        <p>Second</p>
+        <p>SECOND</p>
       </div>
     </div>
   );

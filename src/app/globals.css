@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -34,15 +34,16 @@ body {
 
 .countdown {
   display: flex;
+  padding-left: 12px;
 }
 
 .countdown .time {
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 700;
   text-align: center;
   color: #280d7c;
   font-family: "Syncopate", sans-serif;
-  font-weight: 200;
+
   margin: 0 15px;
 }
 
@@ -55,7 +56,6 @@ body {
   color: white;
   border-radius: 0.3rem;
   font-size: 36px;
-
 }
 
 p {
@@ -86,8 +86,6 @@ p {
   font-size: 70px;
 }
 
-
-
 .titleline {
   width: 576px;
   height: 3px;
@@ -99,10 +97,10 @@ p {
 }
 
 .countd {
-  margin: auto;
   background: #fd1995;
-  padding-top: 150px;
   padding-bottom: 130px;
+  padding-right: 8px;
+  padding-top: 150px;
 }
 
 /************************* BUTTON ****************************************/
@@ -124,7 +122,6 @@ p {
   border: #daee68 4px solid;
   color: #4c97ec;
 }
-
 
 /************************* FOOTER ****************************************/
 .footer {
@@ -203,7 +200,7 @@ p {
   width: 100%;
 }
 
-.map_container>div {
+.map_container > div {
   flex: 1;
   margin: 16px;
 }
@@ -221,8 +218,8 @@ p {
 }
 
 .img_container {
-  background: #1A0755;
-  border: 3px solid #DAEE68;
+  background: #1a0755;
+  border: 3px solid #daee68;
   border-radius: 40px;
   overflow: hidden;
   /* Ensures the image doesn't overflow the container */
@@ -256,7 +253,7 @@ p {
     padding: 16px 8px;
   }
 
-  .map_container>div {
+  .map_container > div {
     margin: 12px;
   }
 
@@ -275,7 +272,7 @@ p {
     flex-direction: column;
   }
 
-  .map_container>div {
+  .map_container > div {
     margin: 8px 0;
   }
 
@@ -405,12 +402,6 @@ p {
   margin: auto;
 }
 
-.ticketflex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-left: 150px;
-}
-
 .ticketh {
   margin-left: 140px;
   margin-top: 50px;
@@ -445,7 +436,6 @@ p {
   justify-content: center;
   gap: 140px;
 }
-
 
 .bbl_container {
   display: grid;
