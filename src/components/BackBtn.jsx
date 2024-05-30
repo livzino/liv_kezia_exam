@@ -1,21 +1,20 @@
+// Angiver at denne fil skal behandles som en klient-side modul
 "use client";
 
+// Eksporterer BackBtn komponentet som standard
 export default function BackBtn() {
+  // Funktion til at gå tilbage i browserens historik, når knappen klikkes
   const goBack = () => {
+    // Tjekker om vinduet er defineret for at undgå fejl i server-side rendering
     if (typeof window !== "undefined") {
-      window.history.back();
+      window.history.back(); // Går tilbage i browserens historik
     }
   };
 
+  // Returnerer en knap med en onClick begivenhed for at aktivere goBack funktionen
   return (
     <button onClick={goBack} className="text-m bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600  backdrop-blur-md transition-all hover:scale-105 border-4 border-lime-400 rounded-2xl text-lime-400 cursor-pointer h-14 px-12 max-w-s">
       &#8592; BACK
     </button>
-
-    /*     <button onClick={goBack} className="text-m bg-gradient-to-r from-[rgba(83, 201, 238, 1)] via-[rgba(76, 151, 236, 1)] to-[rgba(69, 102, 234, 1)] px-2 backdrop-blur-md transition-all hover:bg-[#FF4B4B] hover:bg-none border-4  border-lime-400 rounded-2xl text-lime-400 cursor-pointer  h-14 px-12 max-w-s ">
-      &#8592; Back
-    </button> */
-    /*     <button className=" border-lime-400 rounded-2xl center z-50 flex h-full cursor-pointer flex-row items-center gap-1.5 bg-gradient-to-r from-[#53c9ee] via-[#4c97ec] to-[#4566ea] px-2 backdrop-blur-md transition-all hover:bg-[#FF4B4B] hover:bg-none xl:gap-2"> &#8592; Back</button>
-     */
   );
 }
