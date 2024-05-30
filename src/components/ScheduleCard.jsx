@@ -34,8 +34,7 @@ export default function ScheduleCard({ scene, ...props }) {
           {/* Showing the scene, timeslot and atistname from database */}
           <div className="card-body py-1 gap-0 text-center self-center">
             <p className="text-sm font-light">{scene}</p>
-            <p className="text-2xl font-black">{props.time}</p>
-            <div></div>
+            <p className="text-2xl font-black">{props.time}</p>d<div></div>
           </div>
         </div>
       </Link>
