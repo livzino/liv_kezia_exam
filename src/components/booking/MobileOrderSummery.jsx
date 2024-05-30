@@ -158,9 +158,9 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
         </div>
       )}
       {ticketsReserved && (
-        <div className="text-center">
+        <div className="text-center bg-rose-500">
           <p className="text-indigo-900 text-sm mb-2">Time remaining to complete your order:</p>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center ">
             <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl mr-1">{minutes < 10 ? `0${minutes}` : minutes}</span>
             <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl">:</span>
             <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl ml-1">{seconds < 10 ? `0${seconds}` : seconds}</span>

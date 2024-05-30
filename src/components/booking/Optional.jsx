@@ -19,10 +19,10 @@ export const Optional = ({ updateTents, twoPersonTents, threePersonTents, totalT
         {/* Container til telte og grøn camping */}
         <div className="place-self-center items-center flex flex-col gap-12">
           {/* Container til telte */}
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-12 ">
             {/* Komponent til at vælge telte for to eller tre personer */}
-            <TentOption tentType="TWO" tentPrice="299 DKK" tentCount={twoPersonTents} updateTents={updateTents} totalTickets={totalTickets} totalSelectedCapacity={totalSelectedCapacity} info="Tent for two ;)" />
-            <TentOption tentType="THREE" tentPrice="399 DKK" tentCount={threePersonTents} updateTents={updateTents} totalTickets={totalTickets} totalSelectedCapacity={totalSelectedCapacity} info="Tent for three, or two if you want more space" />
+            <TentOption tentType="two" tentPrice="299 DKK" tentCount={twoPersonTents} updateTents={updateTents} totalTickets={totalTickets} totalSelectedCapacity={totalSelectedCapacity} info="Tent for two ;)" />
+            <TentOption tentType="three" tentPrice="399 DKK" tentCount={threePersonTents} updateTents={updateTents} totalTickets={totalTickets} totalSelectedCapacity={totalSelectedCapacity} info="Tent for three, or two if you want more space" />
           </div>
           {/* Komponent til at vælge grøn camping */}
           <GreenCampingOption greenCamping={greenCamping} setGreenCamping={setGreenCamping} />

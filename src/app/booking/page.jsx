@@ -31,7 +31,7 @@ function Page() {
   const [spots, setSpots] = useState([]); // State for tilgængelige pladser
   const [selectedSpot, setSelectedSpot] = useState(null); // State for den valgte plads
   const [selectedCamp, setSelectedCamp] = useState(null); // State for det valgte lejrområde
-  const [twoPersonTents, setTwoPersonTents] = useState(0); // State for antallet af telte til to personer
+  const [twoPersonTents, settwoPersonTents] = useState(0); // State for antallet af telte til to personer
   const [threePersonTents, setThreePersonTents] = useState(0); // State for antallet af telte til tre personer
   const [greenCamping, setGreenCamping] = useState(false); // State for valget af grøn camping
   const [totalSelectedCapacity, setTotalSelectedCapacity] = useState(0); // State for den samlede valgte kapacitet
@@ -58,7 +58,7 @@ function Page() {
         numRegular: allChoices.regularTickets,
         numVip: allChoices.vipTickets,
         campArea: allChoices.area,
-        numTwoTent: allChoices.twoPersonTents,
+        numtwoTent: allChoices.twoPersonTents,
         numThreeTent: allChoices.threePersonTents,
         greenCamping: allChoices.greenCamping ? "Yes" : "No",
         totalPrice: allChoices.totalPrice,
@@ -96,12 +96,12 @@ function Page() {
     // Tjek om operationen er gyldig
     if (operation === "increase" && totalSelectedCapacity + tentCapacity <= totalTickets) {
       const newTents = currentTents + 1;
-      const setTents = tentType === "two" ? setTwoPersonTents : setThreePersonTents;
+      const setTents = tentType === "two" ? settwoPersonTents : setThreePersonTents;
       setTents(newTents);
       setTotalSelectedCapacity((prevCapacity) => prevCapacity + tentCapacity);
     } else if (operation === "decrease" && currentTents > 0) {
       const newTents = currentTents - 1;
-      const setTents = tentType === "two" ? setTwoPersonTents : setThreePersonTents;
+      const setTents = tentType === "two" ? settwoPersonTents : setThreePersonTents;
       setTents(newTents);
       setTotalSelectedCapacity((prevCapacity) => prevCapacity - tentCapacity);
     }
