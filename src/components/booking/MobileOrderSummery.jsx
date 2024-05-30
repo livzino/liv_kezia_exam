@@ -12,14 +12,18 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
         <div className={`font-medium flex justify-between items-center mx-8 mt-4 mb-3 text-lg ${isPulsing ? " animate-pulse" : ""}`}>
           <p className="text-gray-400">{totalTickets > 1 ? "Tickets Reserved" : "Ticket Reserved"}</p>
           <div>
-            <span className="countdown border border-gray-600 bg-gray-800 rounded-lg p-2 mr-1 ml-2">
-              <span style={{ "--value": minutes }}> :</span>
+            <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2  mr-1 ml-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+              <span style={minutes < 10 ? `0${minutes}` : minutes}> :</span>
             </span>
-            <span className="text-gray-400">min</span>
-            <span className="countdown border border-gray-600 bg-gray-800 rounded-lg p-2 mr-1 ml-2">
-              <span style={{ "--value": seconds }}></span>
+            <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+              min
             </span>
-            <span className="text-gray-400">sec</span>
+            <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 mr-1 ml-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+              <span style={seconds < 10 ? `0${seconds}` : seconds}></span>
+            </span>
+            <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+              sec
+            </span>
           </div>
         </div>
       )}
