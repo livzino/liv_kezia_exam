@@ -37,7 +37,9 @@ export default function Schedule() {
   if (!dataSchedule || !dataBands) {
     return (
       <>
-        <h2 className="text-xl mb-3">Loading...</h2>
+        <h2 className="text-rose-500" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+          Loading...
+        </h2>
         <div className="flex flex-wrap justify-center"></div>
       </>
     );
