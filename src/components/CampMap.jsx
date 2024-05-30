@@ -1,5 +1,4 @@
 import Button from "../components/Button";
-import Image from "next/image";
 import AreaOverview from "./area-overview/AreaOverview";
 export default function Map() {
   return (
@@ -9,7 +8,6 @@ export default function Map() {
         <Button text="BOOK NOW" />
       </div>
       <div className="img_container">
-        {/*  <Image src="./img/map.svg" width={100} height={100} alt="logo" /> */}
         <AreaOverview />
       </div>
     </section>
