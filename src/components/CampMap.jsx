@@ -1,6 +1,5 @@
 // Importer Button komponentet fra en overordnet komponent mappe
 import Button from "../components/Button";
-// Importer AreaOverview komponentet fra en undermappe
 import AreaOverview from "./area-overview/AreaOverview";
 
 // Definerer og eksporterer Map komponentet som standard
@@ -16,7 +15,6 @@ export default function Map() {
       </div>
       {/* Div med klassen "img_container" til at holde AreaOverview komponentet */}
       <div className="img_container">
-        {/* Inkluderer AreaOverview komponentet */}
         <AreaOverview />
       </div>
     </section>
