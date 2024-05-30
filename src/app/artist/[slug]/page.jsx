@@ -50,7 +50,7 @@ export default async function Page({ params }) {
         {/* Hovedsektionen af siden */}
         <div key={band.slug} className="container mx-auto px-4">
           {/* Titlen på bandet */}
-          <Title title={band.name} />
+          <Title title={band.name} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }} />
           {/* Knapper tilbage og spilletid */}
           <div className="flex justify-between mt-6">
             <BackBtn />
@@ -70,9 +70,13 @@ export default async function Page({ params }) {
             {/* Beskrivelse af bandet */}
             <div className="w-1/2 h-full bg-violet-400 border-lime-300 border-4 border-solid p-6 flex items-center relative z-10 -ml-12 rounded-3xl" style={{ paddingLeft: "5rem" }}>
               <div className="relative z-30 p-6  rounded-3xl">
-                <h3 className="text-2xl">OM:</h3>
+                <h3 className="text-2xl" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                  OM:
+                </h3>
                 {/* Bandets biografi */}
-                <p className="mt-4">{band.bio}</p>
+                <p className="mt-4" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                  {band.bio}
+                </p>
               </div>
             </div>
           </div>

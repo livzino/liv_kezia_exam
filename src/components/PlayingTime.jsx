@@ -51,7 +51,7 @@ function PlayingTime({ band }) {
     // Link komponent der navigerer til schedule siden
     <Link href={`/schedule`}>
       {/* Div der viser spilleplanen med dynamisk styling baseret på scenen */}
-      <div className={`badge ${stage === "Midgard" ? "bg-pink-400 border-rose-700 text-indigo-950" : stage === "Vanaheim" ? "bg-purple-500 border-purple-500 text-indigo-950" : stage === "Jotunheim" ? "bg-yellow-400 border-yellow-400 text-indigo-950" : "bg-gray-600 border-gray-500 text-gray-100"} rounded-lg h-fit py-1 md:whitespace-nowrap`}>
+      <div className={`badge ${stage === "Midgard" ? "bg-pink-400 border-rose-700 text-indigo-950" : stage === "Vanaheim" ? "bg-purple-500 border-purple-500 text-indigo-950" : stage === "Jotunheim" ? "bg-yellow-400 border-yellow-400 text-indigo-950" : "bg-gray-600 border-gray-500 text-gray-100"} rounded-lg h-fit py-1 md:whitespace-nowrap`} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
         {/* Viser spilleplanen eller en loading tekst afhængig af om schedule er sat */}
         {schedule ? <p>{schedule}</p> : <p>Loading...</p>}
       </div>
