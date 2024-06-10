@@ -20,7 +20,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: url(../../public/img/bubblebg.jpg);
+  background: url(../../public/img/bubblebg.webp);
   background-size: cover;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
@@ -200,7 +200,7 @@ p {
   width: 100%;
 }
 
-.map_container > div {
+.map_container>div {
   flex: 1;
   margin: 16px;
 }
@@ -253,7 +253,7 @@ p {
     padding: 16px 8px;
   }
 
-  .map_container > div {
+  .map_container>div {
     margin: 12px;
   }
 
@@ -272,7 +272,7 @@ p {
     flex-direction: column;
   }
 
-  .map_container > div {
+  .map_container>div {
     margin: 8px 0;
   }
 
