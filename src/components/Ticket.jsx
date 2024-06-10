@@ -13,7 +13,7 @@ export default function Ticket() {
         {/* Div til at holde billedet */}
         <div className="imgendag">
           {/* Image komponent der viser et SVG billede med specifikke dimensioner */}
-          <Image src="./img/moonbbl.svg" width={100} height={100} alt="starbbl" className="moon" />
+          <Image src="/./img/moonbbl.webp" width={100} height={100} alt="moonbbl" className="moon" />
         </div>
         {/* En divider, muligvis en horisontal linje */}
         <div className="hrendags"></div>
