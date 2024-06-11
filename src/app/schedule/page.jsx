@@ -240,18 +240,43 @@ export default function Schedule() {
               All stages
             </button> */}
           </div>
-          <div className="flex items-center">
-            <input className="input input-bordered input-sm lg:input-md w-full max-w-xs text-xs px-8 py-2 bg-indigo-900 text-gray-100  lg:text-base  rounded border border-lime-500 hover:scale-105" type="text" placeholder="Search artist..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} /> {/* Search input field */}
-            {/* Render the rest of the component, using filteredBands instead of dataBands */}
-          </div>
-        </div>
-        {/* Her vises tidsplanen for hver ugedag */}
-        <div className="flex flex-row lg:grid lg:grid-cols-7 lg:gap-4 overflow-x-scroll overflow-y-hidden snap-mandatory scrollbar-hide gap-x-6 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10 bg-fuchsia-950 opacity-90" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
-          {/* Her mappes hen over hver dag og scene for at generere en tidsplan */}
-          {["mon", "tue", "wed", "thu", "fri", "sat", "sun"].map((dayName) => (
-            <div key={dayName} className="flex flex-col items-start">
-              <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+          <div className="flex items-center">{/* Render the rest of the component, using filteredBands instead of dataBands */}</div>
 
+          {/* Her vises tidsplanen for hver ugedag */}
+          <div className="mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10 bg-fuchsia-950 opacity-90" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+            <button
+              style={{ backgroundColor: selectedButton === "Midgard" ? "rgb(245, 158, 11)" : "rgb(17 24 39)" }}
+              className={`btn btn-block px-8 py-2 bg-gray-900 text-gray-100 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-amber-500" : "border-gray-500"} hover:bg-gray-900 hover:border-amber-500`}
+              onClick={() => {
+                showSelectedScene(`Midgard`);
+                setSelectedButton(`Midgard`);
+              }}
+            >
+              Midgard
+            </button>
+            <button
+              style={{ backgroundColor: selectedButton === "Vanaheim" ? "rgb(16, 185, 129)" : "rgb(17 24 39)" }}
+              className={`btn px-8 py-2 bg-gray-900 text-gray-100 text-xs lg:text-base w-fit rounded border ${selectedButton === "Vanaheim" ? "border-emerald-500" : "border-gray-500"} hover:bg-gray-900 hover:border-emerald-500`}
+              onClick={() => {
+                showSelectedScene(`Vanaheim`);
+                setSelectedButton(`Vanaheim`);
+              }}
+            >
+              Vanaheim
+            </button>
+            <button
+              style={{ backgroundColor: selectedButton === "Jotunheim" ? "rgb(219, 39, 119)" : "rgb(17 24 39)" }}
+              className={`btn px-8 py-2 bg-gray-900 text-gray-100 text-xs lg:text-base w-fit rounded border ${selectedButton === "Jotunheim" ? "border-pink-600" : "border-gray-500"} hover:bg-gray-900 hover:border-pink-600`}
+              onClick={() => {
+                showSelectedScene(`Jotunheim`);
+                setSelectedButton(`Jotunheim`);
+              }}
+            >
+              Jotunheim
+            </button>
+
+            {/* Her mappes hen over hver dag og scene for at generere en tidsplan */}
+            <div className="flex flex-row items-center lg:grid lg:grid-cols-3  overflow-x-scroll overflow-y-hidden snap-mandatory scrollbar-hide scrollbar-hide">
               {/* Her mappes over hver handling udfra dag og scene */}
               {Object.keys(dataSchedule).map((scene) => {
                 const schedule = dataSchedule[scene][dayName];
@@ -282,7 +307,7 @@ export default function Schedule() {
                 });
               })}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </>
