@@ -11,7 +11,7 @@ export default function Title(props) {
         {props.title} {/* Indsæt titlen fra props */}
       </div>
       {/* En div med klassen "titleline", muligvis en dekorativ linje under titlen */}
-      <div className="titleline w-80 md:w-96 h-1 bg-rose-600"></div>
+      <div className=" w-80 md:w-96 h-1 bg-rose-600"></div>
     </div>
   );
 }

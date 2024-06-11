@@ -21,20 +21,17 @@ export default function Home() {
         </div>
       </div>
       <Title title="TICKETS" /> {/* Vis titlen "TICKETS" */}
-      <div className="ticketflex flex flex-col md:flex-row md:justify-center md:items-center">
-        {" "}
+      <div className=" flex flex-col md:flex-row md:gap-60 md:justify-center md:items-center mx-4">
         {/* Div til billetkomponenter */}
         <div>
-          <h2 className="ticketh" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-            {" "}
+          <h2 className="text-center text-indigo-800 text-3xl m-8" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
             {/* Overskrift for almindelige billetter */}
             REGULAR
           </h2>
           <Ticket /> {/* Vis Ticket-komponenten for almindelige billetter */}
         </div>
         <div>
-          <h2 className="tickethv" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-            {" "}
+          <h2 className="text-center text-indigo-800 text-3xl m-8" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
             {/* Overskrift for VIP-billetter */}
             VIP
           </h2>
