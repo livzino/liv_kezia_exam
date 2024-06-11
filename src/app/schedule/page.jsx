@@ -112,19 +112,20 @@ export default function Schedule() {
         <Title title="SCHEDULE" />
 
         <div className="grid grid-cols content-evenly gap-6 lg:flex lg:justify-between">
-          <div className="grid grid-cols-2 lg:flex flex-col lg:flex-row gap-2">
+          <div className="grid grid-cols-2 lg:flex flex-row lg:flex-row gap-2">
             <button
               style={{ backgroundColor: selectedDay === "mon" ? "#ff78b5" : "rgb(17 24 39)" }}
-              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "mon" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
+              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedDay === "mon" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
               onClick={() => {
                 showSelectedDay("mon");
-                setSelectedButton(`mon`);
+                setSelectedButton("mon");
               }}
             >
-              <div key={dayName} className="flex flex-col items-start">
-                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              <div key={dayNames} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames["mon"].toUpperCase()}</h2>
               </div>
             </button>
+
             <button
               style={{ backgroundColor: selectedButton === "tue" ? "#ff78b5" : "rgb(17 24 39)" }}
               className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
@@ -133,8 +134,8 @@ export default function Schedule() {
                 setSelectedButton(`tue`);
               }}
             >
-              <div key={dayName} className="flex flex-col items-start">
-                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              <div key={dayNames} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames["tue"].toUpperCase()}</h2>
               </div>
             </button>
             <button
@@ -145,8 +146,8 @@ export default function Schedule() {
                 setSelectedButton(`wed`);
               }}
             >
-              <div key={dayName} className="flex flex-col items-start">
-                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              <div key={dayNames} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames["wed"].toUpperCase()}</h2>
               </div>
             </button>
             <button
@@ -157,8 +158,8 @@ export default function Schedule() {
                 setSelectedButton(`thu`);
               }}
             >
-              <div key={dayName} className="flex flex-col items-start">
-                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              <div key={dayNames} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames["thu"].toUpperCase()}</h2>
               </div>
             </button>
             <button
@@ -169,8 +170,8 @@ export default function Schedule() {
                 setSelectedButton(`fri`);
               }}
             >
-              <div key={dayName} className="flex flex-col items-start">
-                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              <div key={dayNames} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames["fri"].toUpperCase()}</h2>
               </div>
             </button>
             <button
@@ -181,8 +182,8 @@ export default function Schedule() {
                 setSelectedButton(`sat`);
               }}
             >
-              <div key={dayName} className="flex flex-col items-start">
-                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              <div key={dayNames} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames["sat"].toUpperCase()}</h2>
               </div>
             </button>
             <button
@@ -193,8 +194,8 @@ export default function Schedule() {
                 setSelectedButton(`sun`);
               }}
             >
-              <div key={dayName} className="flex flex-col items-start">
-                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              <div key={dayNames} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames["sun"].toUpperCase()}</h2>
               </div>
             </button>
             {/* Her er vores knapper som er dynamisk genereret baseret på hver scene og */}
@@ -228,7 +229,7 @@ export default function Schedule() {
             >
               Jotunheim
             </button> */}
-            <button
+            {/*     <button
               style={{ backgroundColor: selectedButton === "All stages" ? "rgb(17 24 39)" : "rgb(17 24 39)" }}
               className="btn px-8 py-2 bg-gray-900 text-gray-100 text-xs lg:text-base w-fit rounded border border-gray-500 hover:bg-gray-900 hover:border-gray-300 hover:scale-105"
               onClick={() => {
@@ -237,7 +238,7 @@ export default function Schedule() {
               }}
             >
               All stages
-            </button>
+            </button> */}
           </div>
           <div className="flex items-center">
             <input className="input input-bordered input-sm lg:input-md w-full max-w-xs text-xs px-8 py-2 bg-indigo-900 text-gray-100  lg:text-base  rounded border border-lime-500 hover:scale-105" type="text" placeholder="Search artist..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} /> {/* Search input field */}
