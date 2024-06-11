@@ -13,6 +13,7 @@ export default function Schedule() {
   const [selectedScene, showSelectedScene] = useState("All stages");
   const [selectedButton, setSelectedButton] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedDay, showSelectedDay] = useState("All stages");
 
   // Her bruges useEffect hook til at hente data fra API'et og sætte det i state-variablerne
   useEffect(() => {
@@ -109,11 +110,95 @@ export default function Schedule() {
     <>
       <div className="container mx-auto max-w-6xl px-4 mt-10 flex flex-col gap-4">
         <Title title="SCHEDULE" />
-        <h3 className="font-sans font-black text-2xl lg:text-4xl text-stroke-1 text-transparent">Stage</h3>
+
         <div className="grid grid-cols content-evenly gap-6 lg:flex lg:justify-between">
           <div className="grid grid-cols-2 lg:flex flex-col lg:flex-row gap-2">
-            {/* Her er vores knapper som er dynamisk genereret baseret på hver scene og */}
             <button
+              style={{ backgroundColor: selectedDay === "mon" ? "#ff78b5" : "rgb(17 24 39)" }}
+              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "mon" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
+              onClick={() => {
+                showSelectedDay("mon");
+                setSelectedButton(`mon`);
+              }}
+            >
+              <div key={dayName} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              </div>
+            </button>
+            <button
+              style={{ backgroundColor: selectedButton === "tue" ? "#ff78b5" : "rgb(17 24 39)" }}
+              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
+              onClick={() => {
+                showSelectedDay("tue");
+                setSelectedButton(`tue`);
+              }}
+            >
+              <div key={dayName} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              </div>
+            </button>
+            <button
+              style={{ backgroundColor: selectedButton === "tue" ? "#ff78b5" : "rgb(17 24 39)" }}
+              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
+              onClick={() => {
+                showSelectedDay("wed");
+                setSelectedButton(`wed`);
+              }}
+            >
+              <div key={dayName} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              </div>
+            </button>
+            <button
+              style={{ backgroundColor: selectedButton === "tue" ? "#ff78b5" : "rgb(17 24 39)" }}
+              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
+              onClick={() => {
+                showSelectedDay("thu");
+                setSelectedButton(`thu`);
+              }}
+            >
+              <div key={dayName} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              </div>
+            </button>
+            <button
+              style={{ backgroundColor: selectedButton === "tue" ? "#ff78b5" : "rgb(17 24 39)" }}
+              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
+              onClick={() => {
+                showSelectedDay("fri");
+                setSelectedButton(`fri`);
+              }}
+            >
+              <div key={dayName} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              </div>
+            </button>
+            <button
+              style={{ backgroundColor: selectedButton === "tue" ? "#ff78b5" : "rgb(17 24 39)" }}
+              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
+              onClick={() => {
+                showSelectedDay("sat");
+                setSelectedButton(`sat`);
+              }}
+            >
+              <div key={dayName} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              </div>
+            </button>
+            <button
+              style={{ backgroundColor: selectedButton === "tue" ? "#ff78b5" : "rgb(17 24 39)" }}
+              className={`btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
+              onClick={() => {
+                showSelectedDay("sun");
+                setSelectedButton(`sun`);
+              }}
+            >
+              <div key={dayName} className="flex flex-col items-start">
+                <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
+              </div>
+            </button>
+            {/* Her er vores knapper som er dynamisk genereret baseret på hver scene og */}
+            {/*    <button
               style={{ backgroundColor: selectedButton === "Midgard" ? "#ff78b5" : "rgb(17 24 39)" }}
               className={`btn btn-block px-8 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border ${selectedButton === "Midgard" ? "border-pink-500 " : "border-gray-500"} hover:bg-pink-500 hover:border-pink-500 hover:scale-105`}
               onClick={() => {
@@ -142,7 +227,7 @@ export default function Schedule() {
               }}
             >
               Jotunheim
-            </button>
+            </button> */}
             <button
               style={{ backgroundColor: selectedButton === "All stages" ? "rgb(17 24 39)" : "rgb(17 24 39)" }}
               className="btn px-8 py-2 bg-gray-900 text-gray-100 text-xs lg:text-base w-fit rounded border border-gray-500 hover:bg-gray-900 hover:border-gray-300 hover:scale-105"
@@ -172,7 +257,7 @@ export default function Schedule() {
                 const filteredSchedule = schedule.filter((slot) => slot.act.toLowerCase().includes(searchTerm.toLowerCase()));
                 return filteredSchedule.map((slot, index) => {
                   // Condition for at filtrere handlinger udfra en valgt scene, så hvis der er valgt en scene, så vises kun handlinger fra den scene og hvis der ikke er valgt en scene, så vises alle handlinger fra alle scener.
-                  if (selectedScene !== "All stages" && scene !== selectedScene) {
+                  if (selectedDay !== "All stages" && dayName !== selectedDay) {
                     return null;
                   }
 
