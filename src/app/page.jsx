@@ -12,14 +12,12 @@ export default function Home() {
   const targetDate = new Date("Jun 26, 2024").getTime(); // Definer måldatoen for nedtællingen
   return (
     <main>
-      <div className="heroflex">
-        {" "}
-        {/* Div til layout */}
-        <Hero></Hero> {/* Vis Hero-komponenten */}
-        <div className="countd md:flex flex-col justify-center items-center">
-          {" "}
-          {/* Div til nedtællingskomponent */}
-          <CountDown targetDate={targetDate} /> {/* Vis CountDown-komponenten med måldatoen */}
+      <div className="md:flex md:flex-row">
+        <div className="md:w-1/2 md:h-full md:transition md:duration-300 md:ease-in-out">
+          <Hero />
+        </div>
+        <div className="md:w-1/2 md:h-full md:transition md:duration-300 md:ease-in-out">
+          <CountDown targetDate={targetDate} />
         </div>
       </div>
       <br />

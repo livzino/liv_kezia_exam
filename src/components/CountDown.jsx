@@ -27,21 +27,21 @@ export default function CountDown({ targetDate }) {
   }, [targetDate]);
 
   return (
-    <div className="countdown">
-      <div className="time">
-        <div>{days}</div>
+    <div className="flex flex-row p-24 justify-center items-center bg-rose-600 h-full flex-grow">
+      <div className="text-lg font-bold text-center ">
+        <div className="bg-violet-950 place-items-center text-white rounded-md text-3xl p-2 ">{days}</div>
         <p>DAY</p>
       </div>
-      <div className="time">
-        <div>{hours}</div>
+      <div className="text-lg font-bold text-center mx-4">
+        <div className="bg-violet-950  place-items-center text-white rounded-md text-3xl p-2">{hours}</div>
         <p>HOUR</p>
       </div>
-      <div className="time">
-        <div>{minutes}</div>
+      <div className="text-lg font-bold text-center mx-4">
+        <div className="bg-violet-950  place-items-center text-white rounded-md text-3xl p-2">{minutes}</div>
         <p>MINUTE</p>
       </div>
-      <div className="time">
-        <div>{seconds}</div>
+      <div className="text-lg font-bold text-center mx-4">
+        <div className="bg-violet-950 place-items-center text-white rounded-md text-3xl p-2">{seconds}</div>
         <p>SECOND</p>
       </div>
     </div>
