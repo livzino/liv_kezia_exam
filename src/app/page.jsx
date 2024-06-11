@@ -16,7 +16,7 @@ export default function Home() {
         <div className="md:w-1/2 md:h-full md:transition md:duration-300 md:ease-in-out">
           <Hero />
         </div>
-        <div className="md:w-1/2 md:h-full md:transition md:duration-300 md:ease-in-out">
+        <div className="md:w-1/2  md:transition md:duration-300 md:ease-in-out">
           <CountDown targetDate={targetDate} />
         </div>
       </div>
