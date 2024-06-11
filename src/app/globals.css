@@ -32,7 +32,7 @@ body {
   }
 }
 
-.countdown {
+/* .countdown {
   display: flex;
   padding-left: 12px;
 }
@@ -48,8 +48,7 @@ body {
 }
 
 .countdown .time div {
-  width: 150px;
-  height: 100px;
+
   background-color: #280d7c;
   display: grid;
   place-items: center;
@@ -60,7 +59,7 @@ body {
 
 p {
   margin: 6px;
-}
+} */
 
 /* OVERSKRIFTER */
 .titlecontainer {
@@ -92,9 +91,9 @@ p {
   background-color: #fd1995;
 }
 
-.heroflex {
+/* .heroflex {
   display: flex;
-}
+} */
 
 .countd {
   background: #fd1995;
