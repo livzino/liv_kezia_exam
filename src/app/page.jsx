@@ -12,7 +12,7 @@ export default function Home() {
   const targetDate = new Date("Jun 26, 2024").getTime(); // Definer måldatoen for nedtællingen
   return (
     <main>
-      <div className="md:flex md:flex-row">
+      <div className="md:flex md:flex-row mb-8">
         <div className="md:w-1/2 md:h-full md:transition md:duration-300 md:ease-in-out">
           <Hero />
         </div>
@@ -20,7 +20,6 @@ export default function Home() {
           <CountDown targetDate={targetDate} />
         </div>
       </div>
-      <br />
       <Title title="TICKETS" /> {/* Vis titlen "TICKETS" */}
       <div className="ticketflex flex flex-col md:flex-row md:justify-center md:items-center">
         {" "}

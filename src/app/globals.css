@@ -32,42 +32,13 @@ body {
   }
 }
 
-/* .countdown {
-  display: flex;
-  padding-left: 12px;
-}
-
-.countdown .time {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
-  color: #280d7c;
-  font-family: "Syncopate", sans-serif;
-
-  margin: 0 15px;
-}
-
-.countdown .time div {
-
-  background-color: #280d7c;
-  display: grid;
-  place-items: center;
-  color: white;
-  border-radius: 0.3rem;
-  font-size: 36px;
-}
-
-p {
-  margin: 6px;
-} */
-
 /* OVERSKRIFTER */
-.titlecontainer {
+/* .titlecontainer {
   display: flex;
   align-items: center;
   text-align: center;
-  flex-direction: column;
-}
+  flex-direction: column;} */
+
 
 .titletxt {
   color: #dbc2cf;
@@ -85,22 +56,14 @@ p {
   font-size: 70px;
 }
 
-.titleline {
+/* .titleline {
   width: 576px;
   height: 3px;
   background-color: #fd1995;
-}
-
-/* .heroflex {
-  display: flex;
 } */
 
-.countd {
-  background: #fd1995;
-  padding-bottom: 130px;
-  padding-right: 8px;
-  padding-top: 150px;
-}
+
+
 
 /************************* BUTTON ****************************************/
 .btn {
