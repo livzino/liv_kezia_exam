@@ -39,7 +39,7 @@ function PlayingTime({ band }) {
 
             // Hvis tidsrummet findes, opdaterer schedule og stage state
             if (timeSlot) {
-              setSchedule(`Playing on ${stage}, ${fullDay} at ${timeSlot.start}`);
+              setSchedule(` ${stage}, ${fullDay} ${timeSlot.start}`);
               setStage(stage);
             }
           }
@@ -51,7 +51,8 @@ function PlayingTime({ band }) {
     // Link komponent der navigerer til schedule siden
     <Link href={`/schedule`}>
       {/* Div der viser spilleplanen med dynamisk styling baseret på scenen */}
-      <div className={`badge ${stage === "Midgard" ? "bg-pink-400 border-rose-700 text-indigo-950" : stage === "Vanaheim" ? "bg-purple-500 border-purple-500 text-indigo-950" : stage === "Jotunheim" ? "bg-yellow-400 border-yellow-400 text-indigo-950" : "bg-gray-600 border-gray-500 text-gray-100"} rounded-lg h-fit py-1 md:whitespace-nowrap`} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+      <div className={` ${stage === "Midgard" ? "bg-pink-400 border-rose-700 text-indigo-950" : stage === "Vanaheim" ? "bg-purple-500 border-purple-500 text-indigo-950" : stage === "Jotunheim" ? "bg-yellow-400 border-yellow-400 text-indigo-950" : "bg-gray-600 border-gray-500 text-gray-100"} rounded-lg h-fit p-1 sm:p-4 md:p-6 text-lg`}>
+        {" "}
         {/* Viser spilleplanen eller en loading tekst afhængig af om schedule er sat */}
         {schedule ? <p>{schedule}</p> : <p>Loading...</p>}
       </div>

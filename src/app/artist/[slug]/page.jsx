@@ -53,7 +53,7 @@ export default async function Page({ params }) {
           {/* Titlen på bandet */}
           <Title title={band.name} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }} />
           {/* Knapper tilbage og spilletid */}
-          <div className="flex justify-between mt-6">
+          <div className="flex justify-between m-4 gap-4">
             <BackBtn />
             <PlayingTime band={band} />
           </div>
@@ -63,7 +63,8 @@ export default async function Page({ params }) {
               <Image src={band.logo} width={700} height={700} alt="band" class="h-full w-full object-cover rounded-3xl" />
             </div>
             <div class="relative z-20 md:-ml-12 bg-violet-400 border-lime-300 border-4 border-solid p-6 rounded-3xl text-white">
-              <h2 class="uppercase tracking-tight text-3xl text-lime-300 font-bold">OM:</h2> <p class="mt-2">{band.bio}</p>
+              <h2 class="uppercase tracking-tight text-3xl text-lime-300 ">OM:</h2>
+              <p class="mt-2">{band.bio}</p>
             </div>
           </div>
 
