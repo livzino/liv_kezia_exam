@@ -21,7 +21,7 @@ export default function Home() {
         </div>
       </div>
       <Title title="TICKETS" /> {/* Vis titlen "TICKETS" */}
-      <div className=" flex flex-col md:flex-row md:gap-60 md:justify-center md:items-center mx-4">
+      <div className=" flex flex-col md:flex-row md:gap-60 md:justify-center md:items-center mx-4 mb-8">
         {/* Div til billetkomponenter */}
         <div>
           <h2 className="text-center text-indigo-800 text-3xl m-8" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
@@ -38,11 +38,7 @@ export default function Home() {
           <Vip /> {/* Vis Vip-komponenten for VIP-billetter */}
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <Title title="FESTIVAL OVERVIEW" /> {/* Vis titlen "FESTIVAL OVERVIEW" */}
+      <Title title="MAP" /> {/* Vis titlen "MAP" */}
       <br />
       <CampMap /> {/* Vis CampMap-komponenten for festivaloversigten */}
       <br />

@@ -1,12 +1,9 @@
 .mapWrapper {
   position: relative;
-  /* Ensure the container is relatively positioned */
   width: 100%;
-  /* Adjust the width of the container as needed */
   height: 0;
-  /* Start with 0 height */
   padding-bottom: 100%;
-  /* Set the padding based on width to create a square container */
+
 }
 
 .mapWrapper img {
@@ -103,6 +100,7 @@
   pointer-events: none;
   aspect-ratio: 1/1;
   z-index: 2;
+  white-space: nowrap;
   /* Ensure labels are above images */
 }
 
@@ -193,30 +191,31 @@
 }
 
 .alfheim {
-  bottom: 19%;
-  right: 6%;
+  bottom: 24%;
+  left: 49%;
 }
 
 .helheim {
-  bottom: 75%;
-  left: 11.5%;
+  bottom: 72%;
+  left: 3.5%;
 }
 
 .svartheim {
   bottom: 61%;
-  left: 62%;
+  left: 50%;
 }
 
 .labelWrapper span {
   pointer-events: initial;
   cursor: pointer;
   color: #DAEE68;
-  top: 92%;
-  left: 111%;
+  top: 42%;
+  left: 80%;
   position: absolute;
   border: solid 2px #DAEE68;
-  padding: 4px 32px;
+  padding: 4px 5px;
   transition: 0.3s ease-in-out;
+  font-size: 1rem;
 }
 
 .labelWrapper span:hover {
@@ -461,8 +460,8 @@
   }
 
   .labelWrapper span {
-    top: 80%;
-    left: 95%;
+    top: 100%;
+    left: 73%;
   }
 
   .labelWrapper div h3 {
