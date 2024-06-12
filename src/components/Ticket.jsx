@@ -15,9 +15,9 @@ export default function Ticket() {
             <Image src="/./img/moonbbl.webp" width={100} height={100} alt="moonbbl" className="moon" />
           </div>
           {/* En divider, muligvis en horisontal linje */}
-          <div className="w-64 h-0.5 lg:w-80 xl:w-100 bg-cyan-400 m-auto "></div>
+          <div className="w-44 h-0.5 lg:w-80 xl:w-100 bg-cyan-400 m-auto "></div>
           {/* Overskrift med specifik skrifttype og vægt */}
-          <h2 className="font-bold mb-5 tracking-wide lg:text-3xl xl:text-4xl" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+          <h2 className="font-bold mb-5 tracking-wide lg:text-3xl xl:text-2xl" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
             ENDAGSBILLET
           </h2>
 
