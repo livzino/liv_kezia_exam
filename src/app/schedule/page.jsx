@@ -52,6 +52,10 @@ export default function Schedule() {
   const dayName = days[date.getDay()];
   const currentHour = date.getHours();
 
+  const sc = ["mid", "van", "jot"];
+  const wheres = "mid";
+  const currentwhere = 23;
+
   // Manual override for testing, comment out when done:
   // const dayName = "fri";
   //   const currentHour = 23;
@@ -104,6 +108,11 @@ export default function Schedule() {
     fri: "Friday",
     sat: "Saturday",
     sun: "Sunday",
+  };
+  const where = {
+    mid: "Midgaard",
+    van: "Vanaheim",
+    jot: "Jotunheim",
   };
 
   return (
@@ -248,8 +257,9 @@ export default function Schedule() {
         {/* Her vises tidsplanen for hver ugedag */}
         <div className="flex flex-row lg:grid lg:grid-cols-7 lg:gap-4 overflow-x-scroll overflow-y-hidden snap-mandatory scrollbar-hide gap-x-6 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10 bg-fuchsia-950 opacity-90" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
           {/* Her mappes hen over hver dag og scene for at generere en tidsplan */}
-          {["mon", "tue", "wed", "thu", "fri", "sat", "sun"].map((dayName) => (
-            <div key={dayName} className="flex flex-col items-start">
+          {["mid", "van", "jot"].map((where) => (
+            <div key={where} className="flex flex-col items-start">
+              <h2>Midgard</h2>
               <h2 className="text-xl font-bold mb-3 text-center">{dayNames[dayName].toUpperCase()}</h2>
 
               {/* Her mappes over hver handling udfra dag og scene */}
