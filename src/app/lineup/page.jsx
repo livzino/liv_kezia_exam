@@ -6,7 +6,7 @@ import Artist from "../../components/Artist";
 export default function Lineup() {
   return (
     <main>
-      <Title title="FEATURED ARTISTS" />
+      <Title title="HEADLINERS" />
       <BandBbl />
       <Title title="LINEUP" />
       <br />

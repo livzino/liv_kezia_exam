@@ -46,29 +46,10 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 70px;
+
 }
 
 
-/************************* BUTTON ****************************************/
-/* .btn {
-  background: linear-gradient(90deg, #53c9ee 0%, #4c97ec 35%, #4566ea 100%);
-  border-radius: 20px;
-  border: #daee68 4px solid;
-  color: #daee68;
-  cursor: pointer;
-  font-weight: 700;
-  font-display: swap;
-  height: 3.5rem;
-  padding: 0 2rem;
-  max-width: 10rem;
-}
-
-.btn:hover {
-  background: #daee68;
-  border: #daee68 4px solid;
-  color: #4c97ec;
-} */
 
 /************************* FOOTER ****************************************/
 .footer {
@@ -134,195 +115,12 @@ body {
   }
 }
 
-/************************* MAP OVERVIEW ****************************************/
-
-/* .map_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32px 16px;
-  margin: 16px 0;
-  background: #f42d87b1;
-  width: 100%;
-} */
-
-/* .map_container>div {
-  flex: 1;
-  margin: 16px;
-}
-
-.map_container p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 16px;
-} */
-
-/* .map_container img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
-.img_container {
-  background: #1a0755;
-  border: 3px solid #daee68;
-  border-radius: 40px;
-  overflow: hidden;
-}
-
-.img_container img {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  }
-*/
-
-
-/* Media Queries for Responsiveness */
-/* @media (max-width: 1200px) {
-  .map_container {
-    padding: 24px 12px;
-  }
-
-  .map_container p {
-    font-size: 16px;
-  }
-
-  .map_container img {
-    max-width: 350px;
-  }
-} */
-
-/* @media (max-width: 992px) {
-  .map_container {
-    padding: 16px 8px;
-  }
-
-  .map_container>div {
-    margin: 12px;
-  }
-
-  .map_container p {
-    font-size: 15px;
-  }
-
-  .map_container img {
-    max-width: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .map_container {
-    padding: 12px 8px;
-    flex-direction: column;
-  }
-
-  .map_container>div {
-    margin: 8px 0;
-  }
-
-  .map_container p {
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-
-  .map_container img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .map_container {
-    padding: 8px 4px;
-  }
-
-  .map_container p {
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
-
-  .map_container img {
-    max-width: 100%;
-  }
-
-  .img_container {
-    border-radius: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .map_container {
-    padding: 4px 2px;
-  }
-
-  .map_container p {
-    font-size: 12px;
-    margin-bottom: 6px;
-  }
-
-  .img_container {
-    border-radius: 20px;
-  }
-} */
 
 /******************************** ticket ************************************/
-
-/* .ticket {
-  background: rgb(58 26 160);
-  text-align: center;
-  width: 450px;
-  height: 550px;
-  border: solid 6px rgb(30 218 230);
-  border-radius: 60px;
-  margin: 30px;
-  font-family: "Syncopate", sans-serif;
-  letter-spacing: 2px;
-  font-size: 30px;
-  color: rgb(30 218 230);
-  font-weight: lighter;
-  display: grid;
-  grid-template-columns: 1fr;
-} */
-
-/* .hrendags {
-  width: 300px;
-  height: 2px;
-  background: rgb(30 218 230);
-  margin: auto;
-} */
-
-/* .endags {
-  font-weight: 700;
-  margin-bottom: 5px;
-  letter-spacing: 4px;
-}
-*/
-.fullweek {
-  font-weight: 700;
-  margin-bottom: 5px;
-  letter-spacing: 4px;
-}
-
-/* .pris {
-  font-weight: 250;
-  font-size: 50px;
-  margin-top: 10px;
-} */
-
-
-
 .vip {
   background: linear-gradient(rgb(72 27 165), rgb(72 27 165)) padding-box, linear-gradient(to top, rgb(244 45 133), rgb(218 238 104)) border-box;
   border: 4px solid transparent;
 
-}
-
-.price {
-  font-weight: 250;
-  font-size: 50px;
-  margin-top: 10px;
 }
 
 .hrvip {
@@ -336,51 +134,10 @@ body {
   margin: auto;
 }
 
-/* .ticketh {
-  margin-left: 140px;
-  margin-top: 50px;
-  font-size: 50px;
-  color: #280d7c;
-  font-weight: 600;
-} */
-
 .tickethv {
   margin-left: 210px;
   margin-top: 50px;
   font-size: 50px;
   color: #280d7c;
   font-weight: 600;
-}
-
-/******************************** BUBBLES ************************************/
-.twobbl {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.threebbl {
-  display: flex;
-  justify-content: center;
-  gap: 120px;
-}
-
-.bbl_last {
-  display: flex;
-  justify-content: center;
-  gap: 140px;
-}
-
-.bbl_container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-}
-
-.bbl1 {
-  grid-column: 3/3;
-}
-
-.bbl2 {
-  grid-column: 4/4;
 }

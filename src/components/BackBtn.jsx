@@ -13,7 +13,7 @@ export default function BackBtn() {
 
   // Returnerer en knap med en onClick begivenhed for at aktivere goBack funktionen
   return (
-    <button onClick={goBack} className="text-m bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600  backdrop-blur-md transition-all hover:scale-105 border-4 border-lime-400 rounded-2xl text-lime-400 cursor-pointer h-14 px-12 max-w-s" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+    <button onClick={goBack} className="text-m bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600  backdrop-blur-md transition-all hover:scale-105 border-4 border-lime-400 rounded-2xl text-lime-400 cursor-pointer h-14 px-12 max-w-s mb-8" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
       &#8592; BACK
     </button>
   );

@@ -5,6 +5,7 @@ import BackBtn from "@/components/BackBtn";
 import Spotify from "@/components/Spotify";
 import Title from "@/components/Title";
 import { url } from "/config";
+import Image from "next/image";
 
 // Funktion til at generere statiske stier for hver band
 export async function generateStaticParams() {
@@ -57,31 +58,17 @@ export default async function Page({ params }) {
             <PlayingTime band={band} />
           </div>
           {/* Sektionen om bandet */}
-          <div className="relative flex mt-6 h-96">
-            {/* Visning af bandets logo */}
-            <div
-              className="w-1/2 h-full relative z-20 rounded-3xl"
-              style={{
-                backgroundImage: `url(${band.logo})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}></div>
-            {/* Beskrivelse af bandet */}
-            <div className="w-1/2 h-full bg-violet-400 border-lime-300 border-4 border-solid p-6 flex items-center relative z-10 -ml-12 rounded-3xl" style={{ paddingLeft: "5rem" }}>
-              <div className="relative z-30 p-6  rounded-3xl">
-                <h3 className="text-2xl" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  OM:
-                </h3>
-                {/* Bandets biografi */}
-                <p className="mt-4" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-                  {band.bio}
-                </p>
-              </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="relative z-10">
+              <Image src={band.logo} width={700} height={700} alt="band" class="h-full w-full object-cover rounded-3xl" />
+            </div>
+            <div class="relative z-20 md:-ml-12 bg-violet-400 border-lime-300 border-4 border-solid p-6 rounded-3xl text-white">
+              <h2 class="uppercase tracking-tight text-3xl text-lime-300 font-bold">OM:</h2> <p class="mt-2">{band.bio}</p>
             </div>
           </div>
+
           {/* Spotify-afspilleren */}
-          <div className="mb-8">
+          <div className="mt-6  mb-8 lg:mt-12">
             <Spotify band={band} />
           </div>
         </div>
