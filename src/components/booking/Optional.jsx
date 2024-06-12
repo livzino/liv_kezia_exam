@@ -12,7 +12,7 @@ export const Optional = ({ updateTents, twoPersonTents, threePersonTents, totalT
       <div className="flex gap-2 items-center mt-4 md:mt-0">
         <IconTent color="#FD1995" size="60" />
         <h1 className="font-medium text-5xl " style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-          OPTIONAL ADD-ONS
+          OPTIONAL
         </h1>
       </div>
       <div className="flex flex-col justify-evenly flex-grow">

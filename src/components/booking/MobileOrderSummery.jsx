@@ -8,26 +8,6 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
 
   return (
     <div className="absolute w-full z-50">
-      {ticketsReserved && (
-        <div className={`font-medium flex justify-between items-center mx-8 mt-4 mb-3 text-lg ${isPulsing ? " animate-pulse" : ""}`}>
-          <p className="text-gray-400">{totalTickets > 1 ? "Tickets Reserved" : "Ticket Reserved"}</p>
-          <div>
-            <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2  mr-1 ml-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-              <span style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>{minutes < 10 ? `0${minutes}` : minutes} :</span>
-            </span>
-            <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-              min
-            </span>
-            <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 mr-1 ml-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-              {seconds < 10 ? `0${seconds}` : seconds}
-            </span>
-
-            <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-              sec
-            </span>
-          </div>
-        </div>
-      )}
       <div className="flex items-center justify-between px-8 py-4 bg-rose-500 ">
         <div onClick={() => setShowOrderSummary(!showOrderSummary)} className="flex gap-2">
           <IconShoppingCart size={35} />
@@ -158,12 +138,13 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
         </div>
       )}
       {ticketsReserved && (
-        <div className="text-center bg-rose-500">
+        <div className="text-center bg-rose-500 py-2 ">
+          <hr className="border-indigo-900" />
           <p className="text-indigo-900 text-sm mb-2">Time remaining to complete your order:</p>
-          <div className="flex justify-center items-center ">
-            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl mr-1">{minutes < 10 ? `0${minutes}` : minutes}</span>
-            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl">:</span>
-            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2 text-2xl ml-1">{seconds < 10 ? `0${seconds}` : seconds}</span>
+          <div className="flex justify-center items-center">
+            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg text-xl mr-1">{minutes < 10 ? `0${minutes}` : minutes}</span>
+            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg text-xl">:</span>
+            <span className="text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg text-xl ml-1">{seconds < 10 ? `0${seconds}` : seconds}</span>
           </div>
         </div>
       )}
