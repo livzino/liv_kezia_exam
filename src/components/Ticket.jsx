@@ -17,20 +17,16 @@ export default function Ticket() {
           {/* En divider, muligvis en horisontal linje */}
           <div className="w-44 h-0.5 lg:w-80 xl:w-100 bg-cyan-400 m-auto "></div>
           {/* Overskrift med specifik skrifttype og vægt */}
-          <h2 className="font-bold mb-5 tracking-wide lg:text-3xl xl:text-2xl" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-            ENDAGSBILLET
-          </h2>
+          <h2 className="mb-5 tracking-wide lg:text-3xl xl:text-2xl font-bold">ENDAGSBILLET</h2>
 
           {/* Paragraf med billetbeskrivelse og dato, også med specifik skrifttype og vægt */}
-          <p className="lg:text-xl xl:text-2xl" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+          <p className="lg:text-xl xl:text-2xl font-extralight">
             BILLETTEN GIVER
             <br /> ADGANG TORSDAG
             <br /> D 1.AUGUST
           </p>
           {/* Prisoverskrift med specifik skrifttype og vægt */}
-          <h3 className="text-cyan-400 lg:text-5xl xl:text-6xl" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-            799 DKK
-          </h3>
+          <h3 className="text-cyan-400 lg:text-5xl xl:text-6xl font-extralight">799 DKK</h3>
         </div>
       </div>
     </Link>
