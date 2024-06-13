@@ -1,7 +1,6 @@
 "use client"; // Bruger klientindstillingen for dette modul
 import { useState, useEffect } from "react"; // Importér useState og useEffect hooks fra React
-/* import { sendMail } from "@/utils/sendMail";
- */ import { Optional } from "../../components/booking/Optional"; // Importér Optional-komponenten
+import { Optional } from "../../components/booking/Optional"; // Importér Optional-komponenten
 import Tickets from "../../components/booking/Tickets"; // Importér Tickets-komponenten
 import TicketHolders from "../../components/booking/TicketHolders"; // Importér TicketHolders-komponenten
 import Payment from "../../components/booking/Payment"; // Importér Payment-komponenten
@@ -10,8 +9,7 @@ import OrderSummary from "../../components/booking/OrderSummary"; // Importér O
 import MobileOrderSummary from "../../components/booking/MobileOrderSummery"; // Importér MobileOrderSummary-komponenten
 import BackAndContinueButtons from "../../components/booking/BackAndContinueButtons"; // Importér BackAndContinueButtons-komponenten
 import Camping from "@/components/booking/camping/Camping"; // Importér Camping-komponenten
-/*
-import { supabase } from "@/utils/supabaseClient"; */ // Importér supabase-klienten
+
 import { url } from "/config"; // Importér URL'en fra konfigurationsfilen
 
 // Funktionen Page repræsenterer bookingsiden
@@ -47,28 +45,6 @@ function Page() {
   const [isModalOpen, setIsModalOpen] = useState(false); // State for åbning af modal
   const [paymentSuccess, setPaymentSuccess] = useState(false); // State for betalingsstatus
   const [warningCamp, setWarningCamp] = useState(false); // State for advarslen om lejrplads
-
-  // Funktion til afsendelse af e-mail med ordrebekræftelse til kunden
-  function sendMailToCustomer() {
-    // Mailindhold
-    const mailContent = {
-      to: email,
-      subject: "Order confirmation",
-      html: {
-        numRegular: allChoices.regularTickets,
-        numVip: allChoices.vipTickets,
-        campArea: allChoices.area,
-        numtwoTent: allChoices.twoPersonTents,
-        numThreeTent: allChoices.threePersonTents,
-        greenCamping: allChoices.greenCamping ? "Yes" : "No",
-        totalPrice: allChoices.totalPrice,
-      },
-      company: "FooFest - Festival",
-      sendername: "FooFest Customer Support",
-      template: "foofest-template",
-    };
-    sendMail(mailContent); // Send mail med indholdet
-  }
 
   // Funktion til opdatering af antallet af billetter
   const updateTickets = (type, operation) => {
@@ -367,7 +343,7 @@ function Page() {
             (currentSlide === 4 && <Payment email={email} setEmail={setEmail} termsAccepted={termsAccepted} setTermsAccepted={setTermsAccepted} />) ||
             (currentSlide === 5 && <PaymentStatus paymentSuccess={paymentSuccess} />)}
           {/* Knapper til at gå tilbage og fortsætte i bookingprocessen */}
-          <BackAndContinueButtons currentSlide={currentSlide} changeSlide={changeSlide} handleContinue={handleContinue} totalTickets={totalTickets} selectedSpot={selectedSpot} ticketHolders={ticketHolders} fulfillReservation={fulfillReservation} dataToSupabase={dataToSupabase} sendMailToCustomer={sendMailToCustomer} email={email} termsAccepted={termsAccepted} selectedCamp={selectedCamp} />
+          <BackAndContinueButtons currentSlide={currentSlide} changeSlide={changeSlide} handleContinue={handleContinue} totalTickets={totalTickets} selectedSpot={selectedSpot} ticketHolders={ticketHolders} fulfillReservation={fulfillReservation} dataToSupabase={dataToSupabase} email={email} termsAccepted={termsAccepted} selectedCamp={selectedCamp} />
         </div>
         {currentSlide !== 5 && (
           <div className="hidden h-full w-7/12 order-2 md:block">

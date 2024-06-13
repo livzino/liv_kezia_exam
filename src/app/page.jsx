@@ -24,7 +24,7 @@ export default function Home() {
       <div className=" flex flex-col md:flex-row md:gap-60 md:justify-center md:items-center mx-4 mb-8">
         {/* Div til billetkomponenter */}
         <div>
-          <h2 className="text-center text-indigo-800 text-3xl m-8" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+          <h2 className="text-center text-indigo-800 text-3xl m-8 " style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
             {/* Overskrift for almindelige billetter */}
             REGULAR
           </h2>
