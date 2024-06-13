@@ -41,9 +41,7 @@ export default function Schedule() {
   if (!dataSchedule || !dataBands) {
     return (
       <>
-        <h2 className="text-rose-500" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-          Loading...
-        </h2>
+        <h2 className="text-rose-500">Loading...</h2>
         <div className="flex flex-wrap justify-center"></div>
       </>
     );
@@ -141,7 +139,7 @@ export default function Schedule() {
         </div>
       </div>
 
-      <div className="flex flex-row lg:grid lg:grid-cols-3 lg:gap-4 overflow-x-scroll overflow-y-hidden snap-mandatory scrollbar-hide gap-x-6 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10 bg-fuchsia-950 opacity-90" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+      <div className="flex flex-row lg:grid lg:grid-cols-3 lg:gap-4 overflow-x-scroll overflow-y-hidden snap-mandatory scrollbar-hide gap-x-6 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10 bg-fuchsia-950 opacity-90">
         {/* Her mappes hen over hver scene for at generere en tidsplan */}
         {["Midgard", "Vanaheim", "Jotunheim"].map((scene) => (
           <div key={scene} className="flex flex-col items-start">

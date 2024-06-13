@@ -11,9 +11,7 @@ export const Optional = ({ updateTents, twoPersonTents, threePersonTents, totalT
       {/* Overskrift og ikon for valgfrie tilføjelser */}
       <div className="flex gap-2 items-center mt-4 md:mt-0">
         <IconTent color="#FD1995" size="60" />
-        <h1 className="font-medium text-5xl " style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-          OPTIONAL
-        </h1>
+        <h1 className="font-medium text-5xl ">OPTIONAL</h1>
       </div>
       <div className="flex flex-col justify-evenly flex-grow">
         {/* Container til telte og grøn camping */}
@@ -38,12 +36,8 @@ const TentOption = ({ tentType, tentPrice, tentCount, updateTents, totalTickets,
   <div className="flex items-center gap-5 justify-end">
     {/* Container til at vise telttypen og prisen */}
     <div className="font-medium text-end tooltip tooltip-top" data-tip={info}>
-      <h2 className="text-rose-500 whitespace-nowrap" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-        {tentType.charAt(0).toUpperCase() + tentType.slice(1)} PERSON TENT
-      </h2>
-      <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-        {tentPrice}
-      </p>
+      <h2 className="text-rose-500 whitespace-nowrap">{tentType.charAt(0).toUpperCase() + tentType.slice(1)} PERSON TENT</h2>
+      <p className="text-white">{tentPrice}</p>
     </div>
     {/* Container med knapper til at justere antallet af telte */}
     <div className="flex items-center w-32 justify-between font-medium">
@@ -75,9 +69,7 @@ const GreenCampingOption = ({ greenCamping, setGreenCamping }) => (
     {/* Overskrift og ikon for grøn camping */}
     <div className="font-medium text-center space-y-1 mb-8">
       <div className="flex gap-2 items-center mt-4 md:mt-0">
-        <h2 className="text-primary text-xl md:text45xl font-bold" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-          GREEN CAMPING
-        </h2>
+        <h2 className="text-primary text-xl md:text45xl font-bold">GREEN CAMPING</h2>
         <IconTent color="#B3EE68" size="45" />
       </div>
     </div>
@@ -88,7 +80,7 @@ const GreenCampingOption = ({ greenCamping, setGreenCamping }) => (
         <IconInfoCircle color="#FD1995" size="30" />
       </div>
       {/* Viser prisen for grøn camping */}
-      <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>249 DKK</p>
+      <p>249 DKK</p>
       {/* Checkbox til at vælge grøn camping */}
       <label htmlFor="toggle" className="flex items-center cursor-pointer ml-4">
         <input type="checkbox" id="toggle" className="sr-only peer" onChange={() => setGreenCamping(!greenCamping)} checked={greenCamping} />

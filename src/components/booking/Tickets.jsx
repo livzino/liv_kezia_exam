@@ -7,12 +7,8 @@ const TicketOption = ({ ticketType, ticketPrice, ticketCount, updateTickets, tot
   <div className="flex items-center gap-6 w-fit justify-between ">
     {/* Container til billettype og pris med en tooltip for yderligere information */}
     <div className="font-medium text-end  w-24 tooltip tooltip-top" data-tip={info}>
-      <h2 className="text-rose-500" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-        {ticketType}
-      </h2>
-      <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-        {ticketPrice}
-      </p>
+      <h2 className="text-rose-500">{ticketType}</h2>
+      <p className="text-white">{ticketPrice}</p>
     </div>
 
     {/* Container med knapper til at øge eller mindske antallet af billetter */}
@@ -22,7 +18,7 @@ const TicketOption = ({ ticketType, ticketPrice, ticketCount, updateTickets, tot
         <IconMinus color="#BBEE68" />
       </button>
       {/* Viser det aktuelle antal af billetter */}
-      <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{ticketCount}</p>
+      <p>{ticketCount}</p>
       {/* Knappen til at øge antallet af billetter */}
       <button aria-label="Increase ticket count" className={`font-medium text-base p-2 rounded-full w-fit border transition-colors ${totalTickets >= 8 ? "btn-disabled bg-indigo-900 border-gray-800 stroke-indigo-800" : " text-lime-500 border-lime-500 border-2  hover:scale-105 hover:bg-cyan-400 hover:border-lime-500 "}`} onClick={() => totalTickets < 8 && updateTickets(ticketType.toLowerCase(), "increase")}>
         <IconPlus color="#BBEE68" />
@@ -39,22 +35,20 @@ function Tickets({ regularTickets, vipTickets, totalTickets, updateTickets }) {
       {/* Overskrift og ikon til at repræsentere billetter */}
       <div className="flex gap-2 items-center mt-4 md:mt-0">
         <IconTicket color="#FD1995" size="60" />
-        <h1 className="font-medium text-5xl " style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-          TICKETS
-        </h1>
+        <h1 className="font-medium text-5xl ">TICKETS</h1>
       </div>
       {/* Container til billetinformation og antal billetter */}
       <div className="flex flex-col justify-evenly flex-grow">
         <div className="place-self-center flex flex-col gap-4">
           {/* Viser billettyper og priser */}
-          <div className="space-y-12 font-medium text-1xl text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+          <div className="space-y-12 font-medium text-1xl text-white">
             <TicketOption ticketType="REGULAR" ticketPrice="799 DKK" ticketCount={regularTickets} updateTickets={updateTickets} totalTickets={totalTickets} />
             <TicketOption ticketType="VIP" ticketPrice="1299 DKK" ticketCount={vipTickets} updateTickets={updateTickets} totalTickets={totalTickets} />
           </div>
           {/* Viser det totale antal af billetter */}
-          <div className="font-medium text-sm text-white place-self-end flex flex-col items-end" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+          <div className="font-medium text-sm text-white place-self-end flex flex-col items-end">
             <p>TOTAL TICKETS</p>
-            <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{totalTickets}</p>
+            <p>{totalTickets}</p>
           </div>
         </div>
       </div>

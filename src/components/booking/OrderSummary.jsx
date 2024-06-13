@@ -10,9 +10,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
       <div className="space-y-5 hidden md:block">
         <div className="flex gap-2 items-center">
           <IconShoppingCart />
-          <h1 className="font-medium text-lg whitespace-nowrap" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-            Order Summary
-          </h1>
+          <h1 className="font-medium text-lg whitespace-nowrap">Order Summary</h1>
         </div>
         {/* Viser forskellige elementer i ordren */}
         <div className="space-y-5 font-medium hidden md:block">
@@ -22,10 +20,8 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               <IconCash />
             </div>
             <div className="flex flex-col text-start">
-              <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                BOOKING FEE
-              </p>
-              <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+              <p className="text-indigo-900">BOOKING FEE</p>
+              <p className="text-white">
                 <span>99</span> DKK
               </p>
             </div>
@@ -38,10 +34,8 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
                 <IconTicket />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  REGULAR TICKETS
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">REGULAR TICKETS</p>
+                <p className="text-white">
                   <span>799 DKK</span>
                 </p>
               </div>
@@ -55,10 +49,8 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
                 <IconVip />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  VIP TICKETS
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">VIP TICKETS</p>
+                <p className="text-white">
                   <span>1299 DKK</span>
                 </p>
               </div>
@@ -70,11 +62,9 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
               <IconFlag />
             </div>
             <div className="flex flex-col">
-              <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                SELECTED CAMP
-              </p>
-              <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-                <span style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
+              <p className="text-indigo-900">SELECTED CAMP</p>
+              <p className="text-white">
+                <span>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
               </p>
             </div>
           </div>
@@ -86,10 +76,8 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
                 <IconTent />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  2 PERSON TENTS
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">2 PERSON TENTS</p>
+                <p className="text-white">
                   <span>299 DKK</span>
                 </p>
               </div>
@@ -103,10 +91,8 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
                 <IconBuildingCircus />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  3 PERSON TENTS
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">3 PERSON TENTS</p>
+                <p className="text-white">
                   <span>399 DKK</span>
                 </p>
               </div>
@@ -119,10 +105,8 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
                 <IconTrees />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  GREEN CAMPING
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">GREEN CAMPING</p>
+                <p className="text-white">
                   <span>249 DKK</span>
                 </p>
               </div>
@@ -135,33 +119,23 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
         <div className="divider mt-0 hidden md:flex"></div>
         {ticketsReserved && ( // Hvis der er billetter reserveret
           <div className={`hidden md:block font-medium ${isPulsing ? "animate-pulse" : ""}`}>
-            <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+            <p className="text-white">
               {totalTickets > 1 ? "Tickets Reserved" : "Ticket Reserved"} {/* // Besked om antallet af reserverede billetter */}
             </p>
             <div className="flex items-center gap-2">
-              <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                {minutes < 10 ? `0${minutes}` : minutes} :
-              </span>
+              <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2">{minutes < 10 ? `0${minutes}` : minutes} :</span>
               {/* // Antal minutter til reservation udløber */}
-              <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                min
-              </span>
-              <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                {seconds < 10 ? `0${seconds}` : seconds}
-              </span>
+              <span className="text-indigo-900">min</span>
+              <span className="countdown text-indigo-900 border-lime-500 border-4 bg-lime-300 rounded-lg p-2">{seconds < 10 ? `0${seconds}` : seconds}</span>
               {/* // Antal sekunder til reservation udløber */}
-              <span className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                sec
-              </span>
+              <span className="text-indigo-900">sec</span>
             </div>
           </div>
         )}
         {/* Totalprisen for ordren */}
         <div className="font-medium flex flex-row md:flex-col gap-2 md:gap-0">
-          <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-            TOTAL
-          </p>
-          <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{totalPrice} DKK</p>
+          <p className="text-indigo-900">TOTAL</p>
+          <p>{totalPrice} DKK</p>
           {/* // Totalprisen i DKK */}
         </div>
       </div>

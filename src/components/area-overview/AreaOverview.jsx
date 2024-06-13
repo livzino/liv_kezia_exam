@@ -66,10 +66,9 @@ function AreaOverview() {
         <Image src="/.../../img/Niflheim.webp" alt="Niflheim" width={150} height={150} className={`${styles.mapImage} ${styles.niflheimImg}`} onClick={() => setShowStage("Niflheim")} />
         <Image src="/.../../img/Alfheim.webp" alt="Alfheim" width={150} height={150} className={`${styles.mapImage} ${styles.alfheimImg}`} onClick={() => setShowStage("Alfheim")} />
       </div>
-      <section className={styles.legendWrapper} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+      <section className={styles.legendWrapper}>
         <div>
           <span
-            style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}
             onClick={() => {
               // Skifter mellem at vise og skjule legend-sektionen
               toggleLegend === "" ? setToggleLegend("toggled") : setToggleLegend("");
@@ -79,7 +78,7 @@ function AreaOverview() {
         </div>
         {/* Viser eller skjuler legend baseret på toggleLegend's værdi */}
         <div className={toggleLegend === "toggled" ? styles.showLegend : styles.hideLegend}>
-          <ul style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+          <ul>
             <li>
               <h4 style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>STAGES</h4>
             </li>
