@@ -45,15 +45,15 @@ export default function Hero() {
 
   // Returnerer Hero komponentens UI
   return (
-    <div className="hero flex flex-col lg:h-[460px] bg-violet-950 py-10 px-5">
+    <div className="hero flex flex-col lg:h-full bg-violet-950 py-10 px-5">
       <div className="hero-content text-center">
         {/* Viser de første 10 bands som links */}
-        <ul className="flex flex-wrap font-sans justify-center gap-2 md:gap-4 text-3xl md:text-6xl w-fit font-extrabold tracking-tight lg:tracking-normal">
+        <ul className="flex flex-wrap justify-center gap-2 md:gap-4 text-3xl md:text-6xl w-fit font-extrabold tracking-tight lg:tracking-normal">
           {pages1.map((band, index, array) => {
             return (
               <React.Fragment key={band.slug}>
                 <li>
-                  <Link prefetch={false} href={`/artist/${band.slug}`} className=" text-pink-500 hover:text-pink-800 transition text-stroke-1 hover:text-stroke-0" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
+                  <Link prefetch={false} href={`/artist/${band.slug}`} className=" text-pink-500 hover:text-pink-800 transition text-stroke-1 hover:text-stroke-0">
                     {band.name}
                   </Link>
                 </li>
@@ -66,11 +66,11 @@ export default function Hero() {
       <div className="hero-content px-2 mt-2">
         {/* Viser resten af bands som links */}
         <nav className="">
-          <ul className="flex grow flex-wrap font-sans justify-center gap-2 text-xs lg:text-xl font-regular">
+          <ul className="flex grow flex-wrap justify-center gap-2 text-xs lg:text-xl ">
             {pages2.map((band, index, array) => {
               return (
                 <React.Fragment key={band.slug}>
-                  <li className="text-lime-400 hover:text-emerald-900 transition-colors" key={band.slug} style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 500 }}>
+                  <li className="text-lime-400 hover:text-emerald-900 transition-colors" key={band.slug}>
                     <Link prefetch={false} href={`/artist/${band.slug}`} key={band.slug}>
                       {band.name}
                     </Link>

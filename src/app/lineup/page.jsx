@@ -10,7 +10,7 @@ export default function Lineup() {
       <BandBbl />
       <Title title="LINEUP" />
       <br />
-      <Artist />;
+      <Artist />
     </main>
   );
 }
