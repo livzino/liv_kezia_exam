@@ -7,7 +7,7 @@ export default function Title(props) {
     // En div med klassen "titlecontainer" og margin-top (mt) styling for medium skærmstørrelser (md)
     <div className="flex items-center justify-center flex-col mt-8 mb-8 md:mt-[50px]">
       {/* En div der viser teksten fra props.title med specifik skrifttype og vægt, samt klassen "titletxt" */}
-      <div className="titletxt whitespace-nowrap text-4xl">
+      <div className="titletxt whitespace-nowrap text-4xl font-black">
         {props.title} {/* Indsæt titlen fra props */}
       </div>
       {/* En div med klassen "titleline", muligvis en dekorativ linje under titlen */}
