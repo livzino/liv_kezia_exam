@@ -13,7 +13,6 @@ import Footer from "../components/Footer"; // Importér Footer-komponenten
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {" "}
       {/* HTML-racinelement med sprogindstilling */}
       <head>
         {/* Ikoner og manifestfiler til forskellige enheder og platforme */}
@@ -22,11 +21,15 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" /> {/* Favicon */}
         <link rel="manifest" href="/favicon/site.webmanifest" /> {/* Manifestfil for webstedet */}
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" /> {/* Maskikon til Safari */}
+        {/* FONTE */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
         {/* Meta tags for tema farve og flise farve */}
         <meta name="msapplication-TileColor" content="#da532c" /> {/* MS-flis farve */}
         <meta name="theme-color" content="#ffffff" /> {/* Tema farve */}
       </head>
-      <body>
+      <body className="font-syncopate">
         <Header /> {/* Vis Header-komponenten */}
         {children} {/* Vis børnekomponenterne, som er indeholdt i RootLayout */}
         <Footer /> {/* Vis Footer-komponenten */}
