@@ -1,3 +1,26 @@
+.componentWrapper {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  flex-direction: column;
+
+}
+
+.labelWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  aspect-ratio: 1/1;
+  z-index: 2;
+}
+
 .labelWrapper div {
   pointer-events: none;
   flex-direction: column;
