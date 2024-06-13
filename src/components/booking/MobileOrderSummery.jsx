@@ -23,10 +23,8 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
               <IconCash />
             </div>
             <div className="flex flex-col">
-              <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                BOOKING FEE
-              </p>
-              <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+              <p className="text-indigo-900">BOOKING FEE</p>
+              <p className="text-white">
                 <span>99</span> DKK
               </p>
             </div>
@@ -38,10 +36,8 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
                 <IconTicket />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  REGULAR TICKETS
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">REGULAR TICKETS</p>
+                <p className="text-white">
                   <span>799 DKK </span>
                 </p>
               </div>
@@ -54,10 +50,8 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
                 <IconVip />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  VIP TICKETS
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">VIP TICKETS</p>
+                <p className="text-white">
                   <span>1299 DKK </span>
                 </p>
               </div>
@@ -68,11 +62,9 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
               <IconFlag />
             </div>
             <div className="flex flex-col">
-              <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                SELECTED CAMP
-              </p>
-              <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-                <span style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
+              <p className="text-indigo-900">SELECTED CAMP</p>
+              <p className="text-white">
+                <span>{selectedCamp ? selectedCamp.area : "No camp selected"}</span>
               </p>
             </div>
           </div>
@@ -83,10 +75,8 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
                 <IconTent />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  2 Person Tents
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">2 Person Tents</p>
+                <p className="text-white">
                   <span>299 DKK </span>
                 </p>
               </div>
@@ -99,10 +89,8 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
                 <IconBuildingCircus />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  3 Person Tents
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">3 Person Tents</p>
+                <p className="text-white">
                   <span>399 DKK </span>
                 </p>
               </div>
@@ -114,10 +102,8 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
                 <IconTrees />
               </div>
               <div className="flex flex-col">
-                <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                  Green Camping
-                </p>
-                <p className="text-white" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+                <p className="text-indigo-900">Green Camping</p>
+                <p className="text-white">
                   <span>249 DKK</span>
                 </p>
               </div>
@@ -126,14 +112,10 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
           <hr className="border-indigo-900" />
           <div className="flex justify-between">
             <div>
-              <p className="text-indigo-900" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
-                Total
-              </p>
-              <p className="text-white text-sm whitespace-nowrap" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
-                Including {Number((totalPrice * 0.2).toFixed(2))} kr in taxes
-              </p>
+              <p className="text-indigo-900">Total</p>
+              <p className="text-white text-sm whitespace-nowrap">Including {Number((totalPrice * 0.2).toFixed(2))} kr in taxes</p>
             </div>
-            <p style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>{totalPrice} DKK</p>
+            <p>{totalPrice} DKK</p>
           </div>
         </div>
       )}
