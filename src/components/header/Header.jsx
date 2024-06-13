@@ -1,4 +1,3 @@
-/* import Image from "next/image"; */
 import React from "react";
 import { useState } from "react";
 import styles from "../header/Navbar.module.css";
@@ -14,7 +13,7 @@ function Navbar() {
     setIsActive(false);
   };
   return (
-    <div className="App" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
+    <div className="App font-thin">
       <header className="App-header">
         <nav className={`${styles.navbar}`}>
           <Link href="/">

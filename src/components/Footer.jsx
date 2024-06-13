@@ -2,9 +2,9 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
   return (
-    <footer style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 200 }}>
-      <div class="footer">
-        <div class="row">
+    <footer>
+      <div className="footer font-thin  ">
+        <div className="row">
           <a href="#">
             <SocialIcon className="iconfooter hover:scale-150" network="facebook" bgColor="transparent" fgColor="#DAEE68" url="/" />
           </a>
@@ -19,7 +19,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div class="row">
+        <div className="row">
           <ul>
             <li>
               <a className="linksfooter" href="#">
@@ -44,7 +44,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div class="row">CURLYFRIES Copyright © 2024 CurlyFries - All rights reserved || Designed By: Kezia and Liv</div>
+        <div className="row">CURLYFRIES Copyright © 2024 CurlyFries - All rights reserved || Designed By: Kezia and Liv</div>
       </div>
     </footer>
   );
