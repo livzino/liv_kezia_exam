@@ -142,11 +142,11 @@ export default function Schedule() {
         </div>
       </div>
 
-      <div className="flex flex-row  lg:grid lg:grid-cols-3 lg:gap-4 overflow-x-scroll overflow-y-hidden snap-mandatory scrollbar-hide gap-x-6 mx-32 mt-16 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10 bg-fuchsia-950/60" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+      <div className="flex flex-row max-md:grid max-md:grid-cols-1 max-lg:grid max-lg:grid-cols-3 lg:grid lg:grid-cols-3 lg:gap-4 md:ml-12 overflow-y-hidden  gap-x-6 mx-32 md:mx-24 mt-16 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10  bg-fuchsia-950/60" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
         {/* Her mappes hen over hver scene for at generere en tidsplan */}
         {["Midgard", "Vanaheim", "Jotunheim"].map((scene) => (
-          <div key={scene} className="flex flex-col ml-10 border-r-2 border-cyan-300">
-            <h2 className="text-6xl mb-16 border-b-8 border-double border-cyan-300 pb-8 mt-6 font-synco">{scene}</h2>
+          <div key={scene} className="flex flex-col lg:ml-10 md:ml-6 md:px-6 border-r-2 border-cyan-300">
+            <h2 className="lg:text-4xl md:text-2xl sm:text-4xl mb-16 border-b-8 border-double border-cyan-300 pb-8 mt-6 font-synco">{scene}</h2>
 
             {/* Her mappes over hver handling udfra dag og scene */}
             {dataSchedule[scene][selectedDay]
