@@ -17,7 +17,7 @@ function Navbar() {
       <header className="App-header">
         <nav className={`${styles.navbar}`}>
           <Link href="/">
-            <Image src="/./img/logo.webp" width={100} height={100} alt="logo" className="logo hover:scale-105" />
+            <Image src="./img/logo.webp" width={100} height={100} alt="logo" className="logo hover:scale-105" />
           </Link>
 
           <ul className={`${styles.navMenu} ${isActive ? styles.active : "ul"}`}>
