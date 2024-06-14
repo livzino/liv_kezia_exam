@@ -110,7 +110,7 @@ export default function Schedule() {
         <Title title="SCHEDULE" />
 
         <div className="grid grid-cols content-evenly gap-6 lg:flex lg:justify-between">
-          <div className="grid grid-cols-2 lg:flex flex-row lg:flex-row gap-2 bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 border-4 border-lime-400 rounded-2xl text-lime-400 place-items-center ">
+          <div className=" flex flex-row w-fit gap-2 bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 border-4 border-lime-400 rounded-2xl text-lime-400 place-items-center ">
             <button
               className="btn btn-block px-2 py-2  text-indigo-900 text-xs lg:text-base w-fit rounded   hover:scale-105"
               onClick={() => {
