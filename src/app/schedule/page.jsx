@@ -4,7 +4,7 @@ import ScheduleCard from "../../components/ScheduleCard";
 import { url } from "/config";
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
-import { IconCaretRight, IconCaretLeft } from "@tabler/icons-react";
+import { IconPlayerPlay, IconCaretLeft } from "@tabler/icons-react";
 
 // Funktionel komponent for tidsplan-siden
 export default function Schedule() {
@@ -106,33 +106,31 @@ export default function Schedule() {
 
   return (
     <>
-      <div className="container mx-auto max-w-6xl px-4 mt-10 flex flex-col gap-4">
+      <div className="container mx-auto max-w-6xl px-4 mt-10 flex flex-col gap-4 justify-center">
         <Title title="SCHEDULE" />
 
         <div className="grid grid-cols content-evenly gap-6 lg:flex lg:justify-between">
-          <div className="grid grid-cols-2 lg:flex flex-row lg:flex-row gap-2">
+          <div className="grid grid-cols-2 lg:flex flex-row lg:flex-row gap-2 bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 border-4 border-lime-400 rounded-2xl text-lime-400 place-items-center ">
             <button
-              className="btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border hover:bg-pink-500 hover:border-pink-500 hover:scale-105"
+              className="btn btn-block px-2 py-2  text-indigo-900 text-xs lg:text-base w-fit rounded   hover:scale-105"
               onClick={() => {
                 handleDayChange(-1);
                 if (dayIndex === 0) {
                   setDayIndex(days.length - 1);
                 }
-              }}
-            >
-              <IconCaretLeft></IconCaretLeft> {/* Left arrow */}
+              }}>
+              <IconPlayerPlay fill="#A5E445" size="48px" stroke={1.5} className="scale-x-[-1]"></IconPlayerPlay> {/* left arrow */}
             </button>
-            <span className="text-lg font-bold">{days[dayIndex].toUpperCase()}</span>
+            <span className="text-lg font-bold text-center">{days[dayIndex].toUpperCase()}</span>
             <button
-              className="btn btn-block px-2 py-2 bg-pink-500 text-indigo-900 text-xs lg:text-base w-fit rounded border hover:bg-pink-500 hover:border-pink-500 hover:scale-105"
+              className="btn btn-block px-2 py-2 text-indigo-900 text-xs lg:text-base w-fit rounded   hover:scale-105"
               onClick={() => {
                 handleDayChange(1);
                 if (dayIndex === days.length - 1) {
                   setDayIndex(0);
                 }
-              }}
-            >
-              <IconCaretRight></IconCaretRight> {/* Right arrow */}
+              }}>
+              <IconPlayerPlay fill="#A5E445" size="48px" stroke={1.5}></IconPlayerPlay> {/* Right arrow */}
             </button>
           </div>
           <div className="flex items-center">

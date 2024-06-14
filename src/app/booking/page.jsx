@@ -184,29 +184,6 @@ function Page() {
       });
   }
 
-  // Funktion til afsendelse af data til Supabase ved succesfuld betaling
-  async function dataToSupabase() {
-    const { data, error } = await supabase.from("orders").insert([
-      {
-        email: email,
-        regular_tickets: regularTickets,
-        vip_tickets: vipTickets,
-        area: selectedSpot,
-        green_camping: greenCamping,
-        two_person_tents: twoPersonTents,
-        three_person_tents: threePersonTents,
-        total_price: totalPrice,
-        ticket_holders: ticketHolders,
-        reservation_id: reservationId,
-      },
-    ]);
-    if (error) {
-      console.error("Error inserting:", error);
-    } else {
-      console.log("Success:", data);
-    }
-  }
-
   // Funktion til opfyldelse af reservationen ved hjælp af API'en og reservations-ID'et
   function fulfillReservation() {
     fetch(`${url}/fullfill-reservation`, {
@@ -343,7 +320,7 @@ function Page() {
             (currentSlide === 4 && <Payment email={email} setEmail={setEmail} termsAccepted={termsAccepted} setTermsAccepted={setTermsAccepted} />) ||
             (currentSlide === 5 && <PaymentStatus paymentSuccess={paymentSuccess} />)}
           {/* Knapper til at gå tilbage og fortsætte i bookingprocessen */}
-          <BackAndContinueButtons currentSlide={currentSlide} changeSlide={changeSlide} handleContinue={handleContinue} totalTickets={totalTickets} selectedSpot={selectedSpot} ticketHolders={ticketHolders} fulfillReservation={fulfillReservation} dataToSupabase={dataToSupabase} email={email} termsAccepted={termsAccepted} selectedCamp={selectedCamp} />
+          <BackAndContinueButtons currentSlide={currentSlide} changeSlide={changeSlide} handleContinue={handleContinue} totalTickets={totalTickets} selectedSpot={selectedSpot} ticketHolders={ticketHolders} fulfillReservation={fulfillReservation} email={email} termsAccepted={termsAccepted} selectedCamp={selectedCamp} />
         </div>
         {currentSlide !== 5 && (
           <div className="hidden h-full w-7/12 order-2 md:block">
