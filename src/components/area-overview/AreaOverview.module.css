@@ -4,7 +4,6 @@
   width: fit-content;
   margin: auto;
   flex-direction: column;
-
 }
 
 .labelWrapper {
@@ -128,8 +127,8 @@
   right: 0;
   pointer-events: initial;
   cursor: pointer;
-  color: #DAEE68;
-  border: solid 2px #DAEE68;
+  color: #daee68;
+  border: solid 2px #daee68;
   padding: 4px 10px;
   transition: 0.3s ease-in-out;
   transform: translateY(-10px) translateX(5px);
@@ -265,7 +264,7 @@
 }
 
 .legendWrapper div:first-of-type span {
-  color: #DAEE68;
+  color: #daee68;
   cursor: pointer;
   font-size: 18px;
 }
@@ -351,8 +350,6 @@
 
 /* Media Queries for Responsiveness */
 @media (min-width: 1200px) {
-
-
   .vanaheim {
     top: 7%;
     right: 1%;
@@ -390,7 +387,6 @@
 }
 
 @media (max-width: 992px) {
-
   .vanaheim {
     top: 5%;
     right: -5%;
@@ -438,9 +434,6 @@
 }
 
 @media (max-width: 768px) {
-
-
-
   .labelWrapper div {
     font-size: 0.9rem;
   }
@@ -499,9 +492,6 @@
 }
 
 @media (max-width: 576px) {
-
-
-
   .labelWrapper div h3 {
     font-size: 0.8rem;
   }
@@ -550,7 +540,6 @@
     left: 24%;
   }
 
-
   .legendWrapper div:nth-of-type(2) {
     flex-direction: column;
     gap: 12px;
@@ -558,9 +547,6 @@
 }
 
 @media (max-width: 480px) {
-
-
-
   .labelWrapper div h3 {
     font-size: 0.7rem;
   }
