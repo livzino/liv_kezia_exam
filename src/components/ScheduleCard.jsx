@@ -45,9 +45,6 @@ export default function ScheduleCard({ scene, ...props }) {
           <div className="card-body md:w-24 py-1 gap-0 text-center self-center">
             <p className="text-sm font-light">{scene}</p>
             <p className="text-2xl font-black">{props.time}</p>
-            <div></div>
-            <p className="text-sm font-light">{scene}</p>
-            <p className="text-2xl font-black">{props.time}</p>
           </div>
         </div>
       </Link>
