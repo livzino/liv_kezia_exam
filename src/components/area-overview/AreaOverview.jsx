@@ -16,7 +16,8 @@ function AreaOverview() {
             setShowStage("");
           }}
           // Bruger CSS-klasser baseret på, om showStage er en tom streng eller ej
-          className={showStage !== "" ? `${styles.show}` : `${styles.hide}`}>
+          className={showStage !== "" ? `${styles.show}` : `${styles.hide}`}
+        >
           Hide labels
         </span>
         {/* Gentagne div-elementer for hvert område, som vises eller skjules baseret på værdien af showStage */}
@@ -56,15 +57,15 @@ function AreaOverview() {
       <div className={styles.mapWrapper}>
         {/* Billedkomponenter for hvert område, der bruger Next.js's Image komponent til optimering */}
         {/* Når et billede klikkes, sættes showStage til navnet på det relevante område */}
-        <Image src="/.../../img/Vanaheim.webp" alt="Vanaheim" width={50} height={50} className={`${styles.mapImage} ${styles.vanaheimImg}`} onClick={() => setShowStage("Vanaheim")} />
-        <Image src="/.../../img/Midgard.webp" alt="Midgard" width={150} height={150} className={`${styles.mapImage} ${styles.midgardImg}`} onClick={() => setShowStage("Midgard")} />
-        <Image src="/.../../img/Jotunheim.webp" alt="Jotunheim" width={150} height={150} className={`${styles.mapImage} ${styles.jotunheimImg}`} onClick={() => setShowStage("Jotunheim")} />
+        <Image src="/img/Vanaheim.webp" alt="Vanaheim" width={50} height={50} className={`${styles.mapImage} ${styles.vanaheimImg}`} onClick={() => setShowStage("Vanaheim")} />
+        <Image src="/img/Midgard.webp" alt="Midgard" width={150} height={150} className={`${styles.mapImage} ${styles.midgardImg}`} onClick={() => setShowStage("Midgard")} />
+        <Image src="/img/Jotunheim.webp" alt="Jotunheim" width={150} height={150} className={`${styles.mapImage} ${styles.jotunheimImg}`} onClick={() => setShowStage("Jotunheim")} />
 
-        <Image src="/.../../img/Helheim.webp" alt="Helheim" width={150} height={150} className={`${styles.mapImage} ${styles.helheimImg}`} onClick={() => setShowStage("Helheim")} />
-        <Image src="/.../../img/Svartheim.webp" alt="Svartheim" width={150} height={150} className={`${styles.mapImage} ${styles.svartheimImg}`} onClick={() => setShowStage("Svartheim")} />
-        <Image src="/.../../img/Muspelheim.webp" alt="Muspelheim" width={150} height={150} className={`${styles.mapImage} ${styles.muspelheimImg}`} onClick={() => setShowStage("Muspelheim")} />
-        <Image src="/.../../img/Niflheim.webp" alt="Niflheim" width={150} height={150} className={`${styles.mapImage} ${styles.niflheimImg}`} onClick={() => setShowStage("Niflheim")} />
-        <Image src="/.../../img/Alfheim.webp" alt="Alfheim" width={150} height={150} className={`${styles.mapImage} ${styles.alfheimImg}`} onClick={() => setShowStage("Alfheim")} />
+        <Image src="/img/Helheim.webp" alt="Helheim" width={150} height={150} className={`${styles.mapImage} ${styles.helheimImg}`} onClick={() => setShowStage("Helheim")} />
+        <Image src="/img/Svartheim.webp" alt="Svartheim" width={150} height={150} className={`${styles.mapImage} ${styles.svartheimImg}`} onClick={() => setShowStage("Svartheim")} />
+        <Image src="/img/Muspelheim.webp" alt="Muspelheim" width={150} height={150} className={`${styles.mapImage} ${styles.muspelheimImg}`} onClick={() => setShowStage("Muspelheim")} />
+        <Image src="/img/Niflheim.webp" alt="Niflheim" width={150} height={150} className={`${styles.mapImage} ${styles.niflheimImg}`} onClick={() => setShowStage("Niflheim")} />
+        <Image src="/img/Alfheim.webp" alt="Alfheim" width={150} height={150} className={`${styles.mapImage} ${styles.alfheimImg}`} onClick={() => setShowStage("Alfheim")} />
       </div>
       <section className={styles.legendWrapper}>
         <div>
@@ -72,7 +73,8 @@ function AreaOverview() {
             onClick={() => {
               // Skifter mellem at vise og skjule legend-sektionen
               toggleLegend === "" ? setToggleLegend("toggled") : setToggleLegend("");
-            }}>
+            }}
+          >
             {toggleLegend === "" ? "SHOW" : "HIDE"}
           </span>
         </div>

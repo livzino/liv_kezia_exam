@@ -12,7 +12,7 @@ export default function Ticket() {
           {/* Div til at holde billedet */}
           <div className="m-auto">
             {/* Image komponent der viser et SVG billede med specifikke dimensioner */}
-            <Image src="/./img/moonbbl.webp" width={100} height={100} alt="moonbbl" className="moon" />
+            <Image src="/img/moonbbl.webp" width={100} height={100} alt="moonbbl" className="moon" />
           </div>
           {/* En divider, muligvis en horisontal linje */}
           <div className="w-44 h-0.5 lg:w-80 xl:w-100 bg-cyan-400 m-auto "></div>

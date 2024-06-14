@@ -11,7 +11,7 @@ export default function Vip() {
           {/* Div til at holde billedet */}
           <div className="m-auto">
             {/* Image komponent der viser et SVG billede med specifikke dimensioner */}
-            <Image src="/./img/starbbl.webp" width={100} height={100} alt="starbbl" className="star" />
+            <Image src="/img/starbbl.webp" width={100} height={100} alt="starbbl" className="star" />
           </div>
           {/* En divider, muligvis en horisontal linje */}
           <div className="w-44 h-0.5 lg:w-80 xl:w-100 bg-lime-400 m-auto"></div>
