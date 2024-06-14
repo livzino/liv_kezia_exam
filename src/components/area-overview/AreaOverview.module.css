@@ -65,7 +65,6 @@
   left: 60%;
 }
 
-
 .hide {
   display: none;
   /* Hide elements */
@@ -143,7 +142,7 @@
 }
 
 .labelWrapper div h3 {
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
   font-size: 1rem;
   white-space: nowrap;
 }
@@ -210,11 +209,11 @@
 .labelWrapper span {
   pointer-events: initial;
   cursor: pointer;
-  color: #DAEE68;
+  color: #daee68;
   top: 92%;
   left: 111%;
   position: absolute;
-  border: solid 2px #DAEE68;
+  border: solid 2px #daee68;
   padding: 4px 32px;
   transition: 0.3s ease-in-out;
 }
@@ -251,12 +250,12 @@
 
 .legendWrapper div:first-of-type h2 {
   font-size: 20px;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
   color: #fff;
 }
 
 .legendWrapper div:first-of-type span {
-  color: #DAEE68;
+  color: #daee68;
   cursor: pointer;
   font-size: 18px;
 }
@@ -267,7 +266,7 @@
 
 .legendWrapper div h4 {
   font-weight: bold;
-  font-family: 'Syncopate', sans-serif;
+  font-family: "Syncopate", sans-serif;
   font-size: 18px;
 }
 
@@ -343,7 +342,6 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
-
   .vanaheimImg,
   .midgardImg,
   .jotunheimImg,
@@ -358,7 +356,6 @@
 }
 
 @media (max-width: 992px) {
-
   .vanaheimImg,
   .midgardImg,
   .jotunheimImg,
@@ -383,7 +380,6 @@
 }
 
 @media (max-width: 768px) {
-
   .vanaheimImg,
   .midgardImg,
   .jotunheimImg,
@@ -414,7 +410,6 @@
 }
 
 @media (max-width: 576px) {
-
   .vanaheimImg,
   .midgardImg,
   .jotunheimImg,
@@ -447,7 +442,6 @@
 }
 
 @media (max-width: 480px) {
-
   .vanaheimImg,
   .midgardImg,
   .jotunheimImg,

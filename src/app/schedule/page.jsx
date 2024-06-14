@@ -1,9 +1,10 @@
 "use client";
-
+import React from "react";
 import ScheduleCard from "../../components/ScheduleCard";
 import { url } from "/config";
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
+import { IconCaretRight, IconCaretLeft } from "@tabler/icons-react";
 
 // Funktionel komponent for tidsplan-siden
 export default function Schedule() {
@@ -119,8 +120,9 @@ export default function Schedule() {
                 if (dayIndex === 0) {
                   setDayIndex(days.length - 1);
                 }
-              }}>
-              &#8592; {/* Left arrow */}
+              }}
+            >
+              <IconCaretLeft></IconCaretLeft> {/* Left arrow */}
             </button>
             <span className="text-lg font-bold">{days[dayIndex].toUpperCase()}</span>
             <button
@@ -130,8 +132,9 @@ export default function Schedule() {
                 if (dayIndex === days.length - 1) {
                   setDayIndex(0);
                 }
-              }}>
-              &#8594; {/* Right arrow */}
+              }}
+            >
+              <IconCaretRight></IconCaretRight> {/* Right arrow */}
             </button>
           </div>
           <div className="flex items-center">
@@ -141,11 +144,11 @@ export default function Schedule() {
         </div>
       </div>
 
-      <div className="flex flex-row lg:grid lg:grid-cols-3 lg:gap-4 overflow-x-scroll overflow-y-hidden snap-mandatory scrollbar-hide gap-x-6 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10 bg-fuchsia-950 opacity-90" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+      <div className="flex flex-row  lg:grid lg:grid-cols-3 lg:gap-4 overflow-x-scroll overflow-y-hidden snap-mandatory scrollbar-hide gap-x-6 mx-32 mt-16 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10 bg-fuchsia-950/60" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
         {/* Her mappes hen over hver scene for at generere en tidsplan */}
         {["Midgard", "Vanaheim", "Jotunheim"].map((scene) => (
-          <div key={scene} className="flex flex-col items-start">
-            <h2 className="text-xl font-bold mb-3 text-center">{scene}</h2>
+          <div key={scene} className="flex flex-col ml-10 border-r-2 border-cyan-300">
+            <h2 className="text-6xl mb-16 border-b-8 border-double border-cyan-300 pb-8 mt-6 font-synco">{scene}</h2>
 
             {/* Her mappes over hver handling udfra dag og scene */}
             {dataSchedule[scene][selectedDay]

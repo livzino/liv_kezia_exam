@@ -27,7 +27,7 @@ export default function ScheduleCard({ scene, ...props }) {
       {/* Link komponent til at navigere til den specifikke artists side */}
       <Link prefetch={false} className="" href={`${props.slug}`}>
         {/* Wrapper div for kortet med forskellige klasser til styling */}
-        <div className="card w-36 bg-base-100 image-full cursor-pointer text-center relative hover:scale-105">
+        <div className="card w-36  bg-base-100 image-full cursor-pointer text-center relative hover:scale-105">
           <div>
             {/* Figur element med dynamisk border farve */}
             <figure className={`h-36 relative border-2 rounded-3xl ${borderColor}`}>
@@ -58,8 +58,8 @@ export default function ScheduleCard({ scene, ...props }) {
         </div>
       </Link>
       {/* Div til at vise en pause mellem tidsrum */}
-      <div className="grid text-center">
-        <p className="text-xs text-slate-400 w-fit py-2 px-3" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+      <div className="grid text-center mb-20 pb-4  border-b-2 border-cyan-300 ">
+        <p className="text-xs text-slate-400 w-fit py-2 px-3 " style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
           &#8594; {props.nextTime}{" "}
           <span className="text-slate-50 capitalize" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 700 }}>
             Break
