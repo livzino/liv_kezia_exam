@@ -24,7 +24,7 @@ function BackButton({ currentSlide, changeSlide }) {
 }
 
 // Funktion til at vise fortsæt-knap
-function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpot, fulfillReservation, sendMailToCustomer, dataToSupabase, email, termsAccepted, handleContinue }) {
+function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpot, fulfillReservation, email, termsAccepted, handleContinue }) {
   // Funktion til at afgøre om fortsæt-knap skal være aktiv eller ej
   const isContinueButtonEnabled = () => {
     const isTicketHolderValid = ticketHolders.regular.filter(Boolean).length + ticketHolders.vip.filter(Boolean).length === totalTickets;
@@ -39,8 +39,6 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
     if (isContinueButtonEnabled()) {
       if (currentSlide === 5) {
         fulfillReservation();
-        sendMailToCustomer();
-        dataToSupabase();
       }
       handleContinue();
     }

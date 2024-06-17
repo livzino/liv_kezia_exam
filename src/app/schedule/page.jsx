@@ -4,7 +4,14 @@ import ScheduleCard from "../../components/ScheduleCard";
 import { url } from "/config";
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
-import { IconPlayerPlay, IconCaretLeft } from "@tabler/icons-react";
+import { IconPlayerPlay } from "@tabler/icons-react";
+
+function generateMetadata() {
+  return {
+    title: "Forside",
+    description: "Welcome to Forside",
+  };
+}
 
 // Funktionel komponent for tidsplan-siden
 export default function Schedule() {
@@ -106,6 +113,10 @@ export default function Schedule() {
 
   return (
     <>
+      <head>
+        <title>FooFest - Schedule - Plan Your Kpop Experience</title>
+        <meta name="description" content="Check out the FooFest 2024 schedule! Find out when and where your favorite Kpop bands are performing, and plan your ultimate festival experience."></meta>
+      </head>
       <div className="container mx-auto max-w-6xl px-4 mt-10 flex flex-col gap-4 justify-center">
         <Title title="SCHEDULE" />
 

@@ -1,12 +1,17 @@
-"use client"; // Bruger klientindstillingen for dette modul
 import Hero from "../components/Hero"; // Importér Hero-komponenten
 import CountDown from "../components/CountDown"; // Importér CountDown-komponenten
 import CampMap from "../components/CampMap"; // Importér CampMap-komponenten
 import Title from "../components/Title"; // Importér Title-komponenten
 import Ticket from "../components/Ticket"; // Importér Ticket-komponenten
 import Vip from "../components/Vip"; // Importér Vip-komponenten
-import Image from "next/image"; // Importér Image-komponenten fra Next.js
-import Link from "next/link";
+
+export function generateMetadata() {
+  return {
+    title: "FooFest - The Ultimate Kpop Festival Experience",
+    description: "Welcome to FooFest, the ultimate Kpop festival! Join us for an unforgettable celebration with live performances from top Kpop stars, exciting dance competitions, and immersive cultural experiences ",
+  };
+}
+
 // Funktionen Home repræsenterer hovedsiden for webstedet
 export default function Home() {
   const targetDate = new Date("Jun 26, 2024").getTime(); // Definer måldatoen for nedtællingen

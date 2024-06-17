@@ -1,3 +1,4 @@
+"use client";
 // Importer Button komponentet fra en overordnet komponent mappe
 import Button from "../components/Button";
 import AreaOverview from "./area-overview/AreaOverview";
