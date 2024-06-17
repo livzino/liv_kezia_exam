@@ -289,8 +289,8 @@ function Page() {
   return (
     <>
       <head>
-        <title>Booking</title>
-        <meta name="description" content="Booking flow to Foofest"></meta>
+        <title>FooFest Booking - Secure Your Tickets Now</title>
+        <meta name="description" content="Secure your spot at FooFest 2024! Book your tickets now for the ultimate Kpop festival experience, featuring top artists and exclusive events."></meta>
       </head>
       <main className="md:container mx-auto flex flex-col justify-center items-center h-screen w-screen">
         {/* Modalen vises kun hvis isModalOpen er sand */}

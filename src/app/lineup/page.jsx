@@ -7,8 +7,8 @@ export default function Lineup() {
   return (
     <>
       <head>
-        <title>Lineup</title>
-        <meta name="description" content="Lineup of the headliners and other acts"></meta>
+        <title>FooFest Lineup - Top Kpop Stars and Acts</title>
+        <meta name="description" content="Check out the FooFest 2024 lineup! From chart-topping headliners to rising stars, explore the incredible Kpop acts set to perform"></meta>
       </head>
 
       <main>

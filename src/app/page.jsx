@@ -7,8 +7,8 @@ import Vip from "../components/Vip"; // Importér Vip-komponenten
 
 export function generateMetadata() {
   return {
-    title: "Forside",
-    description: "Welcome to the home of the biggest kpop festival!! ",
+    title: "FooFest - The Ultimate Kpop Festival Experience",
+    description: "Welcome to FooFest, the ultimate Kpop festival! Join us for an unforgettable celebration with live performances from top Kpop stars, exciting dance competitions, and immersive cultural experiences ",
   };
 }
 
