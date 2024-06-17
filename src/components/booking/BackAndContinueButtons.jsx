@@ -31,7 +31,7 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
     const isEmailValid = email && email.includes("@");
     const isTermsAccepted = termsAccepted;
 
-    return totalTickets > 0 > selectedSpot && !(currentSlide === 3 && !isTicketHolderValid) && !(currentSlide === 6 && (!isEmailValid || !isTermsAccepted));
+    return totalTickets > 0 > selectedSpot && !(currentSlide === 3 && !isTicketHolderValid) && !(currentSlide === 5 && (!isEmailValid || !isTermsAccepted));
   };
 
   // Funktion til håndtering af klik på fortsæt-knap
@@ -54,7 +54,7 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
   // Returner knap med aktivering afhængigt af om betingelsen for aktivering er opfyldt
   return (
     <button className={` ${isContinueButtonEnabled() ? "bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600  text-lime-400" : "btn-disabled"} backdrop-blur-md transition-all hover:scale-105 border-4 border-lime-400 rounded-2xl text-lime-400 cursor-pointer h-14 w-40 px-4 py-2" `} onClick={handleButtonClick}>
-      {currentSlide === 5 ? "FINISH PAYMENT" : "CONTINUE"}
+      {currentSlide === 4 ? "FINISH PAYMENT" : "CONTINUE"}
     </button>
   );
 }
