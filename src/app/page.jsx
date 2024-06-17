@@ -8,6 +8,7 @@ import Vip from "../components/Vip"; // Importér Vip-komponenten
 import Image from "next/image"; // Importér Image-komponenten fra Next.js
 import Link from "next/link";
 // Funktionen Home repræsenterer hovedsiden for webstedet
+
 export default function Home() {
   const targetDate = new Date("Jun 26, 2024").getTime(); // Definer måldatoen for nedtællingen
   return (
