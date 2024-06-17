@@ -287,49 +287,55 @@ function Page() {
   }, []);
 
   return (
-    <main className="md:container mx-auto flex flex-col justify-center items-center h-screen w-screen">
-      {/* Modalen vises kun hvis isModalOpen er sand */}
-      <dialog id="my_modal_1" className={isModalOpen ? "modal modal-open " : "modal"}>
-        <div className="modal-box bg-gray-800 border border-gray-700 rounded-lg">
-          {/* Titlen og advarselsteksten i modalen */}
-          <h3 className="font-bold text-lg">Advarsel!</h3>
-          <p className="py-4">
-            Ændring af din ordre vil nulstille din reservation. <br></br>Er du sikker på, at du vil fortsætte?
-          </p>
-          <div className="modal-action font-medium">
-            {/* Annuller-knappen, der lukker modalen uden at fortsætte */}
-            <button className="btn btn-neutral font-medium text-base rounded py-1 px-4 w-fit" onClick={() => setIsModalOpen(false)}>
-              Annuller
-            </button>
-            {/* Bekræft-knappen, der lukker modalen og fortsætter bookingprocessen */}
-            <button className="btn btn-primary font-medium text-emerald-100 text-base rounded py-1 px-4 w-fit border border-emerald-500 hover:bg-emerald-500 hover:border-emerald-400" onClick={handleModalConfirm}>
-              Bekræft
-            </button>
+    <>
+      <head>
+        <title>Booking</title>
+        <meta name="description" content="Booking flow to Foofest"></meta>
+      </head>
+      <main className="md:container mx-auto flex flex-col justify-center items-center h-screen w-screen">
+        {/* Modalen vises kun hvis isModalOpen er sand */}
+        <dialog id="my_modal_1" className={isModalOpen ? "modal modal-open " : "modal"}>
+          <div className="modal-box bg-gray-800 border border-gray-700 rounded-lg">
+            {/* Titlen og advarselsteksten i modalen */}
+            <h3 className="font-bold text-lg">Advarsel!</h3>
+            <p className="py-4">
+              Ændring af din ordre vil nulstille din reservation. <br></br>Er du sikker på, at du vil fortsætte?
+            </p>
+            <div className="modal-action font-medium">
+              {/* Annuller-knappen, der lukker modalen uden at fortsætte */}
+              <button className="btn btn-neutral font-medium text-base rounded py-1 px-4 w-fit" onClick={() => setIsModalOpen(false)}>
+                Annuller
+              </button>
+              {/* Bekræft-knappen, der lukker modalen og fortsætter bookingprocessen */}
+              <button className="btn btn-primary font-medium text-emerald-100 text-base rounded py-1 px-4 w-fit border border-emerald-500 hover:bg-emerald-500 hover:border-emerald-400" onClick={handleModalConfirm}>
+                Bekræft
+              </button>
+            </div>
           </div>
-        </div>
-      </dialog>
+        </dialog>
 
-      {/* Sektionen indeholder de forskellige trin i bookingprocessen */}
-      <section className="w-full h-full md:h-5/6 bg-violet-800 bg-opacity-50 max-w-7xl flex flex-col md:flex-row md:rounded-xl  border-rose-500 border-4  relative overflow-hidden">
-        {/* Indholdet afhænger af det aktuelle trin i bookingprocessen */}
-        <div className={` ${ticketsReserved ? "mt-28" : "mt-12"} md:mt-0 bg-violet-800 bg-opacity-50 w-full  h-full order-2 md:order-1 p-6 md:p-12 flex flex-col justify-between`}>
-          {(currentSlide === 0 && <Tickets regularTickets={regularTickets} vipTickets={vipTickets} totalTickets={totalTickets} spots={spots} selectedSpot={selectedSpot} updateTickets={updateTickets} selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} selectedCamp={selectedCamp} setSelectedCamp={setSelectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
-            (currentSlide === 1 && <Camping selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} setSelectedCamp={setSelectedCamp} selectedCamp={selectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
-            (currentSlide === 2 && <Optional updateTents={updateTents} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} greenCamping={greenCamping} setGreenCamping={setGreenCamping} totalSelectedCapacity={totalSelectedCapacity} setTotalSelectedCapacity={setTotalSelectedCapacity} />) ||
-            (currentSlide === 3 && <TicketHolders regularTickets={regularTickets} vipTickets={vipTickets} ticketHolders={ticketHolders} setTicketHolders={setTicketHolders} />) ||
-            (currentSlide === 4 && <Payment email={email} setEmail={setEmail} termsAccepted={termsAccepted} setTermsAccepted={setTermsAccepted} />) ||
-            (currentSlide === 5 && <PaymentStatus paymentSuccess={paymentSuccess} />)}
-          {/* Knapper til at gå tilbage og fortsætte i bookingprocessen */}
-          <BackAndContinueButtons currentSlide={currentSlide} changeSlide={changeSlide} handleContinue={handleContinue} totalTickets={totalTickets} selectedSpot={selectedSpot} ticketHolders={ticketHolders} fulfillReservation={fulfillReservation} email={email} termsAccepted={termsAccepted} selectedCamp={selectedCamp} />
-        </div>
-        {currentSlide !== 5 && (
-          <div className="hidden h-full w-7/12 order-2 md:block">
-            <OrderSummary allChoices={allChoices} currentSlide={currentSlide} countdown={countdown} minutes={minutes} seconds={seconds} isPulsing={isPulsing} ticketsReserved={ticketsReserved} totalPrice={totalPrice} regularTickets={regularTickets} vipTickets={vipTickets} selectedSpot={selectedSpot} selectedCamp={selectedCamp} greenCamping={greenCamping} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} />
+        {/* Sektionen indeholder de forskellige trin i bookingprocessen */}
+        <section className="w-full h-full md:h-5/6 bg-violet-800 bg-opacity-50 max-w-7xl flex flex-col md:flex-row md:rounded-xl  border-rose-500 border-4  relative overflow-hidden">
+          {/* Indholdet afhænger af det aktuelle trin i bookingprocessen */}
+          <div className={` ${ticketsReserved ? "mt-28" : "mt-12"} md:mt-0 bg-violet-800 bg-opacity-50 w-full  h-full order-2 md:order-1 p-6 md:p-12 flex flex-col justify-between`}>
+            {(currentSlide === 0 && <Tickets regularTickets={regularTickets} vipTickets={vipTickets} totalTickets={totalTickets} spots={spots} selectedSpot={selectedSpot} updateTickets={updateTickets} selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} selectedCamp={selectedCamp} setSelectedCamp={setSelectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
+              (currentSlide === 1 && <Camping selectSpot={selectSpot} setSelectedSpot={setSelectedSpot} ticketsReserved={ticketsReserved} setSelectedCamp={setSelectedCamp} selectedCamp={selectedCamp} mapHandleModal={mapHandleModal} reservationId={reservationId} warningCamp={warningCamp} />) ||
+              (currentSlide === 2 && <Optional updateTents={updateTents} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} greenCamping={greenCamping} setGreenCamping={setGreenCamping} totalSelectedCapacity={totalSelectedCapacity} setTotalSelectedCapacity={setTotalSelectedCapacity} />) ||
+              (currentSlide === 3 && <TicketHolders regularTickets={regularTickets} vipTickets={vipTickets} ticketHolders={ticketHolders} setTicketHolders={setTicketHolders} />) ||
+              (currentSlide === 4 && <Payment email={email} setEmail={setEmail} termsAccepted={termsAccepted} setTermsAccepted={setTermsAccepted} />) ||
+              (currentSlide === 5 && <PaymentStatus paymentSuccess={paymentSuccess} />)}
+            {/* Knapper til at gå tilbage og fortsætte i bookingprocessen */}
+            <BackAndContinueButtons currentSlide={currentSlide} changeSlide={changeSlide} handleContinue={handleContinue} totalTickets={totalTickets} selectedSpot={selectedSpot} ticketHolders={ticketHolders} fulfillReservation={fulfillReservation} email={email} termsAccepted={termsAccepted} selectedCamp={selectedCamp} />
           </div>
-        )}
-        <div className="order-1 md:hidden">{currentSlide !== 5 && <MobileOrderSummary allChoices={allChoices} currentSlide={currentSlide} countdown={countdown} minutes={minutes} seconds={seconds} isPulsing={isPulsing} ticketsReserved={ticketsReserved} totalPrice={totalPrice} regularTickets={regularTickets} vipTickets={vipTickets} selectedSpot={selectedSpot} selectedCamp={selectedCamp} greenCamping={greenCamping} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} />}</div>
-      </section>
-    </main>
+          {currentSlide !== 5 && (
+            <div className="hidden h-full w-7/12 order-2 md:block">
+              <OrderSummary allChoices={allChoices} currentSlide={currentSlide} countdown={countdown} minutes={minutes} seconds={seconds} isPulsing={isPulsing} ticketsReserved={ticketsReserved} totalPrice={totalPrice} regularTickets={regularTickets} vipTickets={vipTickets} selectedSpot={selectedSpot} selectedCamp={selectedCamp} greenCamping={greenCamping} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} />
+            </div>
+          )}
+          <div className="order-1 md:hidden">{currentSlide !== 5 && <MobileOrderSummary allChoices={allChoices} currentSlide={currentSlide} countdown={countdown} minutes={minutes} seconds={seconds} isPulsing={isPulsing} ticketsReserved={ticketsReserved} totalPrice={totalPrice} regularTickets={regularTickets} vipTickets={vipTickets} selectedSpot={selectedSpot} selectedCamp={selectedCamp} greenCamping={greenCamping} twoPersonTents={twoPersonTents} threePersonTents={threePersonTents} totalTickets={totalTickets} />}</div>
+        </section>
+      </main>
+    </>
   );
 }
 

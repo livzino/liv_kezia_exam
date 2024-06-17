@@ -1,3 +1,4 @@
+"use client";
 // Importer Link komponentet fra Next.js til navigation mellem sider
 import Link from "next/link";
 // Importer Image komponentet fra Next.js til håndtering af billeder

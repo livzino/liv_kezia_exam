@@ -5,12 +5,19 @@ import Artist from "../../components/Artist";
 
 export default function Lineup() {
   return (
-    <main>
-      <Title title="HEADLINERS" />
-      <BandBbl />
-      <Title title="LINEUP" />
-      <br />
-      <Artist />
-    </main>
+    <>
+      <head>
+        <title>Lineup</title>
+        <meta name="description" content="Lineup of the headliners and other acts"></meta>
+      </head>
+
+      <main>
+        <Title title="HEADLINERS" />
+        <BandBbl />
+        <Title title="LINEUP" />
+        <br />
+        <Artist />
+      </main>
+    </>
   );
 }
