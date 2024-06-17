@@ -8,7 +8,7 @@ const PaymentStatus = ({ paymentSuccess }) => (
       <div className="place-self-center flex flex-col gap-4 items-center text-center">
         {paymentSuccess ? (
           <>
-            <IconHeartCheck color="#BBEE68" className="animate-bounce" size={64} />
+            <IconHeartCheck color="#BBEE68" className="animate-bounce" size={64} alt="heart icon checkmark" />
             <h1 className="font-medium text-3xl">ORDER COMPLETE!</h1>
             <p className="text-lime-400 font-medium max-w-xs">Your order has been placed and you will receive a confirmation email shortly.</p>
             <Link href="/">

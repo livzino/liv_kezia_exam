@@ -63,8 +63,8 @@ function ContinueButton({ currentSlide, totalTickets, ticketHolders, selectedSpo
 function BackAndContinueButtons(props) {
   return (
     <div className="flex justify-center space-x-6 z-50">
-      <BackButton {...props} />
-      <ContinueButton {...props} />
+      <BackButton {...props} alt="go back button" />
+      <ContinueButton {...props} alt="continue to next page button" />
     </div>
   );
 }

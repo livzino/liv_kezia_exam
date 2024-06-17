@@ -15,13 +15,13 @@ const TicketOption = ({ ticketType, ticketPrice, ticketCount, updateTickets, tot
     <div className="flex items-center w-32 justify-between font-medium ">
       {/* Knappen til at mindske antallet af billetter */}
       <button aria-label="Decrease ticket count" className="bg-neutral text-gray-100 font-medium text-base p-2 rounded-full w-fit  border-lime-500 border-2 hover:scale-105 hover:bg-indigo-900 hover:border-lime-500 transition-colors" onClick={() => updateTickets(ticketType.toLowerCase(), "decrease")}>
-        <IconMinus color="#BBEE68" />
+        <IconMinus color="#BBEE68" alt="plus one ticket" />
       </button>
       {/* Viser det aktuelle antal af billetter */}
       <p>{ticketCount}</p>
       {/* Knappen til at øge antallet af billetter */}
       <button aria-label="Increase ticket count" className={`font-medium text-base p-2 rounded-full w-fit border transition-colors ${totalTickets >= 8 ? "btn-disabled bg-indigo-900 border-gray-800 stroke-indigo-800" : " text-lime-500 border-lime-500 border-2  hover:scale-105 hover:bg-cyan-400 hover:border-lime-500 "}`} onClick={() => totalTickets < 8 && updateTickets(ticketType.toLowerCase(), "increase")}>
-        <IconPlus color="#BBEE68" />
+        <IconPlus color="#BBEE68" alt="minus one ticket" />
       </button>
     </div>
   </div>
@@ -34,7 +34,7 @@ function Tickets({ regularTickets, vipTickets, totalTickets, updateTickets }) {
     <div className="h-full flex flex-col ">
       {/* Overskrift og ikon til at repræsentere billetter */}
       <div className="flex gap-2 items-center mt-4 md:mt-0">
-        <IconTicket color="#FD1995" size="60" />
+        <IconTicket color="#FD1995" size="60" alt="ticket icon" />
         <h1 className="font-medium text-5xl ">TICKETS</h1>
       </div>
       {/* Container til billetinformation og antal billetter */}

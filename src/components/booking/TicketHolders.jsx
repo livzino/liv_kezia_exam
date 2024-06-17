@@ -21,7 +21,7 @@ const TicketHolders = ({ regularTickets, vipTickets, ticketHolders, setTicketHol
     <div className="h-full flex flex-col justify-between">
       {/* Overskrift og ikon for ticketindehavere */}
       <div className="flex gap-2 items-center mt-4 md:mt-0">
-        <IconUsersGroup color="#FD1995" size="60" />
+        <IconUsersGroup color="#FD1995" size="60" alt="camp icon" />
         <h1 className="font-medium text-5xl">TICKET HOLDERS</h1>
       </div>
       {/* Container til at vise inputfelter for ticketindehavere */}

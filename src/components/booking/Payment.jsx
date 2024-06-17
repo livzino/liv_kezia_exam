@@ -48,7 +48,7 @@ const Payment = ({ email, setEmail, termsAccepted, setTermsAccepted }) => {
       {/* Container til betalingskomponenten */}
       <div className="flex gap-2 items-center mt-4 md:mt-0 mb-4 md:mb-0">
         {/* Overskrift til betalingssiden */}
-        <IconCreditCard /> {/* Viser ikonet for kreditkort */}
+        <IconCreditCard alt="creditcard icon" /> {/* Viser ikonet for kreditkort */}
         <h1 className="font-medium text-lg">Payment</h1> {/* Overskrift for betalingssiden */}
       </div>
       <div className="flex flex-col justify-evenly flex-grow">

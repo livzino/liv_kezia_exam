@@ -9,7 +9,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
       {/* Viser overskrift og ikon for ordreoversigt */}
       <div className="space-y-5 hidden md:block">
         <div className="flex gap-2 items-center">
-          <IconShoppingCart />
+          <IconShoppingCart alt="shopping cart icon" />
           <h1 className="font-medium text-lg whitespace-nowrap">Order Summary</h1>
         </div>
         {/* Viser forskellige elementer i ordren */}
@@ -17,7 +17,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
           {/* Bookinggebyr */}
           <div className="flex items-center gap-4 tooltip" data-tip="This fee is non-refundable and is used to cover the costs of the festival.">
             <div className="rounded-lg bg-rose-500 border border-rose-700 p-2">
-              <IconCash />
+              <IconCash alt="cash icon" />
             </div>
             <div className="flex flex-col text-start">
               <p className="text-indigo-900">BOOKING FEE</p>
@@ -31,7 +31,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-rose-500 border border-rose-700 p-2">
                 <span className="indicator-item bg-indigo-900  badge badge-secondary h-5 w-5 rounded-full text-xs">{regularTickets}</span>
-                <IconTicket />
+                <IconTicket alt="regular ticket icon" />
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900">REGULAR TICKETS</p>
@@ -46,7 +46,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-rose-500 border border-rose-700 p-2">
                 <span className="indicator-item bg-indigo-900   badge badge-secondary h-5 w-5 rounded-full text-xs">{vipTickets}</span>
-                <IconVip />
+                <IconVip alt="vip ticket icon" />
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900">VIP TICKETS</p>
@@ -59,7 +59,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
           {/* Valgt campområde */}
           <div className="flex items-center gap-4">
             <div className="rounded-lg bg-rose-500 border border-rose-700 p-2">
-              <IconFlag />
+              <IconFlag alt="camp icon" />
             </div>
             <div className="flex flex-col">
               <p className="text-indigo-900">SELECTED CAMP</p>
@@ -73,7 +73,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-rose-500 border border-rose-700 p-2">
                 <span className="indicator-item bg-indigo-900 badge badge-secondary h-5 w-5 rounded-full text-xs">{twoPersonTents}</span>
-                <IconTent />
+                <IconTent alt="single tent icon" />
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900">2 PERSON TENTS</p>
@@ -88,7 +88,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
             <div className="flex items-center gap-4">
               <div className="indicator rounded-lg bg-rose-500 border border-rose-700 p-2">
                 <span className="indicator-item bg-indigo-900 badge badge-secondary h-5 w-5 rounded-full text-xs">{threePersonTents}</span>
-                <IconBuildingCircus />
+                <IconBuildingCircus alt="three person tent icon" />
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900">3 PERSON TENTS</p>
@@ -102,7 +102,7 @@ function OrderSummary({ minutes, seconds, isPulsing, ticketsReserved, totalPrice
           {greenCamping && ( // Hvis der er valgt grønt campingområde i ordren
             <div className="flex items-center gap-4">
               <div className="rounded-lg bg-rose-500 border border-rose-700 p-2">
-                <IconTrees />
+                <IconTrees alt="greencamping selected icon" />
               </div>
               <div className="flex flex-col">
                 <p className="text-indigo-900">GREEN CAMPING</p>

@@ -61,7 +61,7 @@ export default function Camping({ totalTickets, spots, setSelectedSpot, setSelec
   return (
     <div className="h-full flex flex-col ">
       <div className="flex gap-2 items-center mt-4 md:mt-0 mb-10">
-        <IconFlag color="#FD1995" size="60" /> {/* Vis flag-ikon */}
+        <IconFlag color="#FD1995" size="60" alt="camp flag icon" /> {/* Vis flag-ikon */}
         <h1 className="font-medium text-5xl ">CAMPS {/* Vis overskrift for campingområder */}</h1>
       </div>
 

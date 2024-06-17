@@ -10,9 +10,9 @@ export default function MobileOrderSummary({ minutes, seconds, isPulsing, ticket
     <div className="absolute w-full z-50">
       <div className="flex items-center justify-between px-8 py-4 bg-rose-500 ">
         <div onClick={() => setShowOrderSummary(!showOrderSummary)} className="flex gap-2">
-          <IconShoppingCart size={35} />
-          {!showOrderSummary && <IconCaretDown size={35} />}
-          {showOrderSummary && <IconCaretUp size={35} />}
+          <IconShoppingCart size={35} alt="shoppingcart icon" />
+          {!showOrderSummary && <IconCaretDown size={35} alt="show full order summery" />}
+          {showOrderSummary && <IconCaretUp size={35} alt="hide full order summery" />}
         </div>
         <p>{totalPrice} DKK</p>
       </div>

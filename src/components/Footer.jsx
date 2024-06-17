@@ -6,16 +6,16 @@ export default function Footer() {
       <div className="footer font-thin  ">
         <div className="row">
           <a href="#">
-            <SocialIcon className="iconfooter hover:scale-150" network="facebook" bgColor="transparent" fgColor="#DAEE68" url="/" />
+            <SocialIcon className="iconfooter hover:scale-150" alt="facebook logo" network="facebook" bgColor="transparent" fgColor="#DAEE68" url="/" />
           </a>
           <a href="#">
-            <SocialIcon className="iconfooter hover:scale-150" network="x" bgColor="transparent" fgColor="#DAEE68" url="/" />
+            <SocialIcon className="iconfooter hover:scale-150" alt="x logo" network="x" bgColor="transparent" fgColor="#DAEE68" url="/" />
           </a>
           <a href="#">
-            <SocialIcon className="iconfooter hover:scale-150" network="instagram" bgColor="transparent" fgColor="#DAEE68" url="/" />{" "}
+            <SocialIcon className="iconfooter hover:scale-150" alt="instagram logo" network="instagram" bgColor="transparent" fgColor="#DAEE68" url="/" />{" "}
           </a>
           <a href="#">
-            <SocialIcon className="iconfooter hover:scale-150" network="snapchat" bgColor="transparent" fgColor="#DAEE68" url="/" />
+            <SocialIcon className="iconfooter hover:scale-150" alt="snapchat logo" network="snapchat" bgColor="transparent" fgColor="#DAEE68" url="/" />
           </a>
         </div>
 

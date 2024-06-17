@@ -10,7 +10,7 @@ export const Optional = ({ updateTents, twoPersonTents, threePersonTents, totalT
     <div className=" h-full flex flex-col justify-between">
       {/* Overskrift og ikon for valgfrie tilføjelser */}
       <div className="flex gap-2 items-center mt-4 md:mt-0">
-        <IconTent color="#FD1995" size="60" />
+        <IconTent color="#FD1995" size="60" alt="tent icon" />
         <h1 className="font-medium text-5xl ">OPTIONAL</h1>
       </div>
       <div className="flex flex-col justify-evenly flex-grow">
@@ -43,7 +43,7 @@ const TentOption = ({ tentType, tentPrice, tentCount, updateTents, totalTickets,
     <div className="flex items-center w-32 justify-between font-medium">
       {/* Knappen til at mindske antallet af telte */}
       <button className="bg-neutral text-gray-100 font-medium text-base p-2 rounded-full w-fit  border-lime-500 border-2 hover:scale-105 hover:bg-indigo-900 hover:border-lime-500 transition-colors" onClick={() => updateTents(tentType, "decrease")}>
-        <IconMinus color="#BBEE68" />
+        <IconMinus color="#BBEE68" alt="minus icon" />
       </button>
       {/* Viser det aktuelle antal af telte */}
       <p>{tentCount}</p>
@@ -56,8 +56,9 @@ const TentOption = ({ tentType, tentPrice, tentCount, updateTents, totalTickets,
             updateTents(tentType, "increase");
           }
         }}
-        disabled={totalSelectedCapacity + (tentType === "two" ? 2 : 3) > totalTickets}>
-        <IconPlus color="#BBEE68" />
+        disabled={totalSelectedCapacity + (tentType === "two" ? 2 : 3) > totalTickets}
+      >
+        <IconPlus color="#BBEE68" alt="plus icon" />
       </button>
     </div>
   </div>
@@ -70,14 +71,14 @@ const GreenCampingOption = ({ greenCamping, setGreenCamping }) => (
     <div className="font-medium text-center space-y-1 mb-8">
       <div className="flex gap-2 items-center mt-4 md:mt-0">
         <h2 className="text-primary text-xl md:text45xl font-bold">GREEN CAMPING</h2>
-        <IconTent color="#B3EE68" size="45" />
+        <IconTent color="#B3EE68" size="45" alt="tent icon" />
       </div>
     </div>
     {/* Container til at vælge grøn camping */}
     <div className="flex gap-2 items-center mb-8">
       {/* Infoikon for grøn camping */}
       <div className="tooltip tooltip-bottom" data-tip="Support the environment by choosing a green camping spot.">
-        <IconInfoCircle color="#FD1995" size="30" />
+        <IconInfoCircle color="#FD1995" size="30" alt="info circle icon" />
       </div>
       {/* Viser prisen for grøn camping */}
       <p>249 DKK</p>
