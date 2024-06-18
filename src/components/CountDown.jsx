@@ -31,19 +31,19 @@ export default function CountDown({ targetDate }) {
     <div className="flex flex-row p-24 justify-center items-center bg-rose-600 h-full flex-grow">
       <div className="text-lg font-thin text-center md:text-1xl lg:text-4xl">
         <div className="bg-violet-950 place-items-center text-white rounded-md p-2 mb-4">{days}</div>
-        <p>DAY</p>
+        <h4>DAY</h4>
       </div>
       <div className="text-lg font-thin text-center mx-4 md:text-1xl lg:text-4xl">
         <div className="bg-violet-950  place-items-center text-white rounded-md p-2 mb-4">{hours}</div>
-        <p>HOUR</p>
+        <h4>HOUR</h4>
       </div>
       <div className="text-lg font-thin text-center mx-4 md:text-1xl lg:text-4xl">
         <div className="bg-violet-950  place-items-center text-white rounded-md p-2 mb-4">{minutes}</div>
-        <p>MINUTE</p>
+        <h4>MINUTE</h4>
       </div>
       <div className="text-lg font-thin text-center mx-4 md:text-1xl lg:text-4xl">
         <div className="bg-violet-950 place-items-center text-white rounded-md p-2 mb-4">{seconds}</div>
-        <p>SECOND</p>
+        <h4>SECOND</h4>
       </div>
     </div>
   );

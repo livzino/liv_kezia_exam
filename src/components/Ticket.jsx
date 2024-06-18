@@ -8,7 +8,7 @@ export default function Ticket() {
     <Link href="/booking">
       <div className="flex justify-center">
         {/* Wrapper div for ticket klassen med en hover effekt for skalering */}
-        <div className="bg-indigo-800 text-center h-96 lg:h-[500px] xl:h-[500px]  whitespace-nowrap border-4 border-cyan-400 rounded-3xl p-10 text-lg lg:text-2xl xl:text-3xl text-blue-500 grid grid-cols-1 hover:scale-105">
+        <div className="bg-indigo-800 text-center h-96 lg:h-[500px] xl:h-[500px]  whitespace-nowrap border-4 border-cyan-400 rounded-3xl p-10 text-lg lg:text-2xl xl:text-3xl text-cyan-400 grid grid-cols-1 hover:scale-105">
           {/* Div til at holde billedet */}
           <div className="m-auto">
             {/* Image komponent der viser et SVG billede med specifikke dimensioner */}

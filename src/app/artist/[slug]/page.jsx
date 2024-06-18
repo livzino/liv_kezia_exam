@@ -63,7 +63,7 @@ export default async function Page({ params }) {
             <div class="relative z-10">
               <Image src={band.logo} width={700} height={700} alt="kpop band logo" class="h-full w-full object-cover rounded-3xl" />
             </div>
-            <div class="relative z-20 md:-ml-12 bg-violet-400 border-lime-300 border-4 border-solid p-6 rounded-3xl text-white font-montserrat">
+            <div class="relative z-20 md:-ml-12 bg-indigo-800 border-lime-300 border-4 border-solid p-6 rounded-3xl text-white font-montserrat">
               <h2 class="uppercase tracking-tight text-3xl text-lime-300 font-bold">OM:</h2>
               <p class="mt-2">{band.bio}</p>
             </div>

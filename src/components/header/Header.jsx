@@ -1,28 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import styles from "../header/Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
-
   const toggleActiveClass = () => {
     setIsActive(!isActive);
   };
-
   const removeActive = () => {
     setIsActive(false);
   };
-
   return (
-    <div className="App">
-      <header className="App-header" role="banner">
-        <nav className={`${styles.navbar}`} role="navigation">
+    <div className="App font-thin">
+      <header className="App-header">
+        <nav className={`${styles.navbar}`}>
           <Link href="/">
             <Image src="/img/logo.webp" width={100} height={100} alt="logo shaped like flower with foo-fest inside" className="logo hover:scale-105" />
           </Link>
 
-          <ul className={`${styles.navMenu} ${isActive ? styles.active : ""}`}>
+          <ul className={`${styles.navMenu} ${isActive ? styles.active : "ul"}`}>
             <li onClick={removeActive}>
               <Link href="/lineup" className={`${styles.navLink}`}>
                 LINEUP
@@ -39,18 +37,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-
-          <div
-            className={`${styles.hamburger} ${isActive ? styles.active : ""}`}
-            onClick={toggleActiveClass}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                toggleActiveClass();
-              }
-            }}
-            role="button"
-            tabIndex={0}
-            aria-label="Toggle Menu">
+          <div className={`${styles.hamburger} ${isActive ? styles.active : ""}`} onClick={toggleActiveClass}>
             <span className={`${styles.bar}`}></span>
             <span className={`${styles.bar}`}></span>
             <span className={`${styles.bar}`}></span>
@@ -60,5 +47,4 @@ function Navbar() {
     </div>
   );
 }
-
 export default Navbar;
