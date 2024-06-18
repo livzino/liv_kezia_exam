@@ -6,13 +6,6 @@ import Title from "../../components/Title";
 import { useEffect, useState } from "react";
 import { IconPlayerPlay } from "@tabler/icons-react";
 
-function generateMetadata() {
-  return {
-    title: "Forside",
-    description: "Welcome to Forside",
-  };
-}
-
 // Funktionel komponent for tidsplan-siden
 export default function Schedule() {
   // Her sættes state-variablerne og deres funktioner
