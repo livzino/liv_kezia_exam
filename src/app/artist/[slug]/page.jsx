@@ -48,6 +48,7 @@ export default async function Page({ params }) {
   return (
     <>
       <main>
+        <h1 className="visually-hidden">{band.name}</h1>
         {/* Hovedsektionen af siden */}
         <div key={band.slug} className="container mx-auto px-4">
           {/* Titlen på bandet */}

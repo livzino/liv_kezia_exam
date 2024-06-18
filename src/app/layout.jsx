@@ -30,9 +30,9 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff" /> {/* Tema farve */}
       </head>
       <body className="font-syncopate">
-        <Header /> {/* Vis Header-komponenten */}
+        <Header aria-label="Site Header" /> {/* Vis Header-komponenten */}
         {children} {/* Vis børnekomponenterne, som er indeholdt i RootLayout */}
-        <Footer /> {/* Vis Footer-komponenten */}
+        <Footer aria-label="Site Footer" /> {/* Vis Footer-komponenten */}
       </body>
     </html>
   );

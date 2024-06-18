@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1 class="visually-hidden">FooFest - The Ultimate Kpop Festival Experience</h1>
+        <h1 className="visually-hidden">FooFest - The Ultimate Kpop Festival Experience</h1>
       </header>
       <main>
         <div className="md:flex md:flex-row mb-8">

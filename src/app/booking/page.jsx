@@ -293,6 +293,7 @@ function Page() {
         <meta name="description" content="Secure your spot at FooFest 2024! Book your tickets now for the ultimate Kpop festival experience, featuring top artists and exclusive events."></meta>
       </head>
       <main className="md:container mx-auto flex flex-col justify-center items-center h-screen w-screen">
+        <h1 className="visually-hidden">FooFest Booking - Secure Your Tickets Now</h1>
         {/* Modalen vises kun hvis isModalOpen er sand */}
         <dialog id="my_modal_1" className={isModalOpen ? "modal modal-open " : "modal"}>
           <div className="modal-box bg-gray-800 border border-gray-700 rounded-lg">

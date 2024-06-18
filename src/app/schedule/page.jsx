@@ -114,65 +114,69 @@ export default function Schedule() {
   return (
     <>
       <head>
-        <title>FooFest - Schedule - Plan Your Kpop Experience</title>
+        <title>FooFest Schedule - Plan Your Kpop Experience</title>
         <meta name="description" content="Check out the FooFest 2024 schedule! Find out when and where your favorite Kpop bands are performing, and plan your ultimate festival experience."></meta>
       </head>
-      <div className="container mx-auto max-w-6xl px-4 mt-10 flex flex-col gap-4 justify-center">
-        <Title title="SCHEDULE" />
+      <main>
+        <h1 className="visually-hidden">FooFest Schedule - Plan Your Kpop Experience</h1>
 
-        <div className="grid grid-cols content-evenly gap-6 lg:flex lg:justify-between">
-          <div className=" flex flex-row w-fit gap-2 bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 border-4 border-lime-400 rounded-2xl text-lime-400 place-items-center ">
-            <button
-              className="btn btn-block px-2 py-2  text-indigo-900 text-xs lg:text-base w-fit rounded   hover:scale-105"
-              onClick={() => {
-                handleDayChange(-1);
-                if (dayIndex === 0) {
-                  setDayIndex(days.length - 1);
-                }
-              }}>
-              <IconPlayerPlay fill="#A5E445" size="48px" stroke={1.5} className="scale-x-[-1]"></IconPlayerPlay> {/* left arrow */}
-            </button>
-            <span className="text-lg font-bold text-center">{days[dayIndex].toUpperCase()}</span>
-            <button
-              className="btn btn-block px-2 py-2 text-indigo-900 text-xs lg:text-base w-fit rounded   hover:scale-105"
-              onClick={() => {
-                handleDayChange(1);
-                if (dayIndex === days.length - 1) {
-                  setDayIndex(0);
-                }
-              }}>
-              <IconPlayerPlay fill="#A5E445" size="48px" stroke={1.5}></IconPlayerPlay> {/* Right arrow */}
-            </button>
-          </div>
-          <div className="flex items-center">
-            <input className="input input-bordered input-sm lg:input-md w-full max-w-xs text-xs px-8 py-2 bg-indigo-900 text-gray-100  lg:text-base  rounded border border-lime-500 hover:scale-105" type="text" placeholder="Search artist..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} /> {/* Search input field */}
-            {/* Render the rest of the component, using filteredBands instead of dataBands */}
+        <div className="container mx-auto max-w-6xl px-4 mt-10 flex flex-col gap-4 justify-center">
+          <Title title="SCHEDULE" />
+
+          <div className="grid grid-cols content-evenly gap-6 lg:flex lg:justify-between">
+            <div className=" flex flex-row w-fit gap-2 bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 border-4 border-lime-400 rounded-2xl text-lime-400 place-items-center ">
+              <button
+                className="btn btn-block px-2 py-2  text-indigo-900 text-xs lg:text-base w-fit rounded   hover:scale-105"
+                onClick={() => {
+                  handleDayChange(-1);
+                  if (dayIndex === 0) {
+                    setDayIndex(days.length - 1);
+                  }
+                }}>
+                <IconPlayerPlay fill="#A5E445" size="48px" stroke={1.5} className="scale-x-[-1]"></IconPlayerPlay> {/* left arrow */}
+              </button>
+              <span className="text-lg font-bold text-center">{days[dayIndex].toUpperCase()}</span>
+              <button
+                className="btn btn-block px-2 py-2 text-indigo-900 text-xs lg:text-base w-fit rounded   hover:scale-105"
+                onClick={() => {
+                  handleDayChange(1);
+                  if (dayIndex === days.length - 1) {
+                    setDayIndex(0);
+                  }
+                }}>
+                <IconPlayerPlay fill="#A5E445" size="48px" stroke={1.5}></IconPlayerPlay> {/* Right arrow */}
+              </button>
+            </div>
+            <div className="flex items-center">
+              <input className="input input-bordered input-sm lg:input-md w-full max-w-xs text-xs px-8 py-2 bg-indigo-900 text-gray-100  lg:text-base  rounded border border-lime-500 hover:scale-105" type="text" placeholder="Search artist..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} /> {/* Search input field */}
+              {/* Render the rest of the component, using filteredBands instead of dataBands */}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="flex flex-row max-md:grid max-md:grid-cols-1 max-lg:grid max-lg:grid-cols-3 lg:grid lg:grid-cols-3 lg:gap-4 md:ml-12 overflow-y-hidden  gap-x-6 mx-32 md:mx-24 mt-16 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10  bg-fuchsia-950/60" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
-        {/* Her mappes hen over hver scene for at generere en tidsplan */}
-        {["Midgard", "Vanaheim", "Jotunheim"].map((scene) => (
-          <div key={scene} className="flex flex-col lg:ml-10 md:ml-6 md:px-6 border-r-2 border-cyan-300">
-            <h2 className="lg:text-4xl md:text-2xl sm:text-4xl mb-16 border-b-8 border-double border-cyan-300 pb-8 mt-6 font-synco">{scene}</h2>
+        <div className="flex flex-row max-md:grid max-md:grid-cols-1 max-lg:grid max-lg:grid-cols-3 lg:grid lg:grid-cols-3 lg:gap-4 md:ml-12 overflow-y-hidden  gap-x-6 mx-32 md:mx-24 mt-16 scrollbar-hide mb-20 ring-4 ring-purple-950 ring-offset-4 ring-offset-slate-50 dark:ring-offset-cyan-300 rounded-3xl p-10  bg-fuchsia-950/60" style={{ fontFamily: "Syncopate, sans-serif", fontWeight: 400 }}>
+          {/* Her mappes hen over hver scene for at generere en tidsplan */}
+          {["Midgard", "Vanaheim", "Jotunheim"].map((scene) => (
+            <div key={scene} className="flex flex-col lg:ml-10 md:ml-6 md:px-6 border-r-2 border-cyan-300">
+              <h2 className="lg:text-4xl md:text-2xl sm:text-4xl mb-16 border-b-8 border-double border-cyan-300 pb-8 mt-6 font-synco">{scene}</h2>
 
-            {/* Her mappes over hver handling udfra dag og scene */}
-            {dataSchedule[scene][selectedDay]
-              .filter((slot) => slot.act.toLowerCase().includes(searchTerm.toLowerCase()))
-              .map((slot, index) => {
-                const bandName = slot.act;
-                if (bandName === "break") return null;
-                const bandInfo = getBandInfo(bandName);
-                const bandLogo = getBandLogo(bandInfo);
-                const nextAct = dataSchedule[scene][selectedDay][index + 1];
-                const nextActLink = getnextActlink(nextAct, dataSchedule[scene][selectedDay]);
+              {/* Her mappes over hver handling udfra dag og scene */}
+              {dataSchedule[scene][selectedDay]
+                .filter((slot) => slot.act.toLowerCase().includes(searchTerm.toLowerCase()))
+                .map((slot, index) => {
+                  const bandName = slot.act;
+                  if (bandName === "break") return null;
+                  const bandInfo = getBandInfo(bandName);
+                  const bandLogo = getBandLogo(bandInfo);
+                  const nextAct = dataSchedule[scene][selectedDay][index + 1];
+                  const nextActLink = getnextActlink(nextAct, dataSchedule[scene][selectedDay]);
 
-                return <ScheduleCard key={index} slug={bandName === "break" ? "/schedule" : `/artist/${bandInfo.slug}`} scene={scene} artist={slot.act} time={slot.start} src={bandLogo} logoCredits={bandInfo.logoCredits} nextTime={nextAct ? nextAct.start : "tomorrow"} nextBand={nextAct ? nextAct.act : "check schedule"} nextSlug={nextActLink} />;
-              })}
-          </div>
-        ))}
-      </div>
+                  return <ScheduleCard key={index} slug={bandName === "break" ? "/schedule" : `/artist/${bandInfo.slug}`} scene={scene} artist={slot.act} time={slot.start} src={bandLogo} logoCredits={bandInfo.logoCredits} nextTime={nextAct ? nextAct.start : "tomorrow"} nextBand={nextAct ? nextAct.act : "check schedule"} nextSlug={nextActLink} />;
+                })}
+            </div>
+          ))}
+        </div>
+      </main>
     </>
   );
 }
