@@ -16,40 +16,45 @@ export function generateMetadata() {
 export default function Home() {
   const targetDate = new Date("Jun 26, 2024").getTime(); // Definer måldatoen for nedtællingen
   return (
-    <main>
-      <div className="md:flex md:flex-row mb-8">
-        <div className="md:w-1/2 md:h-full md:transition md:duration-300 md:ease-in-out">
-          <Hero />
+    <>
+      <header>
+        <h1 class="visually-hidden">FooFest - The Ultimate Kpop Festival Experience</h1>
+      </header>
+      <main>
+        <div className="md:flex md:flex-row mb-8">
+          <div className="md:w-1/2 md:h-full md:transition md:duration-300 md:ease-in-out">
+            <Hero />
+          </div>
+          <div className="md:w-1/2  md:transition md:duration-300 md:ease-in-out">
+            <CountDown targetDate={targetDate} />
+          </div>
         </div>
-        <div className="md:w-1/2  md:transition md:duration-300 md:ease-in-out">
-          <CountDown targetDate={targetDate} />
+        <Title title="TICKETS" /> {/* Vis titlen "TICKETS" */}
+        <div className=" flex flex-col md:flex-row md:gap-60 md:justify-center md:items-center mx-4 mb-8">
+          {/* Div til billetkomponenter */}
+          <div>
+            <h2 className="text-center text-indigo-800 text-3xl m-8 font-bold">
+              {/* Overskrift for almindelige billetter */}
+              REGULAR
+            </h2>
+            <Ticket /> {/* Vis Ticket-komponenten for almindelige billetter */}
+          </div>
+          <div>
+            <h2 className="text-center text-indigo-800 text-3xl m-8 font-bold">
+              {/* Overskrift for VIP-billetter */}
+              VIP
+            </h2>
+            <Vip /> {/* Vis Vip-komponenten for VIP-billetter */}
+          </div>
         </div>
-      </div>
-      <Title title="TICKETS" /> {/* Vis titlen "TICKETS" */}
-      <div className=" flex flex-col md:flex-row md:gap-60 md:justify-center md:items-center mx-4 mb-8">
-        {/* Div til billetkomponenter */}
-        <div>
-          <h2 className="text-center text-indigo-800 text-3xl m-8 font-bold">
-            {/* Overskrift for almindelige billetter */}
-            REGULAR
-          </h2>
-          <Ticket /> {/* Vis Ticket-komponenten for almindelige billetter */}
-        </div>
-        <div>
-          <h2 className="text-center text-indigo-800 text-3xl m-8 font-bold">
-            {/* Overskrift for VIP-billetter */}
-            VIP
-          </h2>
-          <Vip /> {/* Vis Vip-komponenten for VIP-billetter */}
-        </div>
-      </div>
-      <Title title="MAP" /> {/* Vis titlen "MAP" */}
-      <br />
-      <CampMap /> {/* Vis CampMap-komponenten for festivaloversigten */}
-      <br />
-      <br />
-      <br />
-      <br />
-    </main>
+        <Title title="MAP" /> {/* Vis titlen "MAP" */}
+        <br />
+        <CampMap /> {/* Vis CampMap-komponenten for festivaloversigten */}
+        <br />
+        <br />
+        <br />
+        <br />
+      </main>
+    </>
   );
 }
